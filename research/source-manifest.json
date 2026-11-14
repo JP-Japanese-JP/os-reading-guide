@@ -1,0 +1,97 @@
+{
+  "retrieved": "2026-10-30",
+  "repository": "https://github.com/nuta/operating-system-in-1000-lines",
+  "branch": "main",
+  "files": [
+    {
+      "path": "website/ja/01-setting-up-development-environment.md",
+      "blobSha": "f95afcfdf6ec493274fb53f5edd5723fd048ce58",
+      "url": "https://github.com/nuta/operating-system-in-1000-lines/blob/main/website/ja/01-setting-up-development-environment.md"
+    },
+    {
+      "path": "website/ja/02-assembly.md",
+      "blobSha": "5e5162ba131702fc77b04316bd0ed96a243da792",
+      "url": "https://github.com/nuta/operating-system-in-1000-lines/blob/main/website/ja/02-assembly.md"
+    },
+    {
+      "path": "website/ja/03-overview.md",
+      "blobSha": "d8fab9f605899e0850101b3bff46a64ea18b96d6",
+      "url": "https://github.com/nuta/operating-system-in-1000-lines/blob/main/website/ja/03-overview.md"
+    },
+    {
+      "path": "website/ja/04-boot.md",
+      "blobSha": "948f92cd0d359065bcd9773214c100274623e04a",
+      "url": "https://github.com/nuta/operating-system-in-1000-lines/blob/main/website/ja/04-boot.md"
+    },
+    {
+      "path": "website/ja/05-hello-world.md",
+      "blobSha": "0155f0211f8ebef4bef308eb9482956c794db2ba",
+      "url": "https://github.com/nuta/operating-system-in-1000-lines/blob/main/website/ja/05-hello-world.md"
+    },
+    {
+      "path": "website/ja/06-libc.md",
+      "blobSha": "6518abc00c03909bcd9c2e0c148e886d1d34da14",
+      "url": "https://github.com/nuta/operating-system-in-1000-lines/blob/main/website/ja/06-libc.md"
+    },
+    {
+      "path": "website/ja/07-kernel-panic.md",
+      "blobSha": "c615167453bf8d706928910bf12d61b1d990417b",
+      "url": "https://github.com/nuta/operating-system-in-1000-lines/blob/main/website/ja/07-kernel-panic.md"
+    },
+    {
+      "path": "website/ja/08-exception.md",
+      "blobSha": "61e7c6263a4ba0d496bb4d41ee4d6044ddfa1d2a",
+      "url": "https://github.com/nuta/operating-system-in-1000-lines/blob/main/website/ja/08-exception.md"
+    },
+    {
+      "path": "website/ja/09-memory-allocation.md",
+      "blobSha": "937bfc7d0be408b416ebf42ad1328fb958596c7e",
+      "url": "https://github.com/nuta/operating-system-in-1000-lines/blob/main/website/ja/09-memory-allocation.md"
+    },
+    {
+      "path": "website/ja/10-process.md",
+      "blobSha": "bf91c080334b9c0f67fe358595d3e51bf5c0c6eb",
+      "url": "https://github.com/nuta/operating-system-in-1000-lines/blob/main/website/ja/10-process.md"
+    },
+    {
+      "path": "website/ja/11-page-table.md",
+      "blobSha": "545f16bc2b182bcfc46efb2f654ff71efdf49a07",
+      "url": "https://github.com/nuta/operating-system-in-1000-lines/blob/main/website/ja/11-page-table.md"
+    },
+    {
+      "path": "website/ja/12-application.md",
+      "blobSha": "117f9273780760ac708f4cc3ea762bf07b621e7f",
+      "url": "https://github.com/nuta/operating-system-in-1000-lines/blob/main/website/ja/12-application.md"
+    },
+    {
+      "path": "website/ja/13-user-mode.md",
+      "blobSha": "612add2f188f7cd0d67a77cc92d50dbc999cdf30",
+      "url": "https://github.com/nuta/operating-system-in-1000-lines/blob/main/website/ja/13-user-mode.md"
+    },
+    {
+      "path": "website/ja/14-system-call.md",
+      "blobSha": "eacfa5debd48362c3bb0d23b3f08e6a8eb6dd210",
+      "url": "https://github.com/nuta/operating-system-in-1000-lines/blob/main/website/ja/14-system-call.md"
+    },
+    {
+      "path": "website/ja/15-virtio-blk.md",
+      "blobSha": "d89260ba69b747e4fcafefbfeed247a2e15f5492",
+      "url": "https://github.com/nuta/operating-system-in-1000-lines/blob/main/website/ja/15-virtio-blk.md"
+    },
+    {
+      "path": "website/ja/16-file-system.md",
+      "blobSha": "82c42b80f853379d112ea1fc41d0ca24a386e5ee",
+      "url": "https://github.com/nuta/operating-system-in-1000-lines/blob/main/website/ja/16-file-system.md"
+    },
+    {
+      "path": "website/ja/17-outro.md",
+      "blobSha": "c885e21d1c5665d9edccdefdeb78658a7521a571",
+      "url": "https://github.com/nuta/operating-system-in-1000-lines/blob/main/website/ja/17-outro.md"
+    },
+    {
+      "path": "website/ja/index.md",
+      "blobSha": "a23e0ce5ade38d2a33a006c7630b01ac5eec9af9",
+      "url": "https://github.com/nuta/operating-system-in-1000-lines/blob/main/website/ja/index.md"
+    }
+  ]
+}

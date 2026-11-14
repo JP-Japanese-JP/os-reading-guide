@@ -1,0 +1,32 @@
+[
+  {
+    "id": "textbook",
+    "title": "教材原稿（nuta / Seiya Nuta）",
+    "url": "https://github.com/nuta/operating-system-in-1000-lines/tree/main/website/ja"
+  },
+  {
+    "id": "riscv",
+    "title": "RISC-V Supervisor ISA",
+    "url": "https://docs.riscv.org/reference/isa/priv/supervisor.html"
+  },
+  {
+    "id": "asm",
+    "title": "GCC Extended Asm",
+    "url": "https://gcc.gnu.org/onlinedocs/gcc/Extended-Asm.html"
+  },
+  {
+    "id": "linker",
+    "title": "GNU ld: Source Code Reference",
+    "url": "https://sourceware.org/binutils/docs/ld/Source-Code-Reference.html"
+  },
+  {
+    "id": "virtio",
+    "title": "OASIS Virtio 1.3（Legacyの節を参照）",
+    "url": "https://docs.oasis-open.org/virtio/virtio/v1.3/virtio-v1.3.html"
+  },
+  {
+    "id": "chrome",
+    "title": "Chrome content scripts",
+    "url": "https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts"
+  }
+]

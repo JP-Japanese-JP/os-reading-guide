@@ -1,0 +1,349 @@
+[
+  {
+    "number": 0,
+    "slug": "",
+    "title": "はじめに",
+    "summary": "OSの中核で何を作るのかをつかむ。Cとシェルの前提もここから確認できます。",
+    "prerequisites": [
+      "os",
+      "app",
+      "source",
+      "compiler",
+      "function",
+      "pointer",
+      "shell",
+      "debug",
+      "context",
+      "paging",
+      "driver",
+      "license"
+    ]
+  },
+  {
+    "number": 1,
+    "slug": "01-setting-up-development-environment",
+    "title": "開発環境",
+    "summary": "開発用PCと、QEMU内の自作OSを区別し、RISC-V向けの道具をそろえます。",
+    "prerequisites": [
+      "wsl",
+      "shell",
+      "directory",
+      "path",
+      "package",
+      "compiler",
+      "linker",
+      "qemu",
+      "virt",
+      "git",
+      "shell-syntax",
+      "build-options"
+    ]
+  },
+  {
+    "number": 2,
+    "slug": "02-assembly",
+    "title": "RISC-V入門",
+    "summary": "Cの処理がCPUの命令と保存状態になる様子を読む。機種の構成と命令の規則も区別します。",
+    "prerequisites": [
+      "cpu",
+      "rv32",
+      "register",
+      "assembly",
+      "load-store",
+      "pc",
+      "stack",
+      "abi",
+      "modes",
+      "csr",
+      "inline-asm",
+      "asm-volatile",
+      "clobber"
+    ]
+  },
+  {
+    "number": 3,
+    "slug": "03-overview",
+    "title": "OSの全体像",
+    "summary": "OSの役割を、プロセス・メモリ・機器・アプリの関係として整理します。",
+    "prerequisites": [
+      "os",
+      "process",
+      "multitask",
+      "exception",
+      "paging",
+      "syscall",
+      "driver",
+      "fs",
+      "shell",
+      "interrupt",
+      "ipc",
+      "multiprocessor"
+    ]
+  },
+  {
+    "number": 4,
+    "slug": "04-boot",
+    "title": "ブート",
+    "summary": "起動の入口を正しい位置へ置き、C関数を呼べる状態を自分で準備します。",
+    "prerequisites": [
+      "boot",
+      "sbi",
+      "linker-script",
+      "ld-dot",
+      "section",
+      "symbol",
+      "entry",
+      "sp",
+      "attribute",
+      "freestanding",
+      "build-options",
+      "monitor",
+      "nm"
+    ]
+  },
+  {
+    "number": 5,
+    "slug": "05-hello-world",
+    "title": "Hello World!",
+    "summary": "カーネルからSBIへ文字を渡す流れと、数を文字列に直す処理を読みます。",
+    "prerequisites": [
+      "sbi",
+      "ecall-sbi",
+      "fixed-register",
+      "abi",
+      "serial",
+      "inline-asm",
+      "clobber",
+      "string",
+      "printf",
+      "varargs",
+      "binary"
+    ]
+  },
+  {
+    "number": 6,
+    "slug": "06-libc",
+    "title": "C標準ライブラリ",
+    "summary": "型、ポインタ、コピー、文字列の終端を整理し、小さな共通関数を作ります。",
+    "prerequisites": [
+      "typedef",
+      "unsigned",
+      "pointer",
+      "cast",
+      "array",
+      "struct",
+      "size",
+      "alignment",
+      "builtin",
+      "offset",
+      "memcpy",
+      "zero",
+      "strings",
+      "code-basics"
+    ]
+  },
+  {
+    "number": 7,
+    "slug": "07-kernel-panic",
+    "title": "カーネルパニック",
+    "summary": "失敗した場所を表示して止まる。マクロを使う理由と独特な文法を確認します。",
+    "prerequisites": [
+      "panic",
+      "macro",
+      "panic-macro",
+      "printf",
+      "varargs",
+      "code-basics"
+    ]
+  },
+  {
+    "number": 8,
+    "slug": "08-exception",
+    "title": "例外処理",
+    "summary": "CPUが自動で残す状態と、OSが自分で退避する状態を区別します。",
+    "prerequisites": [
+      "exception",
+      "trap-state",
+      "csr",
+      "sp",
+      "abi",
+      "attribute",
+      "statement-expression",
+      "sret",
+      "unimp",
+      "addr2line",
+      "float"
+    ]
+  },
+  {
+    "number": 9,
+    "slug": "09-memory-allocation",
+    "title": "メモリ割り当て",
+    "summary": "空きRAMをページ単位で配り、先頭アドレスを返す。配置の決定と実行中の割り当てを区別します。",
+    "prerequisites": [
+      "address",
+      "symbol",
+      "alignment",
+      "page",
+      "static-local",
+      "half-open",
+      "bump",
+      "pointer-int",
+      "zero-security",
+      "malloc",
+      "bitmap",
+      "buddy",
+      "overflow"
+    ]
+  },
+  {
+    "number": 10,
+    "slug": "10-process",
+    "title": "プロセス",
+    "summary": "中断した実行を再開する状態を用意し、CPUを譲り合って複数の仕事を進めます。",
+    "prerequisites": [
+      "process",
+      "pcb",
+      "context",
+      "abi",
+      "first-switch",
+      "scheduler",
+      "multitask",
+      "kernel-stack",
+      "sp",
+      "async"
+    ]
+  },
+  {
+    "number": 11,
+    "slug": "11-page-table",
+    "title": "ページテーブル",
+    "summary": "仮想アドレスを表の番号とページ内の位置へ分け、物理メモリと権限に対応させます。",
+    "prerequisites": [
+      "virtual",
+      "paging",
+      "sv32",
+      "ppn",
+      "pte",
+      "bitops",
+      "satp",
+      "identity",
+      "pagefault",
+      "dump-xp",
+      "half-open"
+    ]
+  },
+  {
+    "number": 12,
+    "slug": "12-application",
+    "title": "アプリケーション",
+    "summary": "アプリ用の入口と配置を作り、実行イメージをカーネルへ埋め込みます。",
+    "prerequisites": [
+      "app",
+      "linker-script",
+      "entry",
+      "assert",
+      "elf",
+      "raw",
+      "absolute",
+      "zero-security",
+      "sp"
+    ]
+  },
+  {
+    "number": 13,
+    "slug": "13-user-mode",
+    "title": "ユーザーモード",
+    "summary": "イメージのコピー・ページの権限・CPUの権限をそろえてアプリを起動します。",
+    "prerequisites": [
+      "raw",
+      "copy-isolate",
+      "paging",
+      "pte",
+      "modes",
+      "sret",
+      "pagefault",
+      "dump-xp",
+      "endian"
+    ]
+  },
+  {
+    "number": 14,
+    "slug": "14-system-call",
+    "title": "システムコール",
+    "summary": "アプリからカーネルへ要求し、保存したレジスタを通して結果を返します。",
+    "prerequisites": [
+      "syscall",
+      "ecall-user",
+      "fixed-register",
+      "trap-state",
+      "ecall-next",
+      "getchar",
+      "scheduler",
+      "exit",
+      "string"
+    ]
+  },
+  {
+    "number": 15,
+    "slug": "15-virtio-blk",
+    "title": "ディスク読み書き",
+    "summary": "機器へ要求表を渡し、完了を確認する。RAMの物理位置と機器から見た読み書き方向が鍵です。",
+    "prerequisites": [
+      "driver",
+      "virtio",
+      "mmio",
+      "device-register",
+      "volatile",
+      "virtqueue",
+      "descriptor",
+      "rings",
+      "device-direction",
+      "barrier",
+      "io",
+      "init-virtio",
+      "sector",
+      "busy",
+      "disk-image",
+      "endian"
+    ]
+  },
+  {
+    "number": 16,
+    "slug": "16-file-system",
+    "title": "ファイルシステム",
+    "summary": "ディスクのバイト列をファイル名・長さ・内容へ解釈し、アプリへ読み書きAPIを渡します。",
+    "prerequisites": [
+      "fs",
+      "tar",
+      "tar-layout",
+      "octal",
+      "subshell",
+      "static-disk",
+      "flex-array",
+      "checksum",
+      "buffer",
+      "flush",
+      "file-api",
+      "sum",
+      "trust"
+    ]
+  },
+  {
+    "number": 17,
+    "slug": "17-outro",
+    "title": "おわりに",
+    "summary": "教材の簡略化を出発点に、再利用・並行動作・機器・通信へ学習を広げます。",
+    "prerequisites": [
+      "microkernel",
+      "fork",
+      "free",
+      "buddy",
+      "interrupt",
+      "multiprocessor",
+      "fs",
+      "network",
+      "ipc"
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "name": "os-reading-guide",
+  "private": true,
+  "version": "1.4.5",
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "test": "node --test tests/*.test.cjs",
+    "audit": "node scripts/audit.cjs",
+    "test:browser": "node tests/upgrade-browser.cjs",
+    "test:dictionary": "node tests/dictionary-browser.cjs"
+  }
+}

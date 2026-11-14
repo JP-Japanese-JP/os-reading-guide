@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "OS読書ガイド — 1000行OSの前提知識",
+  "version": "1.4.5",
+  "action": {
+    "default_title": "解説辞書を開く"
+  },
+  "description": "全18章の本文・コードから解説を参照。必要な表現だけAIで生成し、個人辞書に保存できます。",
+  "permissions": [
+    "storage",
+    "nativeMessaging"
+  ],
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://operating-system-in-1000-lines.vercel.app/*"
+      ],
+      "js": [
+        "data.js",
+        "core.js",
+        "diagram.js",
+        "annotations.js",
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

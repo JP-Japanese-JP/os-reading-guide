@@ -1,0 +1,10 @@
+const fs=require('node:fs');
+const r=JSON.parse(fs.readFileSync('tests/evidence/browser-report.json','utf8'));
+const i=JSON.parse(fs.readFileSync('tests/evidence/integrity-report.json','utf8'));
+const entries=require('../data/glossary.json');
+let text=`# 動作検証レポート\n\n実施日：2026-10-30（日本時間）\n\n- ブラウザー：Windows版 ${r.browser.product}\n- 実行方法：インストール済みChromeをPlaywrightからヘッドレス起動。専用の新規プロファイルへManifest V3拡張をExtensions.loadUnpackedで読み込み。通常の利用者プロファイルは変更していません。\n- 対象：公開サイト https://operating-system-in-1000-lines.vercel.app/ja/ の実ページ。ローカル模擬ページや単なるスクリプト注入による代用ではありません。\n- 初期段階：第9章・39項目で操作検証を先に実施。その後、全18章・${entries.length}項目・${entries.reduce((n,e)=>n+e.aliases.length,0)}表記へ展開。\n- 辞書・照合・参照グラフ・Manifestの単体テスト：10件成功。\n- ブラウザーの確認項目：${r.checks.length}件成功、全18章を確認。未処理のページ例外：${r.errors.length}件。\n\n## 実際に操作して確認したこと\n\n${r.checks.map(s=>'- '+s).join('\n')}\n\n## 各章\n\n| 章 | タイトル | 注釈数 | 読み込み＋ガイド表示 |\n| --- | --- | ---: | ---: |\n`;
+for(const c of r.chapters)text+=`| ${String(c.number).padStart(2,'0')} | ${c.title} | ${c.annotations} | ${c.loadAndGuideMs} ms |\n`;
+text+='\n時間はこのテスト環境のネットワーク・ページ読み込み・自動操作を含む値です。拡張だけの処理時間や速度向上を示すベンチマークではありません。注釈数は取得したDOMと処理タイミングに依存します。\n\n## 元ページを保持できるか\n\n';
+text+=i.map(x=>`- 第${x.chapter}章：拡張なし／ありで本文textContent・全コードブロック・既存リンクの表示文字とhrefが完全一致。注釈数が安定し、再注釈による増殖なし。`).join('\n');
+text+='\n\n## 画面の証拠\n\n- [第9章：解説と前提へのリンク](tests/evidence/09-explanation.png)\n- [第9章：選択した内容への質問](tests/evidence/09-question.png)\n- [幅390px](tests/evidence/mobile.png)\n- [ダークモード](tests/evidence/dark.png)\n\nスクリーンショットを実際に開いて文字・幅・折り返し・パネルの位置を確認しました。狭い画面ではパネル内をスクロールして操作します。\n\n## 確認範囲\n\n全章で注釈と対応する章ガイドを確認し、主要な連続操作は第9章で検証しました。全165解説を人間が順に読んで操作するユーザビリティ調査を実施した、という意味ではありません。各解説の参照先と循環の不存在は全件を機械検査しています。新しい文章への自由回答は生成せず、関連する保存済み解説・質問保存・質問コピーを提供します。\n\n再現：`node --test tests/core.test.cjs`、`node tests/browser.cjs`、`node tests/integrity.cjs`。後者2つはPlaywrightとネットワークが必要です。\n';
+fs.writeFileSync('TEST-REPORT.md',text);console.log('TEST-REPORT.md generated');

@@ -1,0 +1,3 @@
+.osrg-term { text-decoration: underline dotted #8298a3; text-underline-offset: .22em; cursor: help; border-radius: 2px; }
+.osrg-term:hover, .osrg-term:focus-visible { background: #528a8620; outline: 2px solid #528a8650; outline-offset: 2px; }
+pre .osrg-term { font: inherit; color: inherit; white-space: inherit; padding: 0; margin: 0; }

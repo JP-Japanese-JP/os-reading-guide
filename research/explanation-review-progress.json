@@ -1,0 +1,1166 @@
+{
+  "allocation": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-10-31T05:32:26.916Z",
+    "length": 1772
+  },
+  "bit": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-10-31T05:35:41.976Z",
+    "length": 530
+  },
+  "byte": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-10-31T05:35:41.980Z",
+    "length": 589
+  },
+  "binary": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-10-31T05:35:41.980Z",
+    "length": 725
+  },
+  "kib": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-10-31T05:35:41.980Z",
+    "length": 696
+  },
+  "memory": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-10-31T05:35:41.980Z",
+    "length": 699
+  },
+  "address": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-10-31T05:35:41.980Z",
+    "length": 834
+  },
+  "cpu": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-10-31T05:35:41.980Z",
+    "length": 699
+  },
+  "register": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-10-31T05:35:41.980Z",
+    "length": 927
+  },
+  "pointer": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-10-31T05:39:09.996Z",
+    "length": 844
+  },
+  "variable": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-10-31T05:39:09.999Z",
+    "length": 827
+  },
+  "function": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-10-31T05:39:09.999Z",
+    "length": 859
+  },
+  "static-local": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-10-31T05:39:10.000Z",
+    "length": 863
+  },
+  "static": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-10-31T05:39:10.000Z",
+    "length": 813
+  },
+  "array": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-10-31T05:39:10.000Z",
+    "length": 771
+  },
+  "struct": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-10-31T05:39:10.000Z",
+    "length": 823
+  },
+  "cast": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-10-31T05:39:10.000Z",
+    "length": 910
+  },
+  "unsigned": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:15:30.887Z",
+    "length": 845
+  },
+  "size": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:15:30.890Z",
+    "length": 823
+  },
+  "macro": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:15:30.890Z",
+    "length": 908
+  },
+  "compiler": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:15:30.890Z",
+    "length": 713
+  },
+  "linker": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:15:30.890Z",
+    "length": 700
+  },
+  "linker-script": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:15:30.890Z",
+    "length": 1041
+  },
+  "alignment": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:15:30.890Z",
+    "length": 800
+  },
+  "symbol": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:15:30.890Z",
+    "length": 910
+  },
+  "half-open": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:17:55.361Z",
+    "length": 631
+  },
+  "page": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:17:55.362Z",
+    "length": 765
+  },
+  "bump": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:17:55.362Z",
+    "length": 875
+  },
+  "malloc": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:17:55.362Z",
+    "length": 672
+  },
+  "null": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:17:55.362Z",
+    "length": 681
+  },
+  "zero": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:17:55.362Z",
+    "length": 884
+  },
+  "free": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:17:55.362Z",
+    "length": 621
+  },
+  "bitmap": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:17:55.362Z",
+    "length": 769
+  },
+  "buddy": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:20:43.123Z",
+    "length": 665
+  },
+  "physical": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:20:43.123Z",
+    "length": 794
+  },
+  "panic": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:20:43.123Z",
+    "length": 750
+  },
+  "uefi": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:20:43.123Z",
+    "length": 789
+  },
+  "nm": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:20:43.123Z",
+    "length": 874
+  },
+  "overflow": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:20:43.123Z",
+    "length": 873
+  },
+  "os": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:20:43.123Z",
+    "length": 631
+  },
+  "app": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:20:43.123Z",
+    "length": 814
+  },
+  "source": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:22:55.219Z",
+    "length": 471
+  },
+  "debug": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:22:55.219Z",
+    "length": 630
+  },
+  "shell": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:22:55.219Z",
+    "length": 677
+  },
+  "directory": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:22:55.219Z",
+    "length": 697
+  },
+  "path": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:22:55.219Z",
+    "length": 881
+  },
+  "package": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:22:55.219Z",
+    "length": 746
+  },
+  "wsl": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:22:55.219Z",
+    "length": 660
+  },
+  "git": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:22:55.219Z",
+    "length": 828
+  },
+  "qemu": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:25:10.169Z",
+    "length": 631
+  },
+  "virt": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:25:10.169Z",
+    "length": 555
+  },
+  "rv32": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:25:10.169Z",
+    "length": 669
+  },
+  "assembly": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:25:10.169Z",
+    "length": 593
+  },
+  "disassembly": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:25:10.169Z",
+    "length": 564
+  },
+  "pc": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:25:10.169Z",
+    "length": 601
+  },
+  "load-store": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:25:10.169Z",
+    "length": 780
+  },
+  "stack": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:25:10.169Z",
+    "length": 946
+  },
+  "sp": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:27:43.252Z",
+    "length": 773
+  },
+  "abi": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:27:43.252Z",
+    "length": 914
+  },
+  "modes": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:27:43.252Z",
+    "length": 960
+  },
+  "csr": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:27:43.252Z",
+    "length": 640
+  },
+  "inline-asm": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:27:43.252Z",
+    "length": 903
+  },
+  "asm-volatile": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:27:43.252Z",
+    "length": 609
+  },
+  "clobber": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:27:43.252Z",
+    "length": 730
+  },
+  "optimization": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:27:43.252Z",
+    "length": 733
+  },
+  "boot": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:30:02.759Z",
+    "length": 597
+  },
+  "sbi": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:30:02.759Z",
+    "length": 689
+  },
+  "ecall": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:30:02.759Z",
+    "length": 823
+  },
+  "ecall-sbi": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:30:02.759Z",
+    "length": 749
+  },
+  "serial": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:30:02.759Z",
+    "length": 648
+  },
+  "monitor": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:30:02.759Z",
+    "length": 560
+  },
+  "section": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:30:02.759Z",
+    "length": 903
+  },
+  "entry": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:30:02.759Z",
+    "length": 729
+  },
+  "ld-dot": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:32:54.847Z",
+    "length": 807
+  },
+  "attribute": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:32:54.847Z",
+    "length": 1089
+  },
+  "freestanding": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:32:54.847Z",
+    "length": 852
+  },
+  "elf": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:32:54.847Z",
+    "length": 997
+  },
+  "addr2line": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:32:54.847Z",
+    "length": 780
+  },
+  "printf": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:32:54.847Z",
+    "length": 981
+  },
+  "string": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:32:54.847Z",
+    "length": 829
+  },
+  "varargs": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:32:54.847Z",
+    "length": 1121
+  },
+  "typedef": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:35:52.681Z",
+    "length": 826
+  },
+  "builtin": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:35:52.681Z",
+    "length": 762
+  },
+  "offset": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:35:52.681Z",
+    "length": 835
+  },
+  "memcpy": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:35:52.681Z",
+    "length": 1085
+  },
+  "strings": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:35:52.681Z",
+    "length": 857
+  },
+  "panic-macro": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:35:52.681Z",
+    "length": 1089
+  },
+  "exception": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:35:52.681Z",
+    "length": 1124
+  },
+  "interrupt": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:35:52.681Z",
+    "length": 906
+  },
+  "trap-state": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:38:48.380Z",
+    "length": 1048
+  },
+  "sret": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:38:48.381Z",
+    "length": 946
+  },
+  "unimp": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:38:48.381Z",
+    "length": 814
+  },
+  "process": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:38:48.381Z",
+    "length": 776
+  },
+  "context": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:38:48.381Z",
+    "length": 976
+  },
+  "multitask": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:38:48.381Z",
+    "length": 759
+  },
+  "pcb": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:38:48.381Z",
+    "length": 849
+  },
+  "kernel-stack": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:38:48.381Z",
+    "length": 1016
+  },
+  "scheduler": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:45:34.740Z",
+    "length": 1085
+  },
+  "first-switch": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:45:34.742Z",
+    "length": 1192
+  },
+  "virtual": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:45:34.742Z",
+    "length": 725
+  },
+  "paging": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:45:34.742Z",
+    "length": 893
+  },
+  "sv32": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:45:34.742Z",
+    "length": 914
+  },
+  "ppn": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:45:34.742Z",
+    "length": 695
+  },
+  "pte": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:45:34.742Z",
+    "length": 922
+  },
+  "bitops": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:45:34.742Z",
+    "length": 950
+  },
+  "satp": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:47:56.230Z",
+    "length": 834
+  },
+  "identity": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:47:56.230Z",
+    "length": 695
+  },
+  "pagefault": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:47:56.230Z",
+    "length": 714
+  },
+  "dump-xp": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:47:56.230Z",
+    "length": 642
+  },
+  "raw": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:47:56.230Z",
+    "length": 756
+  },
+  "absolute": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:47:56.230Z",
+    "length": 821
+  },
+  "assert": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:47:56.230Z",
+    "length": 692
+  },
+  "copy-isolate": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:47:56.230Z",
+    "length": 746
+  },
+  "syscall": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:50:23.402Z",
+    "length": 625
+  },
+  "ecall-user": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:50:23.402Z",
+    "length": 796
+  },
+  "ecall-next": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:50:23.402Z",
+    "length": 670
+  },
+  "getchar": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:50:23.402Z",
+    "length": 830
+  },
+  "exit": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:50:23.402Z",
+    "length": 880
+  },
+  "driver": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:50:23.402Z",
+    "length": 553
+  },
+  "virtio": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:50:23.402Z",
+    "length": 984
+  },
+  "mmio": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:50:23.402Z",
+    "length": 829
+  },
+  "device-register": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:52:41.573Z",
+    "length": 768
+  },
+  "volatile": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:52:41.573Z",
+    "length": 821
+  },
+  "virtqueue": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:52:41.573Z",
+    "length": 816
+  },
+  "descriptor": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:52:41.573Z",
+    "length": 736
+  },
+  "rings": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:52:41.573Z",
+    "length": 711
+  },
+  "barrier": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:52:41.573Z",
+    "length": 841
+  },
+  "busy": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:52:41.573Z",
+    "length": 544
+  },
+  "sector": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T06:52:41.573Z",
+    "length": 698
+  },
+  "disk-image": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:46:13.115Z",
+    "length": 587
+  },
+  "fs": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:46:13.125Z",
+    "length": 594
+  },
+  "tar": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:46:13.125Z",
+    "length": 641
+  },
+  "tar-layout": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:46:13.125Z",
+    "length": 828
+  },
+  "octal": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:46:13.125Z",
+    "length": 691
+  },
+  "subshell": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:46:13.125Z",
+    "length": 502
+  },
+  "buffer": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:46:13.125Z",
+    "length": 814
+  },
+  "flush": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:46:13.125Z",
+    "length": 763
+  },
+  "file-api": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:48:30.724Z",
+    "length": 888
+  },
+  "sum": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:48:30.724Z",
+    "length": 829
+  },
+  "trust": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:48:30.724Z",
+    "length": 751
+  },
+  "ipc": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:48:30.724Z",
+    "length": 485
+  },
+  "multiprocessor": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:48:30.724Z",
+    "length": 699
+  },
+  "microkernel": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:48:30.724Z",
+    "length": 614
+  },
+  "network": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:48:30.724Z",
+    "length": 576
+  },
+  "fork": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:48:30.724Z",
+    "length": 767
+  },
+  "async": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:54:20.567Z",
+    "length": 1292
+  },
+  "api": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:54:20.569Z",
+    "length": 819
+  },
+  "shell-syntax": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:54:20.569Z",
+    "length": 1650
+  },
+  "build-options": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:54:20.569Z",
+    "length": 1767
+  },
+  "fixed-register": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:56:06.155Z",
+    "length": 1081
+  },
+  "statement-expression": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:56:06.155Z",
+    "length": 1184
+  },
+  "float": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:56:06.155Z",
+    "length": 879
+  },
+  "static-disk": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:56:06.155Z",
+    "length": 1099
+  },
+  "endian": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:57:19.861Z",
+    "length": 645
+  },
+  "flex-array": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:57:19.861Z",
+    "length": 825
+  },
+  "checksum": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:57:19.861Z",
+    "length": 876
+  },
+  "device-direction": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:57:19.861Z",
+    "length": 746
+  },
+  "io": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:59:04.334Z",
+    "length": 994
+  },
+  "init-virtio": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:59:04.334Z",
+    "length": 980
+  },
+  "code-basics": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:59:04.334Z",
+    "length": 1124
+  },
+  "pointer-int": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T12:59:04.334Z",
+    "length": 1067
+  },
+  "zero-security": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:00:14.825Z",
+    "length": 654
+  },
+  "license": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:00:14.825Z",
+    "length": 582
+  },
+  "entry-item": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:00:14.825Z",
+    "length": 610
+  },
+  "flag": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:00:14.825Z",
+    "length": 926
+  },
+  "code-predecrement": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:01:59.424Z",
+    "length": 1242
+  },
+  "code-increment": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:01:59.424Z",
+    "length": 937
+  },
+  "code-star": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:01:59.424Z",
+    "length": 807
+  },
+  "code-amp": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:01:59.424Z",
+    "length": 1112
+  },
+  "code-or": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:04:10.435Z",
+    "length": 949
+  },
+  "code-logic": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:04:10.435Z",
+    "length": 1018
+  },
+  "code-assign": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:04:10.435Z",
+    "length": 1075
+  },
+  "code-compare": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:04:10.435Z",
+    "length": 1129
+  },
+  "code-shift": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:05:46.595Z",
+    "length": 1133
+  },
+  "code-arithmetic": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:05:46.595Z",
+    "length": 1205
+  },
+  "code-arrow": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:05:46.595Z",
+    "length": 766
+  },
+  "code-brackets": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:05:46.595Z",
+    "length": 826
+  },
+  "code-parens": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:07:01.133Z",
+    "length": 829
+  },
+  "code-braces": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:07:01.133Z",
+    "length": 781
+  },
+  "code-ternary": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:07:01.133Z",
+    "length": 645
+  },
+  "code-comma": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:07:01.133Z",
+    "length": 698
+  },
+  "code-comment": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:08:30.489Z",
+    "length": 801
+  },
+  "code-directive": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:08:30.489Z",
+    "length": 851
+  },
+  "code-const": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:08:30.489Z",
+    "length": 1064
+  },
+  "code-void": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:08:30.489Z",
+    "length": 996
+  },
+  "code-width": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:10:21.125Z",
+    "length": 1034
+  },
+  "code-control": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:10:21.125Z",
+    "length": 1250
+  },
+  "code-array-pointer": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:10:21.125Z",
+    "length": 1444
+  },
+  "code-designated": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:10:21.125Z",
+    "length": 1112
+  },
+  "code-asm-operands": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:12:10.559Z",
+    "length": 1095
+  },
+  "code-asm-jump": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:12:10.559Z",
+    "length": 1082
+  },
+  "code-asm-registers": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:12:10.559Z",
+    "length": 1082
+  },
+  "code-sections": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:12:10.559Z",
+    "length": 1211
+  },
+  "code-memory-clobber": {
+    "success": true,
+    "model": "gpt-6.1-sol",
+    "date": "2026-11-01T13:12:46.025Z",
+    "length": 1333
+  }
+}
