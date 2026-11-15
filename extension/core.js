@@ -14,7 +14,9 @@
       if (e.priority!==undefined && !Number.isFinite(e.priority)) throw Error('優先度が不正: '+e.id);
       if (e.chapters && (!Array.isArray(e.chapters) || e.chapters.some(c => !Number.isInteger(c) || c < 0 || c > 17))) throw Error('章番号が不正: ' + e.id);
     }
-    const graph = new Map(entries.map(e => [e.id, [...new Set([...(e.prerequisites || []), ...refs(e.short + e.detail)])]]));
+    // Prerequisites must be a DAG; navigation links may lead back to a shared diagram.
+    for (const e of entries) for (const id of refs(e.short + e.detail)) if (!ids.has(id)) throw Error(e.id + ' の参照先がありません: ' + id);
+    const graph = new Map(entries.map(e => [e.id, [...new Set(e.prerequisites || [])]]));
     for (const [id, children] of graph) for (const child of children) if (!ids.has(child)) throw Error(id + ' の参照先がありません: ' + child);
     const visiting = new Set(), done = new Set();
     function visit(id) { if (visiting.has(id)) throw Error('循環参照: ' + id); if (done.has(id)) return; visiting.add(id); graph.get(id).forEach(visit); visiting.delete(id); done.add(id); }

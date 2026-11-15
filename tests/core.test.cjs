@@ -1,5 +1,5 @@
 const {test}=require('node:test');const assert=require('node:assert/strict');const C=require('../extension/core');const entries=[...require('../data/glossary.json'),...require('../data/code-explanations.json')];
-test('all references exist and form a DAG',()=>assert.equal(C.validate(entries),true));
+test('all links exist and prerequisites form a DAG',()=>assert.equal(C.validate(entries),true));
 test('missing targets and cycles are rejected',()=>{const e={id:'a',title:'A',short:'A',detail:'A',aliases:['A'],prerequisites:['b']};assert.throws(()=>C.validate([e]),/参照先/);assert.throws(()=>C.validate([e,{...e,id:'b',prerequisites:['a']}]),/循環/);});
 test('longest alias and ASCII boundaries',()=>{const m=C.matcher(entries,9);assert.equal(m('リンカスクリプト')[0].id,'linker-script');assert.equal(m('mystaticthing').length,0);assert.equal(m('static')[0].id,'static-local');assert.equal(C.matcher(entries,4)('static')[0].id,'static');});
 test('history returns to existing entries and is bounded',()=>{let h=[];for(let i=0;i<50;i++)h=C.pushHistory(h,'x'+i);assert.equal(h.length,24);h=C.pushHistory(h,'x30');assert.equal(h.at(-1).id,'x30');assert.equal(new Set(h.map(x=>x.id)).size,h.length);});

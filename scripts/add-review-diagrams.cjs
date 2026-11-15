@@ -1,3 +1,5 @@
+// Historical one-off script: do not overwrite the source-checked audit corrections.
+if(require('node:fs').existsSync(require('node:path').join(__dirname,'../research/audit-resolution.json')))throw Error('監査反映後のデータには旧一括処理を適用できません。research/AUDIT-IMPLEMENTATION.mdを参照し、対象項目を個別に編集してください。');
 const fs=require('fs');const file='data/glossary.json',all=JSON.parse(fs.readFileSync(file));const extras={
 allocation:{before:'次の図は上の数値例の配置です。上から下へアドレスが増えます。返す値は確保した領域の先頭の番号であり、領域の内容そのものではありません。',diagram:{mode:'memory',title:'連続するページを順に割り当てる例',rows:['0x80221000〜0x80222fff：最初の2ページ','0x80223000〜0x80223fff：次の1ページ','0x80224000：次回の割り当て開始位置']},after:'次の割り当て位置を更新するだけでは、確保したメモリの中身は変わりません。教材では別途memsetでゼロにします。'},
 sv32:{before:'以下は4KiBページの変換で、各段階の対応表を読む必要がある場合の流れです。仮想ページ番号は上位側と下位側の各10ビット、ページ内オフセットは12ビットに分かれます。図は4MiBの大きなページや変換結果のキャッシュ、アクセス権検査の細部を省略しています。',diagram:{mode:'flow',title:'Sv32の2段階のページテーブル参照（4KiBページ）',rows:['satpからルートのページテーブルの物理位置を得る','仮想ページ番号の上位10ビットで第1段のPTEを選ぶ','非リーフのPTEが示す第2段のページテーブルへ進む','仮想ページ番号の下位10ビットでリーフPTEを選ぶ','物理ページ番号と元の12ビットのオフセットで物理アドレスを作る']},after:'各PTEは有効で、必要なアクセス権もあることが前提です。無効な対応や権限違反なら、そのままメモリへ進まずページフォルトになります。対応表の探索とエラー処理を区別して読んでください。'},

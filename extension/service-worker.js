@@ -1,5 +1,5 @@
-importScripts('data.js','core.js','ai.js');
-const C=OSRGCore,base=OSRGData.entries;
+importScripts('data.js','core.js','diagram.js','ai.js');
+const D=OSRGDiagram,C=OSRGCore,base=OSRGData.entries;
 let queue=Promise.resolve();const inFlight=new Map();
 const transaction=fn=>{const next=queue.then(fn,fn);queue=next.catch(()=>{});return next;};
 async function state(){const data=await chrome.storage.local.get('custom');return {custom:data.custom||[],all:C.merge(base,data.custom||[])};}
@@ -27,15 +27,19 @@ async function generate(message){
     const {aiModel='',planConfirmed=false,aiAccountId=''}=await chrome.storage.local.get(['aiModel','planConfirmed','aiAccountId']);
     if(!planConfirmed||!aiAccountId)throw Error('AI設定で現在のChatGPTアカウントを確認し、プラン利用とクレジット利用OFFを確認して設定を保存してください。');
     const context={url:String(message.context?.url||'').slice(0,600),chapter:String(message.context?.chapter||'').slice(0,200),heading:String(message.context?.heading||'').slice(0,300),excerpt:String(message.context?.excerpt||'').slice(0,12000)};
-    const {all}=await state();const known=C.search(all,term+' '+context.excerpt,Number(message.chapter)).map(e=>({term:e.title,aliases:e.aliases,definition:e.short}));
+    const {all}=await state();const known=C.search(all,term+' '+context.excerpt,Number(message.chapter)).map(e=>({id:e.id,term:e.title,aliases:e.aliases,definition:e.short,hasDiagram:D.hasDiagram(e.detail)}));
     const result=await native('generate',{accountId:aiAccountId,model:aiModel,term,context,known});
     const generated=OSRGAI.parse(result.response);
+    const shared=generated.diagramDecision?.existingTerm?known.find(e=>e.hasDiagram&&[e.term,...e.aliases].includes(generated.diagramDecision.existingTerm)):null;
+    if(generated.diagramDecision?.existingTerm&&!shared)throw Error('共有図の参照先を確認できません。生成結果は保存していません。');
     return transaction(async()=>{
       // Reread only when committing: edits and additions from other tabs survive a slow API call.
       const {custom,all}=await state();const duplicate=C.duplicates(all,term);if(duplicate.length)return {existing:duplicate.map(e=>e.id)};
+      if(shared&&!D.hasDiagram(all.find(e=>e.id===shared.id)?.detail||''))throw Error('共有図が更新されました。生成結果は保存していません。');
       const additions=[],prerequisites=[];const created=stamp();
       for(const p of generated.prerequisites){if(p.term.trim()===term)continue;const found=C.duplicates([...all,...additions],p.term)[0];if(found){prerequisites.push(found.id);continue;}const id='ai-'+crypto.randomUUID();additions.push({id,title:p.term.trim(),aliases:[p.term.trim()],short:p.short,detail:p.detail,prerequisites:[],generated:true,model:aiModel,createdAt:created,updatedAt:created,origin:context});prerequisites.push(id);}
-      const entry={id:'ai-'+crypto.randomUUID(),title:generated.title,aliases:[term],short:generated.short,detail:generated.detail+(generated.scopeNote?'\n\nこの文脈での意味：'+generated.scopeNote:''),prerequisites:[...new Set(prerequisites)],generated:true,model:aiModel,createdAt:created,updatedAt:created,origin:context};
+      const entry={id:'ai-'+crypto.randomUUID(),title:generated.title,aliases:[term],short:generated.short,detail:generated.detail+(generated.scopeNote?'\n\nこの文脈での意味：'+generated.scopeNote:''),prerequisites:[...new Set(prerequisites)],...(generated.diagramDecision?{diagramDecision:generated.diagramDecision}:{}),generated:true,model:aiModel,createdAt:created,updatedAt:created,origin:context};
+      if(shared)entry.detail+='\n\n[['+shared.id+'|図：共有解説]]';
       additions.push(entry);const next=[...custom,...additions];C.merge(base,next);await chrome.storage.local.set({custom:next});return {id:entry.id,added:additions.length};
     });
   })();inFlight.set(term,task);try{return await task;}finally{inFlight.delete(term);}
@@ -58,6 +62,7 @@ async function handle(message,sender){
     if(old&&JSON.stringify(old)!==message.expected)throw Error('別の画面で更新されました。解説を開き直して編集してください。');
     const duplicateAliases=entry.aliases.filter(a=>!old?.aliases.includes(a)).flatMap(a=>C.duplicates(all.filter(x=>x.id!==entry.id),a));
     if(duplicateAliases.length)return {existing:[...new Set(duplicateAliases.map(e=>e.id))]};
+    D.validateEntry(entry);
     const next=custom.filter(e=>e.id!==entry.id).concat({...entry,updatedAt:stamp()});C.merge(base,next);await chrome.storage.local.set({custom:next});return {id:entry.id};
   });
   if(message.type==='delete')return transaction(async()=>{
@@ -72,7 +77,7 @@ async function handle(message,sender){
     const d=message.data;if(d.version!==1||!Array.isArray(d.custom)||!Array.isArray(d.questions)||JSON.stringify(d).length>2000000)throw Error('個人データの形式が不正です。');
     const {custom,all}=await state();const next=[...custom];let skipped=0;
     // Import is a merge. Conflicting data never silently replaces the user's existing edits.
-    for(const e of d.custom){const old=next.find(x=>x.id===e.id);if(old){if(JSON.stringify(old)!==JSON.stringify(e))skipped++;continue;}if(!base.some(x=>x.id===e.id)&&e.aliases?.some(a=>C.duplicates([...all,...next],a).length)){skipped++;continue;}next.push(e);}
+    for(const e of d.custom){const old=next.find(x=>x.id===e.id);if(old){if(JSON.stringify(old)!==JSON.stringify(e))skipped++;continue;}if(!base.some(x=>x.id===e.id)&&e.aliases?.some(a=>C.duplicates([...all,...next],a).length)){skipped++;continue;}D.validateEntry(e);next.push(e);}
     C.merge(base,next);const {questions=[]}=await chrome.storage.local.get('questions');const qs=[...new Map([...questions,...d.questions].map(q=>[JSON.stringify(q),q])).values()];await chrome.storage.local.set({custom:next,questions:qs});return {skipped};
   });
   throw Error('未対応の操作です。');

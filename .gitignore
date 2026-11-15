@@ -4,6 +4,7 @@ node_modules/
 /extension/data.js
 /extension/chapter-text.js
 /native/ai.js
+/native/diagram.js
 
 # Local browser profiles, screenshots, and test reports
 /tests/.chrome-*/

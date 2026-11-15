@@ -62,7 +62,7 @@ function Get-Diagnostics {
   AllowedOriginMatches=(@($manifest.allowed_origins) -contains $origin)
   HostOriginMatches=($origins -contains $origin)
   LauncherMatches=($manifest.path -eq (Join-Path $installRoot 'launch.cmd'))
-  FilesExist=(@('node.exe','host.cjs','accounts.cjs','protect.ps1','ai.js','launch.cmd')|Where-Object {!(Test-Path -LiteralPath (Join-Path $installRoot $_) -PathType Leaf)}).Count -eq 0
+  FilesExist=(@('node.exe','host.cjs','accounts.cjs','protect.ps1','ai.js','diagram.js','launch.cmd')|Where-Object {!(Test-Path -LiteralPath (Join-Path $installRoot $_) -PathType Leaf)}).Count -eq 0
  }
 }
 if ($DiagnoseOnly) { Get-Diagnostics|ConvertTo-Json -Depth 5; exit 0 }
@@ -73,7 +73,7 @@ if(Test-Path -LiteralPath $manifestPath){
  try { $old=Get-Content -LiteralPath $manifestPath -Raw|ConvertFrom-Json; $origins+=@($old.allowed_origins|Where-Object {$_ -match '^chrome-extension://[a-p]{32}/$'}) }catch{}
 }
 $origins=@($origins|Sort-Object -Unique)
-$copies=@(@($NodePath,'node.exe'),@((Join-Path $projectRoot 'native/host.cjs'),'host.cjs'),@((Join-Path $projectRoot 'native/accounts.cjs'),'accounts.cjs'),@((Join-Path $projectRoot 'native/protect.ps1'),'protect.ps1'),@((Join-Path $projectRoot 'extension/ai.js'),'ai.js'))
+$copies=@(@($NodePath,'node.exe'),@((Join-Path $projectRoot 'native/host.cjs'),'host.cjs'),@((Join-Path $projectRoot 'native/accounts.cjs'),'accounts.cjs'),@((Join-Path $projectRoot 'native/protect.ps1'),'protect.ps1'),@((Join-Path $projectRoot 'extension/ai.js'),'ai.js'),@((Join-Path $projectRoot 'extension/diagram.js'),'diagram.js'))
 foreach($copy in $copies){
  $destination=Join-Path $installRoot $copy[1]
  if((Test-Path -LiteralPath $destination) -and ((Get-FileHash -LiteralPath $copy[0]).Hash -eq (Get-FileHash -LiteralPath $destination).Hash)){continue}

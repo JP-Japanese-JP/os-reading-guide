@@ -1,0 +1,1699 @@
+{
+  "commit": "5a002242a003eba2f2a76e175d20a245f8f88326",
+  "entries": [
+    {
+      "id": "bit",
+      "metadataSha256": "47b78237e35de81453763b615dbf0ceae2bda009d8a3086fd2c0232d3fa45846",
+      "shortSha256": "4d5b77467f82f335b99545f7830cb09c81cb48b8addedf2bdf09e0aaa065523e",
+      "detailSha256": "b35e4e3fcc096e840807bdf356de2c78f854e28926123ea67ac7bef279082ba5",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "byte",
+      "metadataSha256": "9248397f10ae5cddfc96582903bc6a09e06705b5f85a1435e57f6d5eeb007559",
+      "shortSha256": "470b17f505ab74bdd5bd072370457d88a56ddeaea1f8555252209172ad1dd9e2",
+      "detailSha256": "de0a49cacdb89b6114cc03a18094deaebc87414aa0e3f6e2723d6e24e8a5791a",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "binary",
+      "metadataSha256": "857730f13d03c3557a07c144fb2a93c4c39b8a604149b58a98aeafe079679233",
+      "shortSha256": "a34d1bbe8709a32c554278274e893d7874ceaeaaf21932a063c189e319fff14f",
+      "detailSha256": "e8706037f04ebfb3bc8dab08914b0b88be39bc4fb53db147e7e718d9c8e952a7",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "kib",
+      "metadataSha256": "5b73088b9955873c4ab17f244ae39da88dfaaecbf54c3c7814a316d98916a963",
+      "shortSha256": "e73af9a203e592f271806ac79dea8818905fb6e4cce590714860264c520da689",
+      "detailSha256": "0f08653d15d2fa3861878b2e53c31deb0d7d4a19fe0e36e252f3e78968441d92",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "memory",
+      "metadataSha256": "af999ae5ec00884f2bac194c17509d01cba80ea4c1a9b7cc658152efbdc0d4c9",
+      "shortSha256": "ef51930ad74f19661c7dadd8d9d4026bf2f2f10353418369a8fcaf7b590b13c9",
+      "detailSha256": "3a02db9de597fcdde905c311862287e7bea322a3b9689fca431a0a3ddf427bf6",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "address",
+      "metadataSha256": "12a636514daefb8b41f6891a48c080d0b013fe1a41641833c29afef855d31908",
+      "shortSha256": "c96b3df550790ab88d338974c917d682566363bdd894ebd3c106700f80350a06",
+      "detailSha256": "41238f878721db3103fa1d952e75ad60cc03e7616bd176ebb4027adc6fa86004",
+      "diagrams": [],
+      "refs": [
+        "pointer"
+      ]
+    },
+    {
+      "id": "cpu",
+      "metadataSha256": "21bd1c6078da1105809dad6fc6e0182a0068446e48bc90a1ea92211a7973f281",
+      "shortSha256": "39253a1aaefa237aeb6e31d8906c7acbbef2305d35c5538c40d8ce0592099c62",
+      "detailSha256": "2aad4cf39d7a3a433fe47ccd66f137d031b743dbf56f76333f707795b2de4912",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "register",
+      "metadataSha256": "5d2ae19bd00b7eff9de29bb4f652494628eb8ef7067e117d80176425feac56a7",
+      "shortSha256": "1236435b04f6fa9a800b982574b0d61bf0570d289a1ff3df1a9086a588ae1b67",
+      "detailSha256": "b6c863f0292a70b051962d1cd19138a6d2c3f266d9415a71d9f67a8a90dca60a",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "pointer",
+      "metadataSha256": "d44d540ff4ecd40aa5e329fa49b72810a80adcbd692b8f678e1628856ee100b5",
+      "shortSha256": "2262918dfabde102826e53b327cc291a1d371e3e6109d09ff3bd48fe47827bb1",
+      "detailSha256": "d3d395eed53cbbbd0fdf72ac6b6fcf6b4433666a4de63f5fcd4b400d05ee6604",
+      "diagrams": [
+        "{\"mode\":\"map\",\"title\":\"pの値と、pが指すxの値\",\"columns\":[\"ポインタ変数\",\"指される整数\"],\"nodes\":[{\"id\":\"p\",\"label\":\"pに保存された値\\n0x1000\",\"column\":0,\"row\":0},{\"id\":\"x\",\"label\":\"xの番地：0x1000\\n内容：3 → 7\",\"column\":1,\"row\":0},{\"id\":\"inc\",\"label\":\"p + 1（intが4Bなら）\\n0x1004\",\"column\":0,\"row\":1},{\"id\":\"next\",\"label\":\"次の要素の位置\\n0x1004\",\"column\":1,\"row\":1}],\"edges\":[{\"to\":\"x\",\"label\":\"*p = 7\",\"from\":\"p\"},{\"to\":\"next\",\"label\":\"4B先\",\"from\":\"inc\"}],\"note\":\"番地は仮定。p+1は同じ配列内または末尾直後まで。末尾直後は間接参照不可。\"}\n"
+      ],
+      "refs": [
+        "code-array-pointer"
+      ]
+    },
+    {
+      "id": "variable",
+      "metadataSha256": "5df3d5cfb2586a3252f4abc9b59b0dffd08b64bac75aa6fb3bf5a560931f3661",
+      "shortSha256": "0f28cb05da88010b97a479d43d57646a9853b5f2b108917dd28303ee9eb65fa4",
+      "detailSha256": "4fd72a07d8a0b9752f21ee1cc4790bf925c28e643d4f3c979cfd92416ddc17e1",
+      "diagrams": [],
+      "refs": [
+        "static-disk"
+      ]
+    },
+    {
+      "id": "function",
+      "metadataSha256": "58c248ff5098e5630520f6ff20ff70d2aedb3651556747b76de5cc6052f2dc76",
+      "shortSha256": "cdbb02efa1a8c2249ba454f0f60268cc5a50a8478c87cf38b526afbe3bbb2f52",
+      "detailSha256": "e705e595dc95dbb42e6fc8ea7f75325230e81efccc3d7ab7f474de179ab166bf",
+      "diagrams": [],
+      "refs": [
+        "context",
+        "attribute"
+      ]
+    },
+    {
+      "id": "static-local",
+      "metadataSha256": "7a77fa256b15ecb1960b87c519d690f95b7ca01c67482d7c56cc599b4f8f9adb",
+      "shortSha256": "c75f34cb99114db0b21faaec46d27e0f08aac6553597c383ba51a0db161df374",
+      "detailSha256": "cde52c2fee33c485c069e888d237c77570147a65edebae1b42aca8e3c240425a",
+      "diagrams": [],
+      "refs": [
+        "allocation"
+      ]
+    },
+    {
+      "id": "static",
+      "metadataSha256": "691d938fdb3c88c741745d859212146b13c1f30c8808156f02ca9a5a2c0eb440",
+      "shortSha256": "17c62a57006ba8603437957266f50cbd6bdd3d67f3564d21625340d2d040e42e",
+      "detailSha256": "e6bc45f9f258322c06aab42de843bb3231c06a1b09082a3d5513770cb7821be3",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "array",
+      "metadataSha256": "5f319be30ba6934a09ccbb28a35f5f413530ffc6bcfd4136edc2c0e7020361ca",
+      "shortSha256": "5323808bfbbde7cabc399046658d4baafcf8317f4231f7d8cdcbbef954faaa90",
+      "detailSha256": "4bea78563018d5cc701c4ffc3d855a108ef9373710a3ee2a472d9b92152e9c65",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "struct",
+      "metadataSha256": "f00027984462a5984b698f0e5fbfb02666636a8603d0ccb849cb518c39ddb5b4",
+      "shortSha256": "cf38e36a033f6320a0e268a8c71cd722809fca8bc428f1f2a9abcad149a55281",
+      "detailSha256": "ab9587105b0025c35e72cce29fec932614094530f2e738482509936cfc6ea81a",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "cast",
+      "metadataSha256": "4ce1f838d436d78ee78f75efb2a1201e254883cf1a419bbaca5975fc0a7c0610",
+      "shortSha256": "d9e38e52685dda14feaee958678010e067c76e4517f0f295e57cdee498374d60",
+      "detailSha256": "17ecba8ca6e1fd273ae33eaf8b4095c7249c5beeefbce45daa16251198192436",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "unsigned",
+      "metadataSha256": "2f118e167f1478ec8d4efc923e6e105adb828cf41edc0653e2621bc036368bc0",
+      "shortSha256": "d91a8c3ca51a5a31231273e05aabc8c284ced24c66a680458a3fecdc0a0eb76f",
+      "detailSha256": "4b75ecf238bfe8acd16a372f08659c5848b35a81fb06c6d1de3482dea2547b03",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "size",
+      "metadataSha256": "5488a4db953fb3224f5279437bac896cc2e61ee63bfc6a13a4f4a67ae4638ee7",
+      "shortSha256": "93fba0d8e59d80505249adb1bde38048da93ecca3eecca9c181946c8bd593733",
+      "detailSha256": "f513adfeba0498ea6fbd25e67f7d3d3cc8d9f1078cdba46c48c6673c46f5d3b4",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "macro",
+      "metadataSha256": "9334b067451eb36759ea1a580b3de93c968e7810c1c8a9200ddf7259be147e14",
+      "shortSha256": "12a0a2e7ef7d1456bfe0bdcd794ed06df093d8677288c9af4219f50652529fde",
+      "detailSha256": "75582e7efb563f48161fe8396c6c26588efd6c36c074eb6d486787b8e38ef9d8",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "compiler",
+      "metadataSha256": "7c20e38dca2c86c6cc92a1fbef3fc4adadcd4c11c4c5ffb2c05614ae3ae59b66",
+      "shortSha256": "359fcc5fc17ae8ac8149ab1a7bcf6e860338f961c9a67be611b651d780f38358",
+      "detailSha256": "6a1673284baf92f0d98485a0b199d4cc99000be10eb61c15f4d6a5e711f741c7",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "linker",
+      "metadataSha256": "d08965125675bdb89652343d82d141b6d45d47f05730a89c83d243e7699a5b25",
+      "shortSha256": "152f86e28067b9ae54c14d4357d85b194b56e711b9ff44be9260c3628dbc6bdf",
+      "detailSha256": "7c8c241b79ae7b0a3b458c01a4367d858bfd3960ee262a88821bda2ac1f4bd09",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "linker-script",
+      "metadataSha256": "ff0e90ad448a81dd5f72798076b2fa9d361d2e1e1d73e9bf0070011e8a9335e8",
+      "shortSha256": "7aa15ddedf02183c0d5fc745462d8d783c88a2dc900625bfc0523a5fc5419703",
+      "detailSha256": "80313002dc4f54369e2d4e376f1a6f5cb4712d76b55efcf89ea5da0d816d6cdc",
+      "diagrams": [],
+      "refs": [
+        "sp",
+        "raw",
+        "raw"
+      ]
+    },
+    {
+      "id": "alignment",
+      "metadataSha256": "02c731b1f19773ed4f84526c467de7bc20b42e3b0cc28ecaf77450f273310e3e",
+      "shortSha256": "09316fe204d6c495369bd6e4fefd093d907b5cb22d5644d4cbfcf13e2061d07d",
+      "detailSha256": "a44296d3c918db28ebec39a7ffcb18d07d556a1f8ab8259148a3922d93165685",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "symbol",
+      "metadataSha256": "c78bfaff6aa06739bffb5455f6036b123cefd3c1c46804b2591b09582ff2c8ae",
+      "shortSha256": "4eaaf118586d0b8f88517a473e70e668be8bb8cc95d3330caeaec88934fc8060",
+      "detailSha256": "c272dee49900ed9c889636888c040a3319736f2da16eda1927d769e6d3746aeb",
+      "diagrams": [
+        "{\"mode\":\"table\",\"title\":\"リンカの名前とCからの参照\",\"columns\":[\"Cの宣言・式\",\"使う値\",\"読み出す内容\"],\"rows\":[[\"extern char mark[]; / mark\",\"シンボルの値（番地）\",\"配列式が指す先頭。内容はまだ読まない\"],[\"extern char mark; / &mark\",\"シンボルの値（番地）\",\"&で場所を取る。内容はまだ読まない\"],[\"extern char *mark; / mark\",\"その位置にあるポインタ値\",\"ポインタ変数の内容を読み出すので上の2つとは違う\"],[\"_binary_shell_bin_size\",\"end − startという数値\",\"絶対シンボル。バイト数として使い、その番地を読まない\"]]}\n"
+      ],
+      "refs": []
+    },
+    {
+      "id": "half-open",
+      "metadataSha256": "02d1b7d76842c7853d4e03afbb55ce6dda7051ba1ffd2d5c44ea2ff51896b92c",
+      "shortSha256": "0414795f4bb4ae4f40979c60e2b4963ea610b99995b3f5a3f57d98927e8ab7e1",
+      "detailSha256": "63a2279092b71f0cbcc492963c899f18b8f40154acd6ab11e1990c826836f61e",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "page",
+      "metadataSha256": "078169963099890f74db81d1b448a68d16c85da69367f2727ede591c952ba401",
+      "shortSha256": "c7142660faa1ea2a7c457b405eb55b4332d20d93d53cb3509b3ef570216cdfd7",
+      "detailSha256": "3f05ee2749ab0f2a850a13ae3d5052608d57149c6341af32284480e3c873a6ef",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "allocation",
+      "metadataSha256": "4aeaf9cc8ac17fb4899620e40e0c0b539c217f9f5502482baab9145892390631",
+      "shortSha256": "24bdb6a9127bd22122a9163396bd5aa9ca2b9c558e8b1ff74764b2e12dcb1415",
+      "detailSha256": "3ad7d8c8fe9189b6aef0f1fcdcfe74dc2f2b69a45357c15f04b9be4307e549fe",
+      "diagrams": [
+        "{\"mode\":\"layout\",\"title\":\"返す先頭と、次に配る境界\",\"start\":2149715968,\"unit\":\"バイト\",\"segments\":[{\"label\":\"最初の要求：2ページ\",\"size\":8192},{\"label\":\"次の要求：1ページ\",\"size\":4096}],\"marks\":[{\"offset\":0,\"label\":\"1回目に返すpaddr\"},{\"offset\":8192,\"label\":\"2回目に返すpaddr\"},{\"offset\":12288,\"label\":\"更新後next_paddr（領域ではなく境界）\"}]}\n"
+      ],
+      "refs": [
+        "linker-script",
+        "static-local"
+      ]
+    },
+    {
+      "id": "bump",
+      "metadataSha256": "87312bfa48736f467ef71fb4e85f59d32394070b778d92ab4749d93eefe557cc",
+      "shortSha256": "708e28f66c2ca54bc13bee4e50897fa9237c7e1c70860547bd4c42f2fdbf06bc",
+      "detailSha256": "f14515069664abbe61110a77a5754c604d44cfbebc01d1d339b74f437552927a",
+      "diagrams": [],
+      "refs": [
+        "allocation"
+      ]
+    },
+    {
+      "id": "malloc",
+      "metadataSha256": "219e1f3c588eeb8d34923d1dff02ae1fa4732f5f2efd567f46407cb1c0a6d69c",
+      "shortSha256": "20d9875c633183cd4fd7a8585b1ce6950f14c0b3de76b5408c09459b049637f1",
+      "detailSha256": "884e1319801e0bf4ceda3e430ab44bd4546f08a45281596c5e3be36e170ffbc3",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "null",
+      "metadataSha256": "fd1fa0d3668db99d3b385cad9c748a8dd223ff201917ed0a44ccf8617ef6792d",
+      "shortSha256": "d2b7054d54cfb4652e39a00016e1e1baa06ebb686ad8f3f76367a66be0914a5f",
+      "detailSha256": "ec9d30683929382589b78fc42a0ac06c8c86ccadace7747fb0bebb99e19e5918",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "zero",
+      "metadataSha256": "d68b7359d4cf5a350475442a224dfacdf020754a0f1d15bfb20e7c0f4d6d692f",
+      "shortSha256": "340cc9160c079dbb3d8371fc1fe7dee2b03a1c9f1907a2b65ef3e6c8655e64aa",
+      "detailSha256": "4bf85a185bae8e368366a2db20adf4a7329e85de96d96ed58a973cae1fcb8392",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "free",
+      "metadataSha256": "0703c25fff3e40aa60e3e88d4f032e4ec92419cea4685d688ae6618addd4471c",
+      "shortSha256": "adcaec969f1fb87dc45d7d8a5f2c2e005ea3eaa31a3b99d4a0a4805e1e77eaee",
+      "detailSha256": "b6d2870459fbb74636ec1b74c6d691204683c6259749e291cc06c9dcbc5d2423",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "bitmap",
+      "metadataSha256": "7892905d9232d611e9558180fdac63daeb1f20381799aa818b62932690d4b557",
+      "shortSha256": "3fd2028d6819b53c67e618c4f71ed3030a8757489382c734c69b300629687f77",
+      "detailSha256": "db42eb3ce72623340ebca8decdcf77f1c26f07bc83e884114968c0451699e649",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "buddy",
+      "metadataSha256": "a506387b00a3e4a024e94ea5400beaf622ba1d430336ae19e7d968e91baa720d",
+      "shortSha256": "41ab7473401f470124e54644e2b645fabad39dd8de37fa4b97034c94dfb7c808",
+      "detailSha256": "3ac53c0ed2b6d9ce6f7f670ae9d9224a3b4a7a5f2429590f5216b1e6a23818ef",
+      "diagrams": [
+        "{\"mode\":\"map\",\"title\":\"8ページを分ける：同じ親から生まれた相方\",\"columns\":[\"分割前\",\"4ページの組\",\"2ページの組\"],\"nodes\":[{\"id\":\"eight\",\"label\":\"8ページ：0〜7\",\"column\":0,\"row\":0},{\"id\":\"left\",\"label\":\"4ページ：0〜3\",\"column\":1,\"row\":0},{\"id\":\"right\",\"label\":\"4ページ：4〜7\",\"column\":1,\"row\":3},{\"id\":\"a\",\"label\":\"2ページ：0〜1\",\"column\":2,\"row\":0},{\"id\":\"b\",\"label\":\"2ページ：2〜3\",\"column\":2,\"row\":1},{\"id\":\"c\",\"label\":\"2ページ：4〜5\",\"column\":2,\"row\":3},{\"id\":\"d\",\"label\":\"2ページ：6〜7\",\"column\":2,\"row\":4}],\"edges\":[{\"to\":\"left\",\"label\":\"半分\",\"from\":\"eight\"},{\"to\":\"right\",\"label\":\"半分\",\"from\":\"eight\"},{\"to\":\"a\",\"label\":\"分割\",\"from\":\"left\"},{\"to\":\"b\",\"label\":\"分割\",\"from\":\"left\"},{\"to\":\"c\",\"label\":\"分割\",\"from\":\"right\"},{\"to\":\"d\",\"label\":\"分割\",\"from\":\"right\"}]}\n"
+      ],
+      "refs": []
+    },
+    {
+      "id": "physical",
+      "metadataSha256": "df1c6125eb9dc6cbe1e02b6b299d2967e1c3f0696e56ffd8b1acddf878678c95",
+      "shortSha256": "91e61dc1a7cd53ddeec57abbb51a657fbf4372ebbeaf25480dbfc6f51ed512c3",
+      "detailSha256": "1e827502be73b67d397d1949e4d6cdc546a70b1839d79ff5ebb5d274806c3e5d",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "panic",
+      "metadataSha256": "277c2d2749f8a1f91cc606a68bac4cc21811119731c6d05ff6d6b4e4f564f433",
+      "shortSha256": "c148478e7b58c41196c649969b0818313237684cdeb2d314339a236310b670b0",
+      "detailSha256": "61f7f1172a1535cd806bcdbebc3000aa1dd66c38369d1f4511c4a127343471dc",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "uefi",
+      "metadataSha256": "f75ffa7297faf65736b16e187d5393be2643048f52f58f43d86ab6035df37a15",
+      "shortSha256": "9d239e316e786832fe135d03512cf16ddff12d218ebc1afc3765301537484825",
+      "detailSha256": "53a91a2c2116fbf60bad41be2994b45c4d7c8f8e79b2a12ac29b643070337209",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "nm",
+      "metadataSha256": "e3b9755e298c4e0fa2dbb308fdf1c60589d81623b08c612c4b3119190d18b2df",
+      "shortSha256": "e26679884ff1e849975a7325b982286b9fb21c0e9b83f3d7657c21370c5e08c7",
+      "detailSha256": "39e0ee11abeaee37ff458ce06b7e651453402e5cd3a43a4899960ed966182ac0",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "overflow",
+      "metadataSha256": "aad15451023bc3667dc9e1d9feb08753a7d248d9f09b7c8e25918dba0fd31b5f",
+      "shortSha256": "06b9a5957d2db15b5812fa65375501df979ed05449966b1973d81491586e5a00",
+      "detailSha256": "2c440b8d3212491c980cacaf788d0d51941c7c604e5da089adf29baf806ad76e",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "os",
+      "metadataSha256": "5a5c44e54d9d89658d4f431c9d93716a07463fdfb6f8bb3764fc410eb6a6a8cd",
+      "shortSha256": "e0ef0c9eac76c430f517e78199afe89b78f4e9083dd17108bded6c42708d7159",
+      "detailSha256": "5be5b81a3fc2cceecbdba12c072f48c718b850b50b8fb2ca255b0f8106fcc5cd",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "app",
+      "metadataSha256": "8b5e3fa355a8f922d95f1dd876e5bc052aec98a57a00a33c0eb12895df26412d",
+      "shortSha256": "61390b5f95bc100cfb4a7f83710922b2018eeafba68969c102468bf7b3c6e86b",
+      "detailSha256": "4ea52bb910f72586ee4f56bb6b0d8b04d936e806d2ecaf772941ccaf99fa0908",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "source",
+      "metadataSha256": "6df7108b754a98beab8230b9a40d8352437a592b9f72742d4ad33f1b5c462589",
+      "shortSha256": "df153668bba79a0bf241681532e17b54230a17c658318a6bf060b41c5e256ec8",
+      "detailSha256": "55b06c3eb250144ac3c9e3a2ecaa7a938ed8ff3b18fd37d8ff3a4ce579ba42c7",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "debug",
+      "metadataSha256": "dcb4c2f7375b15ecc04d3797b9bd33136d7ec860a46a7ab6c668fb9c7f711d18",
+      "shortSha256": "890c646ccfcdda7b27933f328f2e48c1493a693820c58d019dd93dafb27292c3",
+      "detailSha256": "85c2899a07a1572eb408bfc461f2ce3e0894827d33419e6967622b5a99efb94a",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "shell",
+      "metadataSha256": "720573c4e28d5751f91046cecedd200d2e3e6ed1b8ae314358ec9f9b9c42dd87",
+      "shortSha256": "1156c1b43f1e27c2816bbb73668339e1c89dc881e8b9629301d7e6b8b07b9715",
+      "detailSha256": "a9e4473583f9eb65450b7688210b68aaf79947b704f495103c8d0016ca583779",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "directory",
+      "metadataSha256": "c57b90c990278210a96a409a571905bc777d15c1ea62dde06ecd726f2862a177",
+      "shortSha256": "aed3a70f757e7f55c10045751435dff336b0bce9dbcde4155e2fca652258f98c",
+      "detailSha256": "b051dcc9ad47adc07fd2a95d35b219d2b93d4541b020b7b2ff40d907b0b876ca",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "path",
+      "metadataSha256": "d4a08df8202b70579389a80cb995756a573736b6123ccae54036c5dd6717dbfb",
+      "shortSha256": "73c0f3a836ca751bf62c67f6656cae0c79ad7dd83150129edca84ec29fe4f400",
+      "detailSha256": "1f4fd65eaa2c23dc082048fb206d5eac4b7b07857ebd1687402ec7b790f9ffe0",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "package",
+      "metadataSha256": "210afb13ac3e4a62206c6a02a9986f9063ff334aaa933ffb18b2e3058081e9f7",
+      "shortSha256": "f867370fb6ec47ab5ede7bdc1a106b24c99c9e7d28fc308cae66f471c4ea465e",
+      "detailSha256": "a88ba6fd34c6558202036e44f74255c5ed7060eb37f5551b224cb277022e20c2",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "wsl",
+      "metadataSha256": "ed904606c33b180c3ffeac490b1ab89c030a21d3bb88ac1c425a806c5d08234c",
+      "shortSha256": "b35039ec2474f8286b505e2cb4f0fc97f2c490b33ec0769cc1dc17c7db4fa3f0",
+      "detailSha256": "644a770274316e2fab91959c41c908301f63a0c1fed669cbaf0358c807f43027",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "git",
+      "metadataSha256": "b0ab5c6490c01d86916c8de66978e55356fe30b4ad16e661fb35a363b72125a0",
+      "shortSha256": "138a7364760354bd74d3c2e89a5e7c104a4f9643847929bcfabaac5549956e8e",
+      "detailSha256": "1e630cf02f4c4d6a1a2fe527f0169079d0a46cd432dc453ebad16be853d459ac",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "qemu",
+      "metadataSha256": "494959fba4b73fa1f84f12cf718dca71ee15844db5a14e4ffdfe18a89caf36ec",
+      "shortSha256": "270f773171048c39a8078331ba2076574743ca067c793d3ca4eff9d32d877684",
+      "detailSha256": "71cfffb848a96d16c6964bff89a96657f656da320b26d56dce1ff455c4a3fc7c",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "virt",
+      "metadataSha256": "9dd5774329a4f5361ddda3eeec3aafbc40d53cfc2b3352d0a334070dc844b4f0",
+      "shortSha256": "bcc79c75d512dc726fdcfb0fae1edba47cc9618642f4ec886bc7f608c0ad6945",
+      "detailSha256": "ad06d3dd36490d9001302c37573253e855d839e171204cdbadbb02a4ef037a0f",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "rv32",
+      "metadataSha256": "b2396453121d120adab1cef2fb6c0b3917bb20919401b42bf1c8c5bf1a51bef3",
+      "shortSha256": "a1fccf3ff6152bf405a8c7db14e53ce4ce33e858b0b354f35c75c9a1b53e8885",
+      "detailSha256": "cea9b5c43a5c36922b337b66efb99ffccef6648f5affc6edcbfc724373ce362a",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "assembly",
+      "metadataSha256": "13c85043c54dfc2369201556970d77c2136d3965c5c97e5bb9dcf54b7d9d78f7",
+      "shortSha256": "b431db81aa0f27878a942b067b71f3359c936c3bc12b8933417ba88ae9f1c813",
+      "detailSha256": "7f70fdd03810ce1dc490a47901485d018538561a953e9402b966f155827a6e3d",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "disassembly",
+      "metadataSha256": "e2c787de8a0053ccad7e6b88fc26e4408cfe3db3db0c7d823f0d47a94ddfa5e5",
+      "shortSha256": "fcfcea099a1920bde225af52efcf34b08a932e91f88c99a69350c32137f63633",
+      "detailSha256": "3fca26226d8a6afb50fbf7219c20b5277c27710a9448da4d60d50f61eb529296",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "pc",
+      "metadataSha256": "9e4fe3ac3008d98cc288ac3fc92e2f650134f7f4b26fd7d3eb02762dc445d51a",
+      "shortSha256": "49c5c8ed945ee018c7fdf481f89dcd6bf53c555c7f7e1871fc3e753d0fc0817f",
+      "detailSha256": "a20a1a19e3e1dddfadf3dad68f462d4395d16398e8960573931adb71ce378618",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "load-store",
+      "metadataSha256": "672468e83c8b6d327dfecaea739d7316e8b546ef20845518ee9f98e8cc93bc45",
+      "shortSha256": "384e784ebd1a134a12e5af68230a6ebe3398192288577b1e35ad8f7a3070b2d0",
+      "detailSha256": "cccf2642656b3bc952284ff30ec0b689abce174f14ef3b714822bacb5a99dfb6",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "stack",
+      "metadataSha256": "880e63d38c2112c564a9279b6163f55bb0b769d1c2d8de396ea056e27f2d1991",
+      "shortSha256": "ae5163b7ec7ecf32b555a3d88749c0755575eb1aa4b76918979b96e918cb2532",
+      "detailSha256": "843b485b2e1c1aa13d55d47eefaeb40ae3e3f918389380d362b31ca54f3cdcc8",
+      "diagrams": [],
+      "refs": [
+        "context",
+        "first-switch"
+      ]
+    },
+    {
+      "id": "sp",
+      "metadataSha256": "9223ab7aa125916b2999e7cc488615581a0f6c057acd3d82c848b927f3daca06",
+      "shortSha256": "0522671a3de7dc6c3d031dd83ed9ff7d27033f8101f2217b9dadbf71ef2e5193",
+      "detailSha256": "747b9c721782eda4ac9b2b373e5b6ac1bf0a210b11fb3c60334848d87f0e1c5c",
+      "diagrams": [],
+      "refs": [
+        "context"
+      ]
+    },
+    {
+      "id": "abi",
+      "metadataSha256": "ad5522af225bedd8bea25cbd706ea7d88cd6bc99f06c37c6fc91b2146bc97bd4",
+      "shortSha256": "b5b324c5fb2038679e9a31dca38dfa5979f752628af42fb02e2483e89cefdd7e",
+      "detailSha256": "48c226938e366350a3666dc9392c2b8ef35e79c73bce8226590b00b8a45af16c",
+      "diagrams": [],
+      "refs": [
+        "trap-state",
+        "sp"
+      ]
+    },
+    {
+      "id": "modes",
+      "metadataSha256": "2e39fb6704b7fc928c66425eb4d5e537983140944a169637b72f0e31ec97b520",
+      "shortSha256": "957745965ec93dff2ac1514b32dd93457b0cd1f180b307f1f69b8565d4b55a07",
+      "detailSha256": "f6b9e9b3e5db4999f21884c848efbde9d48fb636204d4f57a704df9e42c0a700",
+      "diagrams": [],
+      "refs": [
+        "syscall"
+      ]
+    },
+    {
+      "id": "csr",
+      "metadataSha256": "ded979ff83a3dcc1557df58502d0b1081d5f66b820a41aca26dfcdbe9c7acc32",
+      "shortSha256": "3ba3bccc3dcafbf78fce342ae7d80a20b42dff8637aba1a01532bcf6783ef2fc",
+      "detailSha256": "e7aeda8a716f636063b99bc4f2d5b5c9af08db1b0a04eeb87925a3bc8af43f39",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "inline-asm",
+      "metadataSha256": "276b18223f88a3d029ae11132189630c19f504df9376921885a2632cc71868a8",
+      "shortSha256": "59bb005d6ba28aa4ec2b96ad9a055fa01cfd183484196a609c25c38a3af70b43",
+      "detailSha256": "4d6af872772d2f270735a339f323bfc0ba17c0f22d6d245e399164d333a447a8",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "asm-volatile",
+      "metadataSha256": "051e803829d164c0730af2c2d08e5350a87ab5e22e8dca60c6d47da67baa8783",
+      "shortSha256": "fdb6e316196220857e1edc695c19f9b24a9883ba6d3dea8c4e080d9f3d93b7db",
+      "detailSha256": "46105168d4108de52327b277fe893fc9efd1e616342b67aee38373f92ad86b8e",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "clobber",
+      "metadataSha256": "e3962056aa06a1e2df2fc492a03212fed25f87f5bf4438d10e74623051df2580",
+      "shortSha256": "5d9df9f815cdef1585b727de03259215aa11028de4c4b5f7ebc9f141da3ffa82",
+      "detailSha256": "1a5b582d8aaa6d92adccb174e6c53829633523a815661dd401a603697dde1525",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "optimization",
+      "metadataSha256": "b493b6eedd86a22b7c35db359c0e86bf6c0dd29835152028d8c76101d9718c04",
+      "shortSha256": "9b325b3b3f91970ef4d5683950e5e0fc2162de54e476811b7a79ef0524aa4aa1",
+      "detailSha256": "40680ae9d935141cf34337ede19b7a97e130a85e92777df0efa88f1acb3f0651",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "boot",
+      "metadataSha256": "68b3885fec402e8d04462bdb3b66dd159a3fa159d6c8bbe712306417d306f61e",
+      "shortSha256": "decba3415929bdec21f00484ae15876232e91c01586ea7123f86d643a45732c2",
+      "detailSha256": "fc42baa721cdea008893abff8e80a0840b0051a56a56e164889846e30f52ee36",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "sbi",
+      "metadataSha256": "5f8ff8ac604e9acda09ae963e8c180388ed17aaa9a2f7cbc182277591f358855",
+      "shortSha256": "2fb9ba9c73186cf72e8c8b416a6fb426d535746e07fde9fc68aff256a2616b55",
+      "detailSha256": "eccaf28010e3611361eae544a52fcd98f8b5c6c3fe5b29f1da3c146d00f29ec8",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "ecall",
+      "metadataSha256": "6ca193a72d0088d3f54837710364c9e7243485f64b834d21489621cd95a8643e",
+      "shortSha256": "21325b6a304b5a56f70b4a6662c1f439f6d9a64e644f256a5ab32437e6579864",
+      "detailSha256": "48731b1e74ec7c0aafc917612b10ac668aac9d84081cc19f488c7f44ff9672d5",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "ecall-sbi",
+      "metadataSha256": "0b386639839c08a8b4bbb6b678eb14bc371ab3afb53b6da44b6e5d7ab302c526",
+      "shortSha256": "22272492ca9a9705946cafbe4d55a86b8a86b744e92c475e87f75c834ceff686",
+      "detailSha256": "76f6826dbef3b601a94fac68db0c4ba7398e14a5606b61c85b82e498b286f555",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "serial",
+      "metadataSha256": "a5732e8b228a5a793007b2372894a94017977309924b4d40ebce2fe8b16b1c34",
+      "shortSha256": "02b95fb487bea7c7242c3d735c30bae36619281d65974bb731966659bd0787cc",
+      "detailSha256": "adb80b07cbd4f501d07c015aa166d4cbc698ef5d02eca0732377efc58db30262",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "monitor",
+      "metadataSha256": "e44927b1e28ae4c9fbd72e48152c1a29bc2eb9fa3b0ad4ceb17d2b4d4b45d1fe",
+      "shortSha256": "e9c4a915a932c9a21da63b18997e36c93ebb0651261540fdaf7c8c549e4d10db",
+      "detailSha256": "7a55a2f30b618a425988319fb5917eeb4e169d8bf900446b4d43f3a64a6b8208",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "section",
+      "metadataSha256": "fc5d9ef4cce95b0adc77b63d3458d78e6b9d8d4983b5a10532f9b351264ef27f",
+      "shortSha256": "08023c6a37a2374d240e4d9a6850ab5eab22c82352f7a2d81746bd4e2d9797aa",
+      "detailSha256": "60b9644c98c0bba7734cca8a214d7701dea3b27af7ab5411ba0de294f5e6f54b",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "entry",
+      "metadataSha256": "f3136a7eced00eef75699d1cbb0a8129bb8c9f414b7c5e39a7583d80ea028a6e",
+      "shortSha256": "6d1b5eb4e01af50b34ee4f834199951deae2cc17bda009d9b0ffc67d5c7c9d92",
+      "detailSha256": "7feec0a8b3a523956274335258863b64fc2d6be398111ab2bb8643ffd3e3bfb2",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "ld-dot",
+      "metadataSha256": "a2d93a921257dc26e22535c69256ba940335eeeff038ab006ff56aa7bb720aac",
+      "shortSha256": "c629537ad122f94861846ba86e0a83b19347423f46853c6538290e83029d30cc",
+      "detailSha256": "ba16e553f195d90ce5ff532cdd80b5fb4c5a5e8be876fbf61d0810938abeb545",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "attribute",
+      "metadataSha256": "120ebda1aa44f96a11b37b7b309a1991d1cba36ef00e99fe63e75765c3b984ec",
+      "shortSha256": "7011245cf1ac69d70c896e1e5b47c8360bf0ff2af64e9fb97f87f342770a2e88",
+      "detailSha256": "77f1bc44d9f63c0a980d468692f027541d04a19aba0d4c67d1758940215a7e40",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "freestanding",
+      "metadataSha256": "5f42283cbbc8f5cca6eab906204b3ee5108b8bda25a8b0b834efbf700e59dc9a",
+      "shortSha256": "afa3303e4acebb70265382454ad32e5ddf7a310d3dac9ef29b635548243f2a3f",
+      "detailSha256": "ae3c12c3c67d1976395606fdb253f74cda10abb3226affb1eb5fef4a13070fbf",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "elf",
+      "metadataSha256": "677b1f7baa8597d3a47caceb7386b85e8eb90723a17b700ed9ce6dd9d44f1b99",
+      "shortSha256": "dadc7729b255ad04025da5d0480e0027327fd0d4a13c1a1f002a052f701e25a7",
+      "detailSha256": "834f30fd5e4dde2c77ac24a57f8b00334a5fa23267f290bbe62bbd860a892ca5",
+      "diagrams": [],
+      "refs": [
+        "raw"
+      ]
+    },
+    {
+      "id": "addr2line",
+      "metadataSha256": "991f6a675c7f409cf48f28e8198e5e3308be66413b375b02f8866e79ed6dabf1",
+      "shortSha256": "6358e8ee6d55021a82880e75fbe2b386afa34394d7a901ac44acb1e923d0183b",
+      "detailSha256": "db6fe18ba40c185f30a8b046242e7903621f35ba5cf72ba4a6665a2478a8ffc9",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "printf",
+      "metadataSha256": "4b69155296fe70898d4337ad662f2ec0ce17b305947a9d2ce358c43932d22683",
+      "shortSha256": "7496c88d46c2e7c9bb0ee3bbb5f104b477737df941c4bc83fef818bfe7cafb7b",
+      "detailSha256": "91ab1fac1ea19b02cfd4930c7a12cf80b28f466cb85c43e6cca30ddf3c8865c2",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "string",
+      "metadataSha256": "29c411b460b4377ecde32387317da1875d1b08b567515b579722ef26f2238b12",
+      "shortSha256": "07e716e260063aaf2497b4470a9343a9647e34eda9a467e45d474ee7cf52e838",
+      "detailSha256": "ff9aefe5484f5c11b9a37e5c1f177652d7e88975dd4cdde60fb7d7b8627486c8",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "varargs",
+      "metadataSha256": "2d3b4ea0cec773157df7ad4490a94790db038add5644379dca707ec4b38119a7",
+      "shortSha256": "7567d4492a12af3145c7bbdc1edfc9c3e190dc6eb71281a4bd2663a7adb47950",
+      "detailSha256": "916a2318c5b0b4847c8c2a5ef118bc71f0db8b7f4ec95d40fe43e05ab53c30c2",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "typedef",
+      "metadataSha256": "0fb7b4735e5dc3d1f19b473daedea9ee21d2eea72cb7d2f8becc05282347b664",
+      "shortSha256": "8ec18d2ca0e9b42ae116629ea14b092e96e4bc6e70351a732009cb1e9fcc9707",
+      "detailSha256": "e0f0e2574cb4a842b040877cf5e92cc6abf5d9f22a07300e0147c7b8d570aacf",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "builtin",
+      "metadataSha256": "b73f251020577edee4a568a75e40b986a9de78136d900fe544775a061c6da60a",
+      "shortSha256": "6ae15100be1e508bcb9c8d6a2aca6c71043a1c04ba11f26a336e5da73acb5e1f",
+      "detailSha256": "dde8584266852b2f9d584f45d0a9178ff2bee1b275926e615787e6a64b51765b",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "offset",
+      "metadataSha256": "1c37a05ea272c24b6337b24dd9a84e287193cf81936d58c761730bbb76866019",
+      "shortSha256": "2f1ed7092d861f8f75710db4830c9c87f14d8188d09cd42a7c8d379a747132f3",
+      "detailSha256": "0f8b1500ec02fd19b86bab8f65b474918319252c9f59ba88ddff3d674b30f597",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "memcpy",
+      "metadataSha256": "ef8295d1ae85c49ba833387b78838470a7025841b127b73684d8297cd312eebd",
+      "shortSha256": "009aef0102d0aa066818f6c49cdba0f2c97f5cb9cad5321a612da7e97d6135e1",
+      "detailSha256": "b0d786157201b0b6dfd27725e24dc6641196605d594311a10811d7f256e9419d",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "strings",
+      "metadataSha256": "d49d07cadd22b0dd7cdb58bdc4abdce7e1f521f6517d0bfb7d4c7c41c5d9a16e",
+      "shortSha256": "3a841e1259f66e65c59b380f9d0fb5f53f5a65e4c11f1e504327333c3e413626",
+      "detailSha256": "8a0978b52d000ef3ae485d2fd25682dda0af8bfe9accee515d0a8e74efb44f1e",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "panic-macro",
+      "metadataSha256": "6e0a59432f4c7c3f91ab8421ab509128e292c50807bc58586e8a1465f77df4ae",
+      "shortSha256": "3568127c72e9b9b304e7312639edbd6c1907606cd45dd88f2826c528ead14d7a",
+      "detailSha256": "ade8ba64c4494735c1f70f040fa27e36567b01122644bbadd964d819e07b40dc",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "exception",
+      "metadataSha256": "1c7e1ab3afb3f6c2ed8b9326ca4c86350ed82c0c8471f152702028ad50bd6ff0",
+      "shortSha256": "39a31f768902f7b4b615dd703ebe1e9be5a15a61e61838f3b464387813d4abbc",
+      "detailSha256": "521b73cb461c4b23c5d73c3bce7981156c9ceee6e2d9e9becad4c40e94606186",
+      "diagrams": [],
+      "refs": [
+        "trap-state"
+      ]
+    },
+    {
+      "id": "interrupt",
+      "metadataSha256": "63720c5792a2c3be44ca8c1c311727d0c475901c67f1af2034fb65b76c9433ab",
+      "shortSha256": "bbe324876d5c60883b3fe1df6b439ad95d1f5b6a12e631de48ed931a9e5878ce",
+      "detailSha256": "3b5ef17297b0e00c7c9dc0b1c7ada56f5e02ce8f432026c78a300e4881887497",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "trap-state",
+      "metadataSha256": "6c73321fc311a0e7bf999289e8fd9b9d7b60be743d4b38068c9963b5eeca0c33",
+      "shortSha256": "d24be26e7859197504d850bd424afa6e85d735c5d84f38c778ebbbf08f9b53a6",
+      "detailSha256": "a3e534ec4f5be146a26981d6980f148d380ebe28906a6a25215397da6461551e",
+      "diagrams": [
+        "{\"mode\":\"sequence\",\"title\":\"トラップの保存責任とC呼出し\",\"lanes\":[\"CPU\",\"入口asm\",\"Cハンドラ\"],\"steps\":[{\"from\":0,\"to\":0,\"label\":\"sepc/scause等を更新\\n汎用レジスタは未保存\"},{\"from\":0,\"to\":1,\"label\":\"stvecの入口へ移る\"},{\"from\":1,\"to\":1,\"label\":\"spを確保して汎用レジスタを保存\\n保存量124Bと整列は別\"},{\"from\":1,\"to\":2,\"label\":\"a0 = フレームの番地\\ncall handle_trap\"},{\"from\":2,\"to\":1,\"label\":\"必要な復帰状態を決めて戻る\"},{\"from\":1,\"to\":0,\"label\":\"レジスタを復元しsret\"}]}\n"
+      ],
+      "refs": [
+        "sp"
+      ]
+    },
+    {
+      "id": "sret",
+      "metadataSha256": "9d014159af6396cc817dc3b98c480c483e55c902dee01ec29e39a4d09bcb7179",
+      "shortSha256": "e0625911b20d438e65af84780ded2e7223a0b5f61110d19359c70ee43b9e5657",
+      "detailSha256": "14512e9e48a6ffa6c002c238a54e188ca0fa61278061080e40abc2c8c9b0b061",
+      "diagrams": [],
+      "refs": [
+        "syscall"
+      ]
+    },
+    {
+      "id": "unimp",
+      "metadataSha256": "5b4f0b393ca000d42c8bc1e49070b7c1bf0f027d554060ead6f48cba2865c7f0",
+      "shortSha256": "908ec53ebbab657ba4b8a57610f1414d643882a1609a2e6def1955b3f64f52c5",
+      "detailSha256": "c21f6786c8d68edae9daf838fc24d07066afb6bf60c1c6383cd9cc4571e99495",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "process",
+      "metadataSha256": "4e3a4a5d5be19b7770b05a269a90cfda79025674adfa9140931689425329546f",
+      "shortSha256": "7c9d0090c8b541a9fa53289d161eaeccf8ed2545ab7326ef84645c9643404c95",
+      "detailSha256": "a9b6352dc09db79ddd7e082d1322cb975035b5bbf6da86f15956f7217cb4074e",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "context",
+      "metadataSha256": "4bb8201865b058076232e550c82f90c617f102c937d85e5672ec7d0336a76a08",
+      "shortSha256": "88de183170d8e67e12de64472b0a9fcd12907a6582d2586543092a1c1cd9efa8",
+      "detailSha256": "b0e3652ca3c08b115fe81213a529a137bae1f8e8fa96746688a0d87a1f764b1b",
+      "diagrams": [
+        "{\"mode\":\"map\",\"title\":\"AとBのメモリは残り、CPUのspが切り替わる\",\"columns\":[\"プロセスA\",\"CPU\",\"プロセスB\"],\"nodes\":[{\"id\":\"ap\",\"label\":\"PCB.sp\\n保存後：0x8000\",\"column\":0,\"row\":0},{\"id\":\"cpu\",\"label\":\"sp\\n0x8000 → 0x9000\",\"column\":1,\"row\":0},{\"id\":\"bp\",\"label\":\"PCB.sp\\n保存値：0x9000\",\"column\":2,\"row\":0},{\"id\":\"as\",\"label\":\"Aのスタック\\nraとs0〜s11\",\"column\":0,\"row\":1},{\"id\":\"bs\",\"label\":\"Bのスタック\\nraとs0〜s11\",\"column\":2,\"row\":1}],\"edges\":[{\"to\":\"ap\",\"label\":\"Aのsp保存\",\"from\":\"cpu\"},{\"to\":\"cpu\",\"label\":\"Bのsp読込\",\"from\":\"bp\"},{\"to\":\"as\",\"label\":\"保存値\",\"from\":\"ap\"},{\"to\":\"bs\",\"label\":\"保存値\",\"from\":\"bp\"}],\"note\":\"アドレスは仮定。spをBへ替えてからBのレジスタを復元し、raで再開する。\"}\n"
+      ],
+      "refs": [
+        "first-switch",
+        "sp"
+      ]
+    },
+    {
+      "id": "multitask",
+      "metadataSha256": "91a9d3832e1d6e8338b8fd9b4f14bc5deaa37d972288698ebbcc7eeb63d56430",
+      "shortSha256": "b1ffaf5867591deae98e141b1593f8e2eb320f8017c5e7aa00de0196b1f38241",
+      "detailSha256": "4f531050dce05e7f7622c0dbab7c60849032b6819e3111b01857573011e82b98",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "pcb",
+      "metadataSha256": "1bce7f04a252dbeeffe4beb84a5f33b12af96577d198f9cb8efbc53b45dc0647",
+      "shortSha256": "14889a7b9e7a96414f809e59716c5c370ca7e8d51d4222d4fc9f33a0a85fff5e",
+      "detailSha256": "649a31347f6766cd0ab38c328984a94bcb96c3a320cea16d34b16f103d25f056",
+      "diagrams": [],
+      "refs": [
+        "context"
+      ]
+    },
+    {
+      "id": "kernel-stack",
+      "metadataSha256": "320c7e58bffd1697f23ecc7b91c8f881efb806173583435b4a0ce56f35b54e10",
+      "shortSha256": "b1f2c9dc24b85c00a30106acd3daa02b516dd62c5f097d0d5cd2f9d7cef2bcb1",
+      "detailSha256": "cd182f08c934d3301c500794906dd524f0c0b8595dc72ad21d6b0a54fe8f6e18",
+      "diagrams": [],
+      "refs": [
+        "trap-state"
+      ]
+    },
+    {
+      "id": "scheduler",
+      "metadataSha256": "9f2d957c398047bf1519fd36922267fe5aaf4b434248c62235f7c7c4c9103041",
+      "shortSha256": "cc3aef6558f693303f0a5b8ac47c01fa9f29eb49ecc2a72a803ba51c7150bb73",
+      "detailSha256": "635090fabdc19b8bfd8da4640ee79a573415908a75039f89ae1799feacca4a02",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "first-switch",
+      "metadataSha256": "7b5fe8e139705b0a380ed5812cc08430e83b5b6927fdb22e8f5b89003c5a974a",
+      "shortSha256": "fb0caf47e7f5d90abdb725aa8de6f874ba452ae906b825ec93e824c858c21c2c",
+      "detailSha256": "d707b261510b0c7acf066c6af8c9ea8b412777273426243616cec36748708cbd",
+      "diagrams": [
+        "{\"mode\":\"layout\",\"title\":\"初回に復元する52バイト（低い番地が上）\",\"start\":2147487692,\"unit\":\"バイト\",\"segments\":[{\"label\":\"ra：開始関数の番地\",\"size\":4},{\"label\":\"s0：初期値0\",\"size\":4},{\"label\":\"s1〜s11：初期値0\",\"size\":44}],\"marks\":[{\"offset\":0,\"label\":\"proc->spに保存する位置\"},{\"offset\":52,\"label\":\"復元後sp = 0x80001000\"}]}\n"
+      ],
+      "refs": [
+        "sp"
+      ]
+    },
+    {
+      "id": "virtual",
+      "metadataSha256": "0c5a071127b52c075aacc2e398c75fb3e2634830f46627e0070dab745309d33a",
+      "shortSha256": "6cca32836594b6482597c3b9457af4ac35db04d5080c258aa2ad8e6ff9618355",
+      "detailSha256": "2efa3456c372f3b7c5ab3b94c214450bd2772015dee6d944f7bf126a9eeaf2ec",
+      "diagrams": [],
+      "refs": [
+        "copy-isolate"
+      ]
+    },
+    {
+      "id": "paging",
+      "metadataSha256": "1558087cde6f80b108e956e3cd553794c08ffa8877cc38ef57183dc2e7971058",
+      "shortSha256": "97fbbc6f6c3a8120b1d47c55c2281cc815c1752cbe05619a7c513415b066bd00",
+      "detailSha256": "0b547adf649fea2d797acab0942d9cdaa4e6677b0f6db2c92de5d8c7f2839b2d",
+      "diagrams": [],
+      "refs": [
+        "sv32"
+      ]
+    },
+    {
+      "id": "sv32",
+      "metadataSha256": "6124432df131b46286119ddac4f46950f34ee3bcd200bb4892a876a188b83c01",
+      "shortSha256": "edf79e42a665d1c69bdac548b885c236cea7cc03880ff624281546f0f4ea07d2",
+      "detailSha256": "3816c8d2ca9f032a0514bb6847d6da902041b864de0d2ade52e2fa3a883e3411",
+      "diagrams": [
+        "{\"mode\":\"bits\",\"title\":\"仮想アドレス0x2000f034の分解\",\"fields\":[{\"label\":\"VPN[1]\",\"bits\":10,\"value\":\"0x080 = 128\"},{\"label\":\"VPN[0]\",\"bits\":10,\"value\":\"0x00f = 15\"},{\"label\":\"offset\",\"bits\":12,\"value\":\"0x034\"}]}\n",
+        "{\"mode\":\"map\",\"title\":\"添字128と15で表をたどる\",\"columns\":[\"ルート表\",\"第2段の表\",\"物理ページ\"],\"nodes\":[{\"id\":\"satp\",\"label\":\"satpのPPN\\nルート表の物理位置\",\"column\":0,\"row\":0},{\"id\":\"root\",\"label\":\"ルート表の[128]\\n非リーフPTE\",\"column\":0,\"row\":1},{\"id\":\"second\",\"label\":\"PTEのPPNが指す\\n第2段の表\",\"column\":1,\"row\":1},{\"id\":\"leaf\",\"label\":\"第2段の[15]\\nリーフPTE\",\"column\":1,\"row\":2},{\"id\":\"pa\",\"label\":\"PPN → 0x80253000\\nページ先頭\",\"column\":2,\"row\":2},{\"id\":\"result\",\"label\":\"0x80253000 + 0x034\\n= 0x80253034\",\"column\":2,\"row\":3}],\"edges\":[{\"to\":\"root\",\"label\":\"VPN[1]\",\"from\":\"satp\"},{\"to\":\"second\",\"label\":\"次の表\",\"from\":\"root\"},{\"to\":\"leaf\",\"label\":\"VPN[0]\",\"from\":\"second\"},{\"to\":\"pa\",\"label\":\"物理ページ\",\"from\":\"leaf\"},{\"to\":\"result\",\"label\":\"offset\",\"from\":\"pa\"}],\"note\":\"4KiBページで全PTEが有効・必要な権限あり。4MiBページ、TLB、権限失敗の経路は省略。\"}\n"
+      ],
+      "refs": []
+    },
+    {
+      "id": "ppn",
+      "metadataSha256": "50befc00e9803c8318ca66292619c19e10ce6fae7391430e1001341c32572959",
+      "shortSha256": "82bb9d36acf6e02cd2e5e952f71e2404911d1bc32a53fa4f512ea9412e112046",
+      "detailSha256": "083e011c23f24d904933f8c7dcc1327064b33d7165668aad5cf0cfb476303f3d",
+      "diagrams": [
+        "{\"mode\":\"table\",\"title\":\"同じ番号でも格納するビット位置が違う\",\"columns\":[\"段階\",\"値の例\",\"単位・意味\"],\"rows\":[[\"物理アドレス\",\"0x80253034\",\"バイト位置\"],[\"/4096 と %4096\",\"PPN=0x80253 / offset=0x034\",\"ページ番号とページ内位置\"],[\"ページ先頭へ戻す\",\"0x80253 × 4096 = 0x80253000\",\"物理アドレス\"],[\"PTEの番号欄へ\",\"0x80253 << 10 = 0x20094c00\",\"下位10ビットを空ける（フラグ未合成）\"],[\"satpの番号欄へ\",\"0x80253\",\"ルート表がその位置なら下位22ビットへ。PTEのように左10シフトしない\"]]}\n"
+      ],
+      "refs": [
+        "pte"
+      ]
+    },
+    {
+      "id": "pte",
+      "metadataSha256": "654b640cd5d870554bbbd5502d71bdfae6484087b03a06c46a79986267d06fdd",
+      "shortSha256": "3e4ecb1a5ba504d8988b279131a0f29e25c3a4a612282308def192b76e479222",
+      "detailSha256": "eb3a0fe64aeae73c7b8e1454a39a2f10cb88d2487ce33c37055cc7bff90700c9",
+      "diagrams": [
+        "{\"mode\":\"bits\",\"title\":\"Sv32の32ビットPTE（上位から）\",\"fields\":[{\"label\":\"PPN[1]\",\"bits\":12},{\"label\":\"PPN[0]\",\"bits\":10},{\"label\":\"RSW\",\"bits\":2},{\"label\":\"D\",\"bits\":1},{\"label\":\"A\",\"bits\":1},{\"label\":\"G\",\"bits\":1},{\"label\":\"U\",\"bits\":1},{\"label\":\"X\",\"bits\":1},{\"label\":\"W\",\"bits\":1},{\"label\":\"R\",\"bits\":1},{\"label\":\"V\",\"bits\":1}]}\n"
+      ],
+      "refs": []
+    },
+    {
+      "id": "bitops",
+      "metadataSha256": "02b5c26a9ffb60a65fc4be87a12a679a3339fd606260aa5457b65d47f5f196f3",
+      "shortSha256": "382e33cc36743886750baf4b86c8ce86cda7ddca25f294fffc2023f6b0a2868d",
+      "detailSha256": "b06186c7c07593655a4f6c35ee6e90b21f5836495e12dc239d81f4b0d434ab82",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "satp",
+      "metadataSha256": "cb673ab4014de9d3ffc896b2f1306b8969f7a277747a8db5808b76d7a2f0af89",
+      "shortSha256": "b77ae70432220b12dcf4d24291f2d2c0fa4881d24729c1cc931bbda613bbc21b",
+      "detailSha256": "4ca17d2e35c715263aff51db0278ed6555c89063826b186fa12656f12879fa13",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "identity",
+      "metadataSha256": "2c7820d6f8451ab439a2b8c065e345e45d317282737f9eac36bb29ad6713a9e4",
+      "shortSha256": "2c37821d51d3ac30e8999089d3240e68d756f3e7a12e31ce21558fa86ebcc254",
+      "detailSha256": "89da513d690388233ed4bc45ead4930323eabf850ce9b1b6978d3bfce287e949",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "pagefault",
+      "metadataSha256": "8a7399af483ffdfde4b18098f0c1b8b9d157a291e848357d5acb85396e526186",
+      "shortSha256": "2000bd9b09d661be07cfe56ff8c1a9db65acdb8bce5a2ebd59f5b5f35e25131e",
+      "detailSha256": "6ecd876c891becaf5d5d9f708eacec1c6193fdf2a0b408f2572b4147a0028a0e",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "dump-xp",
+      "metadataSha256": "3918dd0da27d6dcb72dafc0213a633db7dde5150c2b5b6b82670a4cd080a9117",
+      "shortSha256": "49db5dc0025915a4a1a5b4b51e5d2a1137504c4e55ddfb5fe83abfa81ee90e30",
+      "detailSha256": "db71f037d26e0ff1732ecbb75a6d15bee3499cfa6b74e662fba2042afe0015b3",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "raw",
+      "metadataSha256": "d55051192afe3d08f2ac375850bf4b9cd187d2e5055bbb25b21f4a54d237ccfe",
+      "shortSha256": "50dacd0b613e2430636e91f8d3620705472e2f36fa320bf32ec67a43a088dae7",
+      "detailSha256": "3596a324f9fe600131893bd4247c8540544d9c7b582d1edfd227b312cfb920a9",
+      "diagrams": [
+        "{\"mode\":\"map\",\"title\":\"アプリのファイルと起動時のRAM\",\"columns\":[\"ビルドで作るもの\",\"カーネルで行うこと\"],\"nodes\":[{\"id\":\"elf\",\"label\":\"shell.elf\\n配置情報とセクション\",\"column\":0,\"row\":0},{\"id\":\"bin\",\"label\":\"shell.bin\\n.bss・64KiBスタックも内容化\",\"column\":0,\"row\":1},{\"id\":\"obj\",\"label\":\"shell.bin.o → kernel.elf\\nバイト列を埋め込む\",\"column\":0,\"row\":2},{\"id\":\"alloc\",\"label\":\"image_size分をページ確保\\n全体をゼロにする\",\"column\":1,\"row\":1},{\"id\":\"copy\",\"label\":\"イメージを各ページへコピー\\n最後の余白はゼロのまま\",\"column\":1,\"row\":2},{\"id\":\"map\",\"label\":\"USER_BASEから対応付け\\n入口・sp・権限を準備\",\"column\":1,\"row\":3}],\"edges\":[{\"to\":\"bin\",\"label\":\"contents指定\",\"from\":\"elf\"},{\"to\":\"obj\",\"label\":\"-I binary\",\"from\":\"bin\"},{\"to\":\"copy\",\"label\":\"埋込データ\",\"from\":\"obj\"},{\"to\":\"copy\",\"label\":\"確保後\",\"from\":\"alloc\"},{\"to\":\"map\",\"label\":\"マッピング\",\"from\":\"copy\"}]}\n"
+      ],
+      "refs": []
+    },
+    {
+      "id": "absolute",
+      "metadataSha256": "018927b3c8bf0fbc14d9cae732c66d19ab75ac99b102da1bc2b8e06bc281eed2",
+      "shortSha256": "c8843310d19815299d52ae5a1bc33f7a3be7b550a126b02290e34174565376a4",
+      "detailSha256": "9aa31241dac7309ce03cc4dd96af6d887a831b2f71cddc0daea08232173c33bd",
+      "diagrams": [],
+      "refs": [
+        "symbol"
+      ]
+    },
+    {
+      "id": "assert",
+      "metadataSha256": "ef3dc0c17bd1a0659bdaeed65356a5ae78b29bfe7b5c43f1c27d35e298863256",
+      "shortSha256": "050f8b7caf68032d2b6a7013aeac3e844193348a4773e3331d570afc37e86a4d",
+      "detailSha256": "3de1b02a6c503019901fbbf7eae4d86ba22dbb5d84255005cfabaa9db7ef315c",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "copy-isolate",
+      "metadataSha256": "b78230db036d757ce15be17f8a216d909f4cc92f1866dd250e56faceb62cfa5e",
+      "shortSha256": "396dc61122a89dfa31ac5fad24307c50111df6aaf251aa27c597b04f3d5762cc",
+      "detailSha256": "2a1cb6d95c70656b0ae041f10ecf0dcb57996ac2f10f419f27375843c12ffd6b",
+      "diagrams": [
+        "{\"mode\":\"map\",\"title\":\"同じVAでも、コピー先の物理ページは別\",\"columns\":[\"プロセスの仮想空間\",\"物理メモリ\"],\"nodes\":[{\"id\":\"a\",\"label\":\"A：VA 0x01000000\",\"column\":0,\"row\":0},{\"id\":\"ap\",\"label\":\"PA 0x80260000\\nコピー後 → Aの書込だけ変更\",\"column\":1,\"row\":0},{\"id\":\"b\",\"label\":\"B：VA 0x01000000\",\"column\":0,\"row\":1},{\"id\":\"bp\",\"label\":\"PA 0x80261000\\nコピー後 → 元の内容のまま\",\"column\":1,\"row\":1}],\"edges\":[{\"to\":\"ap\",\"label\":\"Aのページ表\",\"from\":\"a\"},{\"to\":\"bp\",\"label\":\"Bのページ表\",\"from\":\"b\"}],\"note\":\"PAは仮定。共有するなら両方の表を同じPAへ対応させる。\"}\n"
+      ],
+      "refs": []
+    },
+    {
+      "id": "syscall",
+      "metadataSha256": "312ef8d954ab3e97f8eafc805749206ea1d7e649c5cabab56d3f858f54c1c582",
+      "shortSha256": "c50d5acaa7016baa3b84648f8663150e408ba26b8ddfb6d5b89274cec0210977",
+      "detailSha256": "48dcaef60f5eaedf75240d4d1ee86fc892765ce8309bf4cc6f67d01131639547",
+      "diagrams": [
+        "{\"mode\":\"sequence\",\"title\":\"UモードからSモードへ依頼して戻る\",\"lanes\":[\"U側アプリ\",\"S側カーネル\",\"M側OpenSBI\"],\"steps\":[{\"from\":0,\"to\":0,\"label\":\"syscall関数でa0〜a2と番号a3を用意\"},{\"from\":0,\"to\":1,\"label\":\"ecall：トラップ。通常のC callとは別\"},{\"from\":1,\"to\":1,\"label\":\"trap_frameへ保存し、a3で処理を選ぶ\"},{\"from\":1,\"to\":2,\"label\":\"文字出力などはSBIのecallで依頼\"},{\"from\":2,\"to\":1,\"label\":\"OpenSBIの処理から戻る\"},{\"from\":1,\"to\":1,\"label\":\"返す値を保存済みa0へ\\nsepcをecallの4バイト分進める\"},{\"from\":1,\"to\":0,\"label\":\"復元してsret。U側の次の命令へ\"}],\"note\":\"U→Sは教材の委譲設定を前提とする。全システムコールがSBIを呼ぶわけではない。\"}\n"
+      ],
+      "refs": []
+    },
+    {
+      "id": "ecall-user",
+      "metadataSha256": "198e02bfbacc865f89592642a01ea6c01fbcca6b53c428014657e4c839429cca",
+      "shortSha256": "e97d730fc157d6600c11954e2f8855dac207718f21efba04ce0c0b4e1c77c5fb",
+      "detailSha256": "20dd5679ae22860bde372c277c93c013bcf1b06d8c3ad81c8c6203133cdb9284",
+      "diagrams": [],
+      "refs": [
+        "syscall"
+      ]
+    },
+    {
+      "id": "ecall-next",
+      "metadataSha256": "2b35bab5fdafbb2ddc22e3a32489efbdd8a025dea65fb527c7508c28a5cb8ba0",
+      "shortSha256": "4182f8751b06f751e02ec9a4615e8756035c90811a13e6f580af524fe0aab45d",
+      "detailSha256": "72f4c9e593a9b03ab77c782aaf8c0f839d0595962dc9a3a6adbc68378ce86cbd",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "getchar",
+      "metadataSha256": "ddc7ad9c119315ac4363dfeae4e430f0e2cd8945c03dc27540f63d50bd18ae5b",
+      "shortSha256": "2cdaddeb5a131822a76f2041cdde3fb9ee8750ea71330360420163a855b17b3c",
+      "detailSha256": "888e2afadc900cb5f0a5499171f7b63a558cbc43aa23cea436a76eadf09eb7cf",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "exit",
+      "metadataSha256": "acb87936a959eed5ef75f87dd19a652893f3f72ab43078ca504e1d02aab16b22",
+      "shortSha256": "ee37891d0fe5253fa2b2c47ffcdc43e4f22e86e441f6a03d0706808cd273616b",
+      "detailSha256": "bf4830eecdf3a8792811a1103126f6f63773537b38e801a1bad64ad3e71064ec",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "driver",
+      "metadataSha256": "7cb23941afada30c366fd7a005ef6409fd66d48ff8a355e63fa1b36b2f440918",
+      "shortSha256": "07b63248da85b7af0ce33eecfbd2f2b61d2bd38446e37d804aea069bd6800a14",
+      "detailSha256": "05093511c72fc5cf8ca70dd372e24ae3ec9defda90a8e594d352380c33488d5d",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "virtio",
+      "metadataSha256": "21bb5faa3c89b48b21f3aeb083ad65da57ba2aa6b8d0fdeb3e58a573191c8656",
+      "shortSha256": "9d2d9b03d8a1fa9b9e391d7a617ea16273e64165b8bb48e5e7fe0f024ddbe67b",
+      "detailSha256": "f74d43ea73bdf6be6262f4e7ce0d49032d1bbf6845b37690ce07f406202ab8a2",
+      "diagrams": [],
+      "refs": [
+        "virtqueue"
+      ]
+    },
+    {
+      "id": "mmio",
+      "metadataSha256": "ad5ba0312907be2a15bc41c7dbc226edd06d67780a73a1d67a71333bd9cad3e5",
+      "shortSha256": "5b4c579a9881ad87535db575b5e596fb8aeb75fb107bc49e6173f976486b39e2",
+      "detailSha256": "a08cd809b77972482dad24d609fe311fdde1d1c0fc274ef8c36d4f599aed968f",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "device-register",
+      "metadataSha256": "9ed6b09c3a48029c7fd3594862713bcabe42072a38b55878c221fb699f093d68",
+      "shortSha256": "9daa45fb910293f6c7cbd564e3cfbabb22c4243e69dc205183522da65d226159",
+      "detailSha256": "652e7597800385f7416defe4046b0b84c7e2c5a2a192ca5f5bc980aece878b0c",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "volatile",
+      "metadataSha256": "91b6a25c1fe08abda21d7d258b8a51a8b89333602883deaca48bb9784114dad1",
+      "shortSha256": "751ee962b1f60515c9b61c4d24c3fbae3e6613b01cacdf3f22f635811c169656",
+      "detailSha256": "089002c21c44e35874979477aa6aa30849a87a250ea049dc0207ce1500c9ede2",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "virtqueue",
+      "metadataSha256": "5574f617b77da7c05eb6ffd27a184501fc878a3a270e2b7d89f2584d1da4c0b2",
+      "shortSha256": "1bbef6ebad04bb30cc8cbc6ef0ba6f2bb5c80d1eb5250f4812e0991a1f05b5fb",
+      "detailSha256": "cae2321ea9f88f33b2431d9eab56c9e59b46ff967b93d2df6b19d90b1a0baaa4",
+      "diagrams": [
+        "{\"mode\":\"layout\",\"title\":\"Legacyキューの先頭からusedまでの配置例\",\"start\":2149842944,\"unit\":\"バイト\",\"segments\":[{\"label\":\"descs[16]：16B × 16\",\"size\":256},{\"label\":\"avail：flags/index/ring[16]\",\"size\":36},{\"label\":\"usedを4096境界へそろえる隙間\",\"size\":3804},{\"label\":\"used：flags/index/16個の完了情報\",\"size\":132}],\"marks\":[{\"offset\":4096,\"label\":\"usedの先頭：0x80241000\"},{\"offset\":4228,\"label\":\"この後にCPU用管理欄が続く\"}],\"note\":\"構造体全体のサイズ・末尾の詰物は省略。確保量はsizeofをページに切り上げる。\"}\n"
+      ],
+      "refs": []
+    },
+    {
+      "id": "descriptor",
+      "metadataSha256": "9f40c40c6f80185981f3f8e310c20e1d791aa4fc41a523d3029452cc84f23ab6",
+      "shortSha256": "862262529e2ec07ff8c3f235dd1bb9b863cae5a06d82bb9c979415455a519447",
+      "detailSha256": "b3a8d3e3c44559df00d99a4fcff3cfb819bf0cb71713d2c4ea6ac13326e8c42b",
+      "diagrams": [
+        "{\"mode\":\"map\",\"title\":\"番号のチェーンと、addrが指すメモリを分ける\",\"columns\":[\"ディスクリプタ表\",\"要求用メモリ\"],\"nodes\":[{\"id\":\"d0\",\"label\":\"desc[0]\\nNEXT / next=1\",\"column\":0,\"row\":0},{\"id\":\"h\",\"label\":\"要求ヘッダ：16B\\nデバイスが読む\",\"column\":1,\"row\":0},{\"id\":\"d1\",\"label\":\"desc[1]\\nNEXT / next=2\",\"column\":0,\"row\":1},{\"id\":\"data\",\"label\":\"data：512B\\nINならWRITEあり\",\"column\":1,\"row\":1},{\"id\":\"d2\",\"label\":\"desc[2]\\nNEXTなし\",\"column\":0,\"row\":2},{\"id\":\"status\",\"label\":\"status：1B\\nWRITEあり\",\"column\":1,\"row\":2}],\"edges\":[{\"to\":\"d1\",\"label\":\"next番号\",\"from\":\"d0\"},{\"to\":\"d2\",\"label\":\"next番号\",\"from\":\"d1\"},{\"to\":\"h\",\"label\":\"addr\",\"from\":\"d0\"},{\"to\":\"data\",\"label\":\"addr\",\"from\":\"d1\"},{\"to\":\"status\",\"label\":\"addr\",\"from\":\"d2\"}],\"note\":\"WRITEは機器がRAMへ書いてよいという意味。ディスクへの書込み要求という意味ではない。\"}\n"
+      ],
+      "refs": []
+    },
+    {
+      "id": "rings",
+      "metadataSha256": "686a2813e50fcaf969a6f9b7cbf22d774e8ad4dfa1410ca40d70f9f2c574a625",
+      "shortSha256": "dd6f895e5ee7e4958c844c19b379e226aa25026d82d8de7b06295122607c0c52",
+      "detailSha256": "d672eb4821e12bde10fbd15e4c83bbb80e02173510d6a15426159d0442bb7586",
+      "diagrams": [
+        "{\"mode\":\"table\",\"title\":\"増えるカウンタと折り返す配列位置\",\"columns\":[\"操作\",\"カウンタ値\",\"位置（N=16）\",\"意味\"],\"rows\":[[\"要求公開\",\"14 → 15\",\"ring[14]\",\"先頭desc番号を書く\"],[\"次の要求公開\",\"15 → 16\",\"ring[15]\",\"末尾の次へカウンタを進める\"],[\"次の要求公開\",\"16 → 17\",\"ring[0]\",\"添字は16 % 16 = 0\"],[\"完了確認\",\"used.indexとlast_used_index\",\"used側も %16\",\"availableとは別の完了カウンタ\"]],\"note\":\"16ビットカウンタ自身も65535の次は0へ戻る。表は1件ずつ公開する例。\"}\n"
+      ],
+      "refs": []
+    },
+    {
+      "id": "barrier",
+      "metadataSha256": "89eb236dccdbedf2fcd0b31d167e704127ac51856f25686b09fa5fd29f9fd5a8",
+      "shortSha256": "c190c115111a3916f4c11ab4607538cd887c87b349918e1e94ced658d435fa7a",
+      "detailSha256": "23ad8c0d9eea76c001f96de4a9e1386621f8675b9168a8dde12893125934d053",
+      "diagrams": [],
+      "refs": [
+        "io"
+      ]
+    },
+    {
+      "id": "busy",
+      "metadataSha256": "4ceb61e1e5ec21018801543c0e7ef096b3b9424bad529b08b77742d976019adb",
+      "shortSha256": "27e7a22f5161c78f0b3c1bac93057701556d5b561988754216b46670f613aa0d",
+      "detailSha256": "7b34c9f8f52592799feb2dea7604d75b2e0c714699070e452a3be4067c1bda4b",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "sector",
+      "metadataSha256": "6623b58ec4d1d34ddf9b5883ff552ff0bef7af493ae5c95e89d3c89d1cbc0d00",
+      "shortSha256": "3b73e2c74bf485c3058dde0c1baa5a66d8edecf962e53528cd98ce3a645fd79a",
+      "detailSha256": "244679427b3ee59e7c6481dc8885345706d09f6441a29a5b5b47032cb1f6e2d9",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "disk-image",
+      "metadataSha256": "d80bc36b72b61a4a71078b5d785f11445255d44dcb8addb068cf7dfc72d05a19",
+      "shortSha256": "ea9835e3292999cb1de576ffa56b6c90032126f2ddc2225062cb0cc4b1eac30b",
+      "detailSha256": "329cde72068f1231256540a7918fae9dcb5974e528f18a3bd15622f2ae97618a",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "fs",
+      "metadataSha256": "ad04549ebf9961eae3635d2cbc667b27316be978f755b22941598e443af9855f",
+      "shortSha256": "f188f5926234922dbb078b0ee5c10d0a6771bad733dac4cf1f9aa2bf004ac8c0",
+      "detailSha256": "299ef5d6b663ff7014d6e84bd79ec5c9e7da3f2ade0820913b5aa9dc40989e06",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "tar",
+      "metadataSha256": "252b5b1d1d93842dd909a2eb92737b3f7c1ca4dec7ea5141c932b15e0483619c",
+      "shortSha256": "609cbf79648b6485894b8c527ac5fb51297ee86b2a4ac9762e58d0c7e5ff914d",
+      "detailSha256": "b83644a3883494f92566eb655eb65f32772a003d78a46b5a70cd5afd2f933391",
+      "diagrams": [],
+      "refs": [
+        "tar-layout"
+      ]
+    },
+    {
+      "id": "tar-layout",
+      "metadataSha256": "f329f26764a61529d8432afc2a53e46da9b4e9484f3737e5483ed232d4e80f7d",
+      "shortSha256": "ffc031fe0087280fc68bdcbb0d21facb0b893fd1bd44d7408395fd03640037b1",
+      "detailSha256": "79b9cdf76f4cd6fea539811582aa3663acfa21875d6f80a1b3d164df787a4cc1",
+      "diagrams": [
+        "{\"mode\":\"layout\",\"title\":\"600バイトのファイルの次は1536から\",\"start\":0,\"unit\":\"バイト\",\"segments\":[{\"label\":\"tarヘッダ\",\"size\":512},{\"label\":\"ファイル内容\",\"size\":600},{\"label\":\"512バイト境界までの詰物\",\"size\":424}],\"marks\":[{\"offset\":1536,\"label\":\"次のヘッダの先頭\"}]}\n"
+      ],
+      "refs": []
+    },
+    {
+      "id": "octal",
+      "metadataSha256": "c663dd47bf47df9945e2dc5828e5b1b828f85435107a68a44adbcab1170c2cec",
+      "shortSha256": "a772ff678fec3d176b720e71ac04bed107379aed42506c4634941a70940fed3f",
+      "detailSha256": "9a0e6fa807fd3edb636844a162710e94690b800ebfadfdc91a52354438500b93",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "subshell",
+      "metadataSha256": "bf4bcd57a0e485f60dcd2f6642eb02f1bb0a0e77def28169558183d27cd68550",
+      "shortSha256": "6a63e837e0b72ff9f0174f80bd468c35cccdbd1e15eadc7bf3ed28234b058a13",
+      "detailSha256": "870e765d3b560597cc6347eb7b57cb2cfd0ca31fedc00b447e845fcd4ecf4a56",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "buffer",
+      "metadataSha256": "881143ce0daca4f5bb7fbf6756d85861baef0385c2d43eeb0bdc547eda08b760",
+      "shortSha256": "0ec8f4e8192622ef76fde901c07e59fab3513311cd1d238ad626b05b085a8e31",
+      "detailSha256": "dff3a832a6dcdfd2e0770ac5dea79a9a134c9cee8fe06e36cfe5e405a68e0fe8",
+      "diagrams": [],
+      "refs": [
+        "file-api"
+      ]
+    },
+    {
+      "id": "flush",
+      "metadataSha256": "5b9de989d6f2a6e8797402d6abc39f172c536b5cb786631545d125fea75379b9",
+      "shortSha256": "5ddc92eff55143d323c538f396963cecd995ea90b1eb22140d98fa1c1b33e575",
+      "detailSha256": "76b647a72ea1ecf8f3c0468846bbd27d5d92bccf12c4a75f6da1038743d7b9f3",
+      "diagrams": [],
+      "refs": [
+        "file-api"
+      ]
+    },
+    {
+      "id": "file-api",
+      "metadataSha256": "f170d9ed645566a03ce769f999d99b6f4aff1284c0bea00c1ee4086da695a694",
+      "shortSha256": "f41b1d38703b93a683cf1df37dfca4accb63ee3f8a80c98bb178064d4069f8b0",
+      "detailSha256": "944296bf62fe7a4f42b0fc4c1a1f2b53805c38d97dd312ac134ecc00d0f33d1b",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "sum",
+      "metadataSha256": "40fdd799391aa829e42f35915ad7e05cbed24ee3594e98f1bae8eddab72e2fe7",
+      "shortSha256": "4e7ac4c48dc0e991e18a78b851b50de7c15c7e972e7ffb97f7401a5e2fd46682",
+      "detailSha256": "9077be14f9797b656057ca21e70d0b0b65a240186401e69d27f0fa60235ef89d",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "trust",
+      "metadataSha256": "9228ae643400dcd4977de721b9d24451acfb3e69e043282b21ee07fe0306ce39",
+      "shortSha256": "28688e42ade4faa01327bea02f1c16234a581c7202254d8ad74c47276a3e244a",
+      "detailSha256": "904c62ba965bc50115720de2a59370f3d2de6706183877c58146a597c354c090",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "ipc",
+      "metadataSha256": "24249123ba39b9b06f36216a1fd407c593c19ceda6111099f6e5ad0f1fa0da13",
+      "shortSha256": "8ae439ead8c287dc1541d360a82cb5a4dea3e5ec22a85440b3456d7248b6911a",
+      "detailSha256": "05d2c560253153034b38dbda905ee2acee964c831b05a08d59a61c3700e1506b",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "multiprocessor",
+      "metadataSha256": "ed43deead6864cd51c0157c13057843b329d69e52e5852f236af6c5787164dcf",
+      "shortSha256": "ecde74d0927a05e28a9b59acb82d02e15a28d5d8ffac0b54dc3bf77638ff1bd3",
+      "detailSha256": "3ecd25588e1c773c89e8c19f424713211ee9111109e6809f0679133e2c5d818a",
+      "diagrams": [
+        "{\"mode\":\"sequence\",\"title\":\"同期なしでは同じ空きページを二重に渡す\",\"lanes\":[\"CPU A\",\"next_paddr\",\"CPU B\"],\"steps\":[{\"from\":0,\"to\":1,\"label\":\"空き位置pを読む\"},{\"from\":2,\"to\":1,\"label\":\"Aの更新前に同じpを読む\"},{\"from\":0,\"to\":1,\"label\":\"p + PAGE_SIZEへ更新\"},{\"from\":2,\"to\":1,\"label\":\"同じp + PAGE_SIZEへ更新\"},{\"from\":0,\"to\":0,\"label\":\"呼出し元へpを返す\"},{\"from\":2,\"to\":2,\"label\":\"別の呼出し元へ同じpを返す\"}]}\n"
+      ],
+      "refs": []
+    },
+    {
+      "id": "microkernel",
+      "metadataSha256": "134244ee003ba815c66b8b6954d0bfd5db4646b6eec62f7d5e5c45c060acbdeb",
+      "shortSha256": "4a882c12b36e8f3cf2823939737b252345abe8dad3a42c98cb3db2b35ac4faf7",
+      "detailSha256": "07a4dfe45691ea2d2d1b9b6e4f2b07e7f17f095d9ebd07cd04d8a0f6a50b0b1c",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "network",
+      "metadataSha256": "62826087b6ed11dfbae07b18c50cf2198a9ae7db9bf2f0ac206829782ddb02a3",
+      "shortSha256": "c15eda62447cf7a183acabf3c87ad8b7a9c470f3ed3fd0aa50751a1e3c770bd7",
+      "detailSha256": "cdd5273552bd21b959bb1e6abc4b764bff7ef199f54de6d7a7f54f076bd349cc",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "fork",
+      "metadataSha256": "f364bdebba3d78f4298ef2b6bc9f866c638a1c57a4e3c0f6c5f0bfa6420182c8",
+      "shortSha256": "95df996850b855968468bf96ee0d06ff46bba0ab49298815c925770e7aeaca8b",
+      "detailSha256": "a6c7f2d44ca0b28e3f8ad71498768d5c2fe9fe2f0566116cb712c9376213c251",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "async",
+      "metadataSha256": "9d86e15de5fb32a4a170f6dc77647a49e1d12658282b5dae60c6b670d5fe64a5",
+      "shortSha256": "0bb5fa25e394b8984dd19c1a83a129b27b3e362071d724c332f652880d95b9c1",
+      "detailSha256": "c27af37dcd812db13c68dee3930f5b98b78313c76d70f5037b7e9bcea7923a0a",
+      "diagrams": [
+        "{\"mode\":\"table\",\"title\":\"中断を越えて、何をどこに残すか\",\"columns\":[\"比較\",\"stackful\",\"stackless\"],\"rows\":[[\"再開に必要な状態\",\"独立したスタックとレジスタ等\",\"状態番号と必要な変数等\"],[\"A→B→Cの途中で待つ\",\"呼出しの積重なりを保存\",\"対応する中断点の状態を値へ保存\"],[\"再開\",\"保存したスタック等を復元\",\"保存した状態に応じた処理へ\"],[\"教材との関係\",\"プロセス切替の考え方に通じる\",\"教材がこの方式を実装しているわけではない\"]]}\n"
+      ],
+      "refs": []
+    },
+    {
+      "id": "api",
+      "metadataSha256": "88e77e628aa784acb8153d4f48b9196e268083e9c018d35c8f48c1c89cfe3f19",
+      "shortSha256": "f3eec081b7092d793ead6445825857f353e9b56802622870a5d146d91e4b1709",
+      "detailSha256": "74ab137dd4a92a2ed35b096bbd5445e646c97cd3c3cacf9adb5cec6e5a506530",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "shell-syntax",
+      "metadataSha256": "ba2c48d80ac2b24fb5c33637f3cae4fe456236ef4712e07d03eb197edf8aa2eb",
+      "shortSha256": "0e3d4a2acf1ef9069442e7f38e89a15a7683692127154e3d896319689679e040",
+      "detailSha256": "b52503b62c15f6d3a6c5493311f6a52b959dfcc015e9b6df207a731d08d99076",
+      "diagrams": [],
+      "refs": [
+        "tar",
+        "subshell"
+      ]
+    },
+    {
+      "id": "build-options",
+      "metadataSha256": "b0e748be9a537bb467b5c7ffc1355e21c0134f9ac968de26bc71eaf53bf5c51f",
+      "shortSha256": "e35b46e562b1222d4f8b03f81be04f14947519535302fa7c8e7160dd53d00efa",
+      "detailSha256": "c23edef456c87c023bbeadac2addf65319d0a0c41110268cdb775e45da8eaa50",
+      "diagrams": [
+        "{\"mode\":\"table\",\"title\":\"どの工程に効くオプションか\",\"columns\":[\"工程\",\"代表的な指定\",\"確認すること\"],\"rows\":[[\"コード生成\",\"--target / -std=c11 / -O2 / -g3\",\"対象CPU・言語・最適化・デバッグ情報\"],[\"実行環境の前提\",\"-ffreestanding / -fno-stack-protector\",\"標準起動環境や検査の補助処理を用意するか\"],[\"リンク\",\"-nostdlib / -fuse-ld=lld / -Wl,-Tkernel.ld\",\"リンクする部品・配置\"],[\"生成物と起動\",\"-o kernel.elf / QEMUの-kernel\",\"作ったファイルと動かす仮想環境\"]]}\n"
+      ],
+      "refs": []
+    },
+    {
+      "id": "fixed-register",
+      "metadataSha256": "2690c842aab9da98135e25958f47feae10b222da1e3adbfb1d2465449f929263",
+      "shortSha256": "f2489f6129e38ddf15adb1ff1e0dfbc041a49a79387f86b254cfa7e2ddfce06b",
+      "detailSha256": "b29c35973eeb96582e2cc7ba926ca5451b4a1054656fb8b15d8ae270a93d1b13",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "statement-expression",
+      "metadataSha256": "2a846f6f7a762c6275b2ed5c633a527048ab27ab60d081a3d8ff2f1375dd4d62",
+      "shortSha256": "b17ad4e5e8fd8ad8fb2abd17753ef6e17757af4ede980ac7e04f8417e0dc789c",
+      "detailSha256": "beee2f07a24b15a60cdd50b07920e79315d6842976ca8818ff600768d42754a6",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "float",
+      "metadataSha256": "0f65f221720f69e872b3d6cbc33d9626565492cd015d56f5384df89833459638",
+      "shortSha256": "8b0f5dde4a560386b005565d20525461ca7b412f73bbaf6ab942d37b05e5a4a3",
+      "detailSha256": "ecca051a9b7bf886966f6da144429fe6691ff87cd89509fcb0c571e8bc891589",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "static-disk",
+      "metadataSha256": "7c31a289d4ebcbf451acc7e68467ce2f435fc8a06d4587795c7cd77cb31afdc3",
+      "shortSha256": "72787a7e84cb6473ad55363b647dddbc97178b69dd3ed5e6eb58d1128544a977",
+      "detailSha256": "24d9a13f14aed006d3a7802a1760c589070d4a240e3496cd54f4b7aa9f884482",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "endian",
+      "metadataSha256": "cab81675e3b33b2df1d6fd4b370d889f0d415c229f07833b12645f14adaf0d54",
+      "shortSha256": "f0a697f8330828716229e7dd83fd1403671dd7eb97b14684084f7a9e1f52980f",
+      "detailSha256": "e2ee436633d60fb9ee6b15f10205f992b527b59bfc5598c8180727b70c35f44a",
+      "diagrams": [
+        "{\"mode\":\"table\",\"title\":\"0x12345678を4バイトで置く\",\"columns\":[\"番地\",\"Little-endian\",\"Big-endian\"],\"rows\":[[\"0x1000（低位）\",\"0x78\",\"0x12\"],[\"0x1001\",\"0x56\",\"0x34\"],[\"0x1002\",\"0x34\",\"0x56\"],[\"0x1003（高位）\",\"0x12\",\"0x78\"]]}\n"
+      ],
+      "refs": []
+    },
+    {
+      "id": "flex-array",
+      "metadataSha256": "d32500feef8ebf1052afa48cf213318547a92dc259d2ccf176a0be6ce9610dee",
+      "shortSha256": "637f85053f60002d6fdd2ba4dfc410c26c5a3e6879ad446ca858198e17e69bb1",
+      "detailSha256": "caaabed5609f8e67608b36a3a138f65beb9e0fe064082e7f8b6724e1857fba87",
+      "diagrams": [
+        "{\"mode\":\"table\",\"title\":\"data[]とポインタメンバは別の配置\",\"columns\":[\"宣言\",\"構造体の中\",\"データの場所\"],\"rows\":[[\"char data[]\",\"データへのポインタ値の欄はない\",\"ヘッダ直後の追加領域。sizeofには追加分を含まない\"],[\"char *data\",\"ポインタ値を保存する欄がある\",\"その値で指す別領域。別途有効な領域が必要\"]]}\n"
+      ],
+      "refs": [
+        "tar-layout"
+      ]
+    },
+    {
+      "id": "checksum",
+      "metadataSha256": "2eec95d298bc321b5fb6e1fabbd87de4b71f461ff482262f63d275629a2dfd6e",
+      "shortSha256": "37e9066bea85144742e5e8735f03269fd9809a9b88d12ca259f076e79c8bba48",
+      "detailSha256": "70a83052c09dff712eca8e8cadb1078372265c393dfbd984e1aa89e901ad1735",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "device-direction",
+      "metadataSha256": "9ff532ccfd08e2b5c18deba75f294d57b36fd8a816ae710c1fb66284f8424471",
+      "shortSha256": "27cc2294cc94ff82d498694edc8e3ef47f18a63b54bbcba7de01584cafe440cf",
+      "detailSha256": "12d80d58853df7fd50af003767f562d6079f178a5ffb02bd83b6feae96fd87f8",
+      "diagrams": [],
+      "refs": [
+        "descriptor"
+      ]
+    },
+    {
+      "id": "io",
+      "metadataSha256": "3fe6be981528393c86efa141539b47a783971fe5084f80ad8e0410b59d79fa79",
+      "shortSha256": "eee2510865bbe122846713e3b307a50fd251c1f794fd4e4db36cb35b74a1109f",
+      "detailSha256": "2e2276b83a3ef238804d90fecd21a1a1a5d912aaf6add2acaadbff24822484a1",
+      "diagrams": [
+        "{\"mode\":\"sequence\",\"title\":\"要求の公開から完了確認まで\",\"lanes\":[\"ドライバCPU\",\"共有RAM\",\"デバイス\"],\"steps\":[{\"from\":0,\"to\":1,\"label\":\"ヘッダ・desc・avail.ringを書き込む\"},{\"from\":0,\"to\":0,\"label\":\"公開前のメモリバリア\"},{\"from\":0,\"to\":1,\"label\":\"avail.indexを進めて要求を公開\"},{\"from\":0,\"to\":2,\"label\":\"必要な順序保証後に通知\"},{\"from\":2,\"to\":1,\"label\":\"要求を読み、data/statusとusedを更新\"},{\"from\":0,\"to\":1,\"label\":\"used.indexで完了を確認\"},{\"from\":0,\"to\":0,\"label\":\"必要な読取側同期後にstatus/dataを使う\"}],\"note\":\"教材のindex++後だけのバリアを一般に十分とは扱わない。通知・完了・成功は別。\"}\n"
+      ],
+      "refs": []
+    },
+    {
+      "id": "init-virtio",
+      "metadataSha256": "b1f041a2b56d8a88dff7f8a641dcea092d355d7a4d2b51b01ebafe1ae879557a",
+      "shortSha256": "f9dcaf636253ce8337efe7d026c9ec85ce5eb4ab70fd37e9c37ff61f74e384b8",
+      "detailSha256": "f119b91bf514485631dde807d2aa6284138b1704e4fdddca052eb576c3d66741",
+      "diagrams": [
+        "{\"mode\":\"table\",\"title\":\"状態ビットは累積する\",\"columns\":[\"段階\",\"期待する値\",\"掲載コードの書込値\"],\"rows\":[[\"リセット\",\"0\",\"0\"],[\"ACK追加\",\"1\",\"1（OR）\"],[\"DRIVER追加\",\"3 = 1 | 2\",\"3（OR）\"],[\"キュー準備後DRIVER_OK追加\",\"7 = 1 | 2 | 4\",\"4のみ（write32）\"]],\"note\":\"Legacyの例。ModernのFEATURES_OK等をそのまま混ぜない。\"}\n"
+      ],
+      "refs": []
+    },
+    {
+      "id": "code-basics",
+      "metadataSha256": "68054da266f5d17445edb9e1474abf43fa73bf32f9c9e7a71fb1b88f8e59d58b",
+      "shortSha256": "3b53fd665ac2865ebfa9ef46406431d9eaf4772834a674e92f36f53a6a407d70",
+      "detailSha256": "e6f692e341780cd34f45ced170c7fe06562d4b9c8b4235e0081d6d4b9299558f",
+      "diagrams": [],
+      "refs": [
+        "code-control"
+      ]
+    },
+    {
+      "id": "pointer-int",
+      "metadataSha256": "ff1ca78d44da41e744e46fbeb0d6da619c85e29f28b067d4d5889b7285595b4c",
+      "shortSha256": "a617077387491c58d074d3baa58193954736c0a2accfb1e5135acf78c2c902ce",
+      "detailSha256": "4d910e0c8c2a7282d9d13852821488d8fe2eecaa9ffae3d562b750eda6a2eb62",
+      "diagrams": [],
+      "refs": [
+        "pointer"
+      ]
+    },
+    {
+      "id": "zero-security",
+      "metadataSha256": "d2575e92c48e5894c397eb8183aeaf02d1622bc89f28e7a85102ee2090865fc9",
+      "shortSha256": "6fcec81ca597da452ced4511754c5f663e79b018dc7164c389dd00323aa91421",
+      "detailSha256": "827b91fc35a2cafc64218181a6c11180a667f4c478a99578a6e981167f89519f",
+      "diagrams": [],
+      "refs": [
+        "raw"
+      ]
+    },
+    {
+      "id": "license",
+      "metadataSha256": "45e9cb0cb7393526de2cf552cfd32244f80a636c39d79eba36e79b569d89933e",
+      "shortSha256": "e78d9cbb82b39aeeb3b36179ee56e04de3af5969531b18d4d86081a24e9b8317",
+      "detailSha256": "7ed08befb905a41ce33b4a9e285e611c3786d69a5e4d312bcd3360a029cef991",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "entry-item",
+      "metadataSha256": "538e0d51566c1e6398d6bf2fd815ca9d10e3ebb97d2eabf09949aa230f860975",
+      "shortSha256": "a18ce3aeda0a1fda4c2a3e40b2f6c08f363d04fb386fe885a454398bbb18b0a1",
+      "detailSha256": "e0e9cf949b8fb2c7564a7f99988bc5342148812b6bddb972cb1fa4462774c523",
+      "diagrams": [],
+      "refs": [
+        "sv32"
+      ]
+    },
+    {
+      "id": "flag",
+      "metadataSha256": "29266cce3c1b334b6427194fe505c78e5592268d19b7a443d4aff7c8d247ba9f",
+      "shortSha256": "bdfe919c09903ad67767185d2ad23c8fa6cfab1b8f28472dcfa11fb69c01124c",
+      "detailSha256": "b818fe341745c0eb5d577943bcb8d850d4b8be8f28d465172d0d9840257758df",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "code-predecrement",
+      "metadataSha256": "579c99067fd71a1d999d1203f18ac9d665b325899741b55546e89295988591a4",
+      "shortSha256": "1a35e777050bcc78d1b24de5a200e60796297aac9c1a18845af5675eccc7ab00",
+      "detailSha256": "628e3e2d2aedbd7a522a2d8f2797afb4ff38a3f5f7f057bf15eda3d37171a3e7",
+      "diagrams": [],
+      "refs": [
+        "first-switch"
+      ]
+    },
+    {
+      "id": "code-increment",
+      "metadataSha256": "efd49232a8e62cc5e420b1ebb929e84caa2c8206190b7ec7cd5f0b396485cb28",
+      "shortSha256": "2e30b110b8e6e63190542fbc9ba351f41f3c2b8b510dc3a9cf19d61f7d57020e",
+      "detailSha256": "88c33c176ddbfa687145a1a4c582c0f8f852bef1762966a69a45358ffabfda0a",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "code-star",
+      "metadataSha256": "69b8c0391af36a0e01c7bb99a807e141080479d236257ca0ebe1ba7988986be7",
+      "shortSha256": "3d939a2f33f773f50abaa1e9803ae156969fa6e75edb0e5ee1f1882f82d83d5f",
+      "detailSha256": "00dd649fdb8ed9211f98867b213e256c6157b40284028c0ced3ceadeaed91067",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "code-amp",
+      "metadataSha256": "5657b0626aecc57fa8eb0567d5734a6a22f52112ee02f76ae23c02adf684cff6",
+      "shortSha256": "4a0fdfa3bc62ac962922c3a203f48d7c767175019bd1691dce1c4c592643ee52",
+      "detailSha256": "1703ea9e25dbaddbc8d424996fde22439d60c3ec46636fdeb729bb4cdc655332",
+      "diagrams": [],
+      "refs": [
+        "code-array-pointer"
+      ]
+    },
+    {
+      "id": "code-or",
+      "metadataSha256": "022f6f5f0096298441e630b4977e821d111da76dc89e57bece7ff1d5b64afaca",
+      "shortSha256": "91e476e1be3d474e4e21bc8dc516ce1866b5f7b4d4bc4ec13222066e1e01ce8d",
+      "detailSha256": "96d2aeeb67c0b122e147a44f865982dc1514f129d0f57e4d667f99ca826f4f55",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "code-logic",
+      "metadataSha256": "a89c0c05e5d7198d52a8c1351334cf4bc7092a4d42cc71d8932dcb056ad8767a",
+      "shortSha256": "59b1f6c0516b9d5cd233f8d29665be97229a103f7f17a2e3f614cc01c8e73856",
+      "detailSha256": "d4b73f90a772990227829b94098fc5a0b19eca3cf9925b813f1da5ae8e0adbbc",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "code-assign",
+      "metadataSha256": "4cc6ff94f747bf10464fcad02b0e98dcf8a1345727a5a9a68b6366e2720dd68c",
+      "shortSha256": "cd309c079bf9dadbf80cf92d935557dabb15d0b892ae9da61133ed66852c5b29",
+      "detailSha256": "788ad80bd894ce625b4bff7467d0ac9c0feced3b1d174b27aa9e21d937252ff0",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "code-compare",
+      "metadataSha256": "b0f35ac37b96c2b2c336ceea09f6363011129f1f87126d7625333c8ca839a1d5",
+      "shortSha256": "1f98a0495cf64ef511995239fc8757eab7e75b01c2dd0531c3cb5ceea141ecd2",
+      "detailSha256": "1cc15f3436a47219a2ed4c9ca021d63ecfe58fa79d95d3963504a67b62c63d5c",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "code-shift",
+      "metadataSha256": "aa2864e1d694a03b1e9539c84c5c8bd766559e76e6c0cf1062afe4ab022ef0df",
+      "shortSha256": "0019346c5756b5dd8a725efa961413a83e5cfb320abe3a0b334ce739d65b403d",
+      "detailSha256": "efcc2127c73a0e43b4446637f9653374cdcdbb5125d8839a6093456c344cf700",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "code-arithmetic",
+      "metadataSha256": "d0202083fbe80f654838b412e485b2dabe8b02366362bfc660f663331e9df53a",
+      "shortSha256": "eade307194467b1c50c7ed32f7b495001c402b6eaf50785761672ff45c9bac51",
+      "detailSha256": "996580618a155ea91da433735603d5512e518f71c41db2d6b1184e6a66220e5f",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "code-arrow",
+      "metadataSha256": "7fb850e4925b5198ce3a8fc9410bd1fa124c278906b463e961adc755255c609e",
+      "shortSha256": "e64702b3a06388f99a6b4722bb8db2b443b94698cd1458925e0303976a6465c6",
+      "detailSha256": "f9bcc6b75c3e8e37ea0c5448423669ced0e55a3301561a00cd74e9f9366501ab",
+      "diagrams": [],
+      "refs": [
+        "code-array-pointer"
+      ]
+    },
+    {
+      "id": "code-brackets",
+      "metadataSha256": "6e4b84d535a6fa82dd55892681d872ea23503ee7e782f8ee490cb4015b5e032a",
+      "shortSha256": "0cbc4a3276e0d5ac6852d2a4086c28e1cde3ce3261c3504eadb7a17cc6d6f726",
+      "detailSha256": "930dbb21cb5aade767d2960a9fcbb6449f711759d1284002cabc952d32f83a8b",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "code-parens",
+      "metadataSha256": "3a6e3b084de50f88798420e9958c143a62c76a221c706617a92bb0e3b9fffc76",
+      "shortSha256": "68d03ba515d94277e4072cfe697ceb5f3b0786791d694bf0b0e457fe6a8c3545",
+      "detailSha256": "22fffb41defeb7cacf41a381b8aae2483afe28fc3aa11b1984d44ed4ce16b074",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "code-braces",
+      "metadataSha256": "9e73a1dec2a18658beca25d9b1e476857c7289faeb5d8cd9b0b0844265c484dc",
+      "shortSha256": "79222765c94b9679912243c1dc5b072a67c669efbb9347b0220208a20e8899e3",
+      "detailSha256": "3c693e4f9eaad234061c0a263cb717b61d50a75b99c3175b6730c0cf520d6906",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "code-ternary",
+      "metadataSha256": "ddaf994fbe31bfe74849d4ecbb919c0268f78ba32634edac51247f09269c44a4",
+      "shortSha256": "e1d6e458fb1fab65f4e902775ad5a659d54c3e612fdc4027606991296fab037f",
+      "detailSha256": "121044065109f8571caaf61cf9b276ecd76ba8e08c38e42aa09f1ae5f5af99f0",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "code-comma",
+      "metadataSha256": "fafae3d07e9c0044557b56542fe1eb4df813584dbb90697d9d25f19b1af8ca85",
+      "shortSha256": "68182c3f8cba91861f3978d879aaca06aeb459132bc45e8e5b22af8c31b5d1c7",
+      "detailSha256": "ff03fe46beb04b12f82b0bab3175bdc9104a2016898b1737cd1989d69e0f00ea",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "code-comment",
+      "metadataSha256": "ed37574c277a5beb602c7ec79b00ba2d37426258f477d62c0ae7e42aa56b26d0",
+      "shortSha256": "ff8cf0f022233acd12b5c0888b25406eef863a081e2aa9973cde4598ff7167de",
+      "detailSha256": "f9ef1e266155de8d7345e33f4f93de6052bde53c1cf1cef149b1768228ba2f64",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "code-directive",
+      "metadataSha256": "1be9fcdc53a280e786c3c7d3584f77a22e385e3afd96b4b8c257c38f609786b5",
+      "shortSha256": "48a683cf379ed08f9c67d78394bb42db979b9e71d27973732dfec4112b47d83b",
+      "detailSha256": "4a60535887d538892cfaff8652cade285c9bca3514b21f97cba8f1bf22d5638c",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "code-const",
+      "metadataSha256": "bbdb61b5697820b036fac3655bf85d1eec8ca8f69edbef9efccc9ea0a93c8fdb",
+      "shortSha256": "7bbd5cc460431f0a019d04589c5db7f26919a4434f357e3a41a6c58ec6acb5e3",
+      "detailSha256": "ba1888962016f30d89d6b2e028968c1dd8eb9c48197facb81ccd7806a047a737",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "code-void",
+      "metadataSha256": "74605f773944c33fe759e8e2ddfdbf87c05a93bb95f2091c067d65321363a209",
+      "shortSha256": "8af2e7a75f79e3d863764bf74e6180bd6f8a3d2bd7a07ab728f02b1bf06acb4b",
+      "detailSha256": "22a09dcaf66c592ee80d9088223ea1e27c6afb391a89c0a5875d59d024c5b5ba",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "code-width",
+      "metadataSha256": "675b8e0485ecbba643fef22a749aeb9599d378fe2f97450c4273f6ae0e61f751",
+      "shortSha256": "0fca002dd98a08e4021f77478dda18d7361dca83e0df5f92388141375920e8df",
+      "detailSha256": "a7d8cfb560c2fdeae782679e6614124a1501439ec49fcb6c71bad52be2cc1030",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "code-control",
+      "metadataSha256": "778571bdc0a76822ec6d592c42efbf810f5525a52ed81897ba603eb67f1161fd",
+      "shortSha256": "4a741e5a970291d6bcb4fe82b943fb4d83b68697ba6a4ec861ffc338515e2cf3",
+      "detailSha256": "d6569964d026c109af66a461cd9e866c779286e684550c09613b8cbc600c7bca",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "code-array-pointer",
+      "metadataSha256": "fbed9b8e6c44d7510c0d9f9997e432d97ef23545e9d467816267054684067795",
+      "shortSha256": "94450fceac0508973a0b5c0b5a07f2b4175139ebdc10de6170db5b6e395abb1d",
+      "detailSha256": "3c56b0887e0854f25ec8a234b3f35e5fe34e9745d1743a32d994d04da2bc194c",
+      "diagrams": [
+        "{\"mode\":\"map\",\"title\":\"保存先の住所を渡す（RV32の例）\",\"columns\":[\"引数と保存欄\",\"スタック\"],\"nodes\":[{\"id\":\"arg\",\"label\":\"a0 = 0x1000\\nprev_spの値\",\"column\":0,\"row\":0},{\"id\":\"slot\",\"label\":\"0x1000の保存欄\\n内容：0x8000\",\"column\":0,\"row\":1},{\"id\":\"stack\",\"label\":\"保存後のスタック先頭\\n0x8000\",\"column\":1,\"row\":1}],\"edges\":[{\"to\":\"slot\",\"label\":\"sw sp,0(a0)\",\"from\":\"arg\"},{\"to\":\"stack\",\"label\":\"保存値\",\"from\":\"slot\"}]}\n"
+      ],
+      "refs": []
+    },
+    {
+      "id": "code-designated",
+      "metadataSha256": "6c9caff75c6e234a0f793563c95916ce243962ff8885d4cdf4df085ca37a1945",
+      "shortSha256": "fdcee8057f0abda800fb8cd27f61010fe1071a5dd2c3746c4a585920e61dd691",
+      "detailSha256": "c9b84638c5c5a8b9fb5a4dc756d03862111acdbdc59a556cfe6de4bda252ade6",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "code-asm-operands",
+      "metadataSha256": "27b8d6f459f8f4f136461cbd18fe04fa1e4a547602076260b3e37c4abc0f77c6",
+      "shortSha256": "e24de2acaa53c23f5a1e510085cd6afa38ae57760ed548ee57da7a530a2634f0",
+      "detailSha256": "9b24df6b5d751a5c2d8c82bc263563b13dfd88d19b0c0d603f9899ac1677de6e",
+      "diagrams": [],
+      "refs": [
+        "trap-state"
+      ]
+    },
+    {
+      "id": "code-asm-jump",
+      "metadataSha256": "c5c58f591973cf7f31ba8cb01119c32eb04d9d9019fd5545856905ecff6fe2ee",
+      "shortSha256": "c392cfaae9cbdfb59fb498d94affec4f9d6c3764fbda29a9f776f82d5080f095",
+      "detailSha256": "0245827bd289c76cc056f7118d8f620b5f561258dd447610b62bb7a003edeb68",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "code-asm-registers",
+      "metadataSha256": "7bd47f7a0a985c6e3b4c94842bff3da823d817be1c50f2c5ba7ae503159c50b2",
+      "shortSha256": "7048ebf5bb894ec23456cad70dd8dfad6869863a0e037c04f89471ba1c1e2c0b",
+      "detailSha256": "2c0c4f4062e319ef13fe526b0a1a45a9f2163671d68eb5449f7388fe24227416",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "code-sections",
+      "metadataSha256": "e4c892586088ed191d9b2ba8c694609d40d2a08975ded24e8358f90ce5b78b88",
+      "shortSha256": "99a296d22d7999d9f7925da272506c1b7b6ca0252736fe7ac3c0c0117e27262e",
+      "detailSha256": "3fda5e40d33f90063e2953183a49e7bf526cbf3e57c57fcbf2bb7d5f9312656c",
+      "diagrams": [],
+      "refs": []
+    },
+    {
+      "id": "code-memory-clobber",
+      "metadataSha256": "0edab7f7388134f09b645587603ecfd3b9d81b3077057941a812217ffac30733",
+      "shortSha256": "e05451b7d3ebc526d244174043aaa453073180d3aa88809a5caaff9877347c81",
+      "detailSha256": "ad78d37069e00bc216e7146774d773f3c458a6a1060125576f0414ddc3745e87",
+      "diagrams": [],
+      "refs": []
+    }
+  ],
+  "note": "B追加改善開始時の未コミット成果を含む保護用スナップショット"
+}

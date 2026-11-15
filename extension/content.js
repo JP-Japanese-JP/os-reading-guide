@@ -34,7 +34,7 @@
   shadow.append(style,dock,panel); document.documentElement.append(host);
   function el(tag,text,cls){const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;}
   function button(text,click,cls){const b=el('button',text,cls);b.type='button';b.addEventListener('click',click);return b;}
-  function entryLink(id,label){const e=byId.get(id);return e?button(label||e.title,()=>openEntry(id,null,true),'link'):el('span',label||id);}
+  function entryLink(id,label){const e=byId.get(id);return e?button(label||e.title,()=>{openEntry(id,null,true);if(label?.startsWith('図：')){history.at(-1).expanded=true;render();scrollToDiagram();}},'link'):el('span',label||id);}
   function rich(parent,text){
     if(text.includes("```diagram")){OSRGDiagram.renderText(parent,text,(t,target=parent)=>rich(target,t));return;}
     const available=entries.filter(e=>e.id!==history.at(-1)?.id);
@@ -44,6 +44,7 @@
   function clearTimers(){clearTimeout(hoverTimer);clearTimeout(closeTimer);}
   function close(restore=false){clearTimers();panel.hidden=true;pinned=false;history=[];if(restore&&origin?.isConnected)origin.focus({preventScroll:true});}
   function position(anchor){const r=anchor?.getBoundingClientRect();const width=Math.min(430,innerWidth-24);let left=r?Math.min(r.left,innerWidth-width-12):innerWidth-width-20;const height=Math.min(540,innerHeight-100);let top=r?(r.bottom+height+70<innerHeight?r.bottom+10:r.top-height-10):Math.min(100,innerHeight/5);left=Math.max(12,left);top=Math.max(12,top);panel.style.left=left+'px';panel.style.top=top+'px';panel.style.maxHeight=Math.max(120,innerHeight-top-70)+'px';}
+  function scrollToDiagram(){const figure=panel.querySelector('.osrg-diagram');if(!figure)return;panel.scrollTop+=figure.getBoundingClientRect().top-panel.getBoundingClientRect().top-panel.querySelector('header').getBoundingClientRect().height-12;if(history.length)history.at(-1).scroll=panel.scrollTop;}
   function remember(){if(history.length)history.at(-1).scroll=panel.scrollTop;}
   function openEntry(id,anchor,fromPanel=false){if(!byId.has(id))return;clearTimers();if(!fromPanel){history=[];rootView='guide';origin=anchor;position(anchor);}else{remember();pinned=true;}history=C.pushHistory(history,id);panel.hidden=false;render();if(fromPanel)panel.querySelector('h2')?.focus({preventScroll:true});}
   function openRoot(view,anchor){clearTimers();history=[];rootView=view;origin=anchor;pinned=true;position(null);panel.hidden=false;render();}
@@ -60,7 +61,7 @@
       const item=history.at(-1),e=byId.get(item.id);
       body.append(button('← 戻る',()=>{history.pop();render();}));const title=el('h2',e.title);title.tabIndex=-1;body.append(title);
       const short=el('p',undefined,'short');rich(short,e.short);body.append(short);
-      const more=button(item.expanded?'詳しい説明を閉じる':'詳しい説明を読む',()=>{item.expanded=!item.expanded;item.scroll=panel.scrollTop;render();});more.setAttribute('aria-expanded',String(item.expanded));body.append(more);
+      const more=button(item.expanded?'詳しい説明を閉じる':'詳しい説明を読む',()=>{item.expanded=!item.expanded;item.scroll=panel.scrollTop;render();});more.setAttribute('aria-expanded',String(item.expanded));body.append(more);if(OSRGDiagram.blocks(e.detail).length)body.append(button('図解を読む',()=>{item.expanded=true;render();scrollToDiagram();}));
       if(item.expanded){const p=el('div',undefined,'detail');rich(p,e.detail);body.append(p);}
       if(e.prerequisites?.length){body.append(el('h3','ここから前提知識へ'));const chips=el('div',undefined,'chips');e.prerequisites.forEach(id=>chips.append(entryLink(id)));body.append(chips);}
       if(e.chapters)body.append(el('p','この意味を使う章：'+e.chapters.map(n=>String(n).padStart(2,'0')).join('・'),'muted'));
@@ -123,6 +124,7 @@
     editing=true;
     const body=panel.querySelector('.body');body.replaceChildren(button('← キャンセル',render),el('h2',e?'解説を編集':'解説を追加'));
     const fields={};for(const [key,label,value] of [['title','表示名',e?.title||''],['aliases','本文で下線にする語句（改行で区切る）',e?.aliases.join('\n')||selection],['short','短い説明',e?.short||''],['detail','詳しい説明（[[id|表示名]]で他の解説へリンク）',e?.detail||'']]){const l=el('label',label);const input=el(key==='title'?'input':'textarea');input.value=value;l.append(input);fields[key]=input;body.append(l);}
+    const preview=el('div');body.append(button('説明と図をプレビュー',()=>{preview.replaceChildren();try{OSRGDiagram.validateText(fields.short.value,'短い説明');OSRGDiagram.validateText(fields.detail.value);preview.append(el('p','図の形式を確認しました。'));}catch(err){preview.append(el('p',err.message));}rich(preview,fields.short.value+'\n\n'+fields.detail.value);}),preview);
     body.append(button('このChromeに保存',async()=>{try{const item={...(e||{}),id:e?.id||'personal-'+crypto.randomUUID(),title:fields.title.value.trim(),aliases:fields.aliases.value.split('\n').map(s=>s.trim()).filter(Boolean),short:fields.short.value.trim(),detail:fields.detail.value.trim(),prerequisites:e?.prerequisites||[]};const result=await rpc('save',{entry:item,expected:e?JSON.stringify(e):null});if(result.existing){status('この表現は登録済みです。既存の解説から編集してください。');return;}await refreshDictionary();history=[{id:item.id,expanded:true,scroll:0}];render();}catch(err){status('保存できません: '+err.message);}}));const s=el('p','','status');s.id='status';body.append(s);
   }
   function removeMarks(){scanGeneration++;observer.disconnect();OSRGAnnotations.clear(article);observe();}

@@ -1,0 +1,4602 @@
+{
+  "auditCommit": "5a002242a003eba2f2a76e175d20a245f8f88326",
+  "auditDate": "2026-11-15",
+  "source": "os-explanation-audit",
+  "count": 194,
+  "items": [
+    {
+      "id": "bit",
+      "title": "ビット",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "桁の重みとSv32への接続まで十分。重大な問題なし。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "byte",
+      "title": "バイト",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "アドレス刻み・文字数との区別が明確。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "binary",
+      "title": "2進数と16進数",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "基数変換とアドレス・内容の区別は正確。",
+      "auditProposal": "必要なら桁対応を視覚化。",
+      "diagramProposal": "16進2桁と4ビットずつの対応表。",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「16進2桁と4ビットずつの対応表。」の個別追加は今回は不要と判断。",
+      "changedFields": [],
+      "diagramDisposition": "現状の文章・コード例で十分と判断した",
+      "bStatus": "現状の文章・コード例で十分と判断した",
+      "bReason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「16進2桁と4ビットずつの対応表。」の個別追加は今回は不要と判断。"
+    },
+    {
+      "id": "kib",
+      "title": "4KBと4096バイト",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "単位の曖昧さを教材の式で解消できる。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "memory",
+      "title": "メモリ",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "RAMとディスク、配置と実在を区別できる。",
+      "auditProposal": "箱の比喩をアドレス例と対応させるとさらに明瞭。",
+      "diagramProposal": "アドレス欄と1バイトの内容欄を分けた配置図。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「アドレス欄と1バイトの内容欄を分けた配置図。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「アドレス欄と1バイトの内容欄を分けた配置図。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "address",
+      "title": "アドレスと中身の違い",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "説明は十分だが場所・値・幅の区別は初学者の主要な難所。",
+      "auditProposal": "数値例を共有図へ。",
+      "diagramProposal": "アドレス100〜103と値、p・*pを別の欄で示す。",
+      "status": "対応済み",
+      "actions": [
+        "共通図への明示案内：pointer"
+      ],
+      "diagramOwners": [
+        "pointer"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "[[pointer|図：ポインタと間接参照]]では、本文で扱う場所・値・処理の対応を同じ例で確認できます。"
+        ]
+      },
+      "diagramDisposition": "共通図へ案内"
+    },
+    {
+      "id": "cpu",
+      "title": "CPU",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "CPU・ISA・QEMUを適切に区別。",
+      "auditProposal": "現状を維持し構成図は共用。",
+      "diagramProposal": "CPU内のレジスタと外部RAM、命令取得・データ読み書きの関係。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「CPU内のレジスタと外部RAM、命令取得・データ読み書きの関係。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「CPU内のレジスタと外部RAM、命令取得・データ読み書きの関係。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "register",
+      "title": "レジスタ",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "汎用レジスタ・別名・CSR・RAMの違いを説明できている。",
+      "auditProposal": "レジスタとRAMの関係を共用図へ。",
+      "diagramProposal": "x2=spの箱からRAMスタックへの矢印、CSRを別枠に置く。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「x2=spの箱からRAMスタックへの矢印、CSRを別枠に置く。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「x2=spの箱からRAMスタックへの矢印、CSRを別枠に置く。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "pointer",
+      "title": "ポインタと間接参照",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "基礎例は良いが未提示の関数を前提とする末段が唐突。",
+      "auditProposal": "章10と関数の該当行を明示し、prev_spの保存先はcode-array-pointerへ案内。",
+      "diagramProposal": "pの保存値→xの位置、*p=7の前後を示す。",
+      "status": "対応済み",
+      "actions": [
+        "switch_contextの例を第10章と明示し、保存先アドレスをcode-array-pointerへ案内。",
+        "図：pの値と、pが指すxの値"
+      ],
+      "diagramOwners": [
+        "pointer"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [
+          "提示された`switch_context`の`uint32_t *prev_sp`などは、32ビット整数を指すポインタを引数として受け取る宣言です。ただし本体はアセンブリなので、実際にどこをどう読み書きするかは、その命令も確認する必要があります。"
+        ],
+        "addedParagraphs": [
+          "第10章「プロセス」の`switch_context`に進んだら、そこで使う`uint32_t *prev_sp`などは、32ビット整数を指すポインタを引数として受け取る宣言です。ただし本体はアセンブリなので、実際にどこをどう読み書きするかは、その命令も確認する必要があります。",
+          "その引数が指すのは「保存するsp値の置き場所」です。[[code-array-pointer|prev_spと保存先の具体例]]で、アドレスを渡す意味を追えます。入門段階ではまず`p`と`*p`を区別してください。",
+          "ポインタの箱には相手の番地が入り、相手の箱には整数が入ります。\n［図の定義］\n*p=7で変わるのはxの内容です。pの値0x1000は変わりません。整数アドレスに1を足すなら0x1001、char*なら1バイト先、uint32_t*なら4バイト先です。"
+        ]
+      },
+      "diagramDisposition": "図を搭載"
+    },
+    {
+      "id": "variable",
+      "title": "変数・型・代入",
+      "priority": "P2",
+      "diagramRating": "B",
+      "auditFinding": "第16章の宣言にstaticはなく、キーワードと静的記憶期間を混同させる。",
+      "auditProposal": "関数外のdiskはstaticなしでも静的記憶期間と修正。",
+      "diagramProposal": "通常ローカル・staticローカル・ファイル変数の寿命の比較表。",
+      "status": "追加図は保留",
+      "actions": [
+        "staticキーワードを含まない関数外のdisk宣言と静的記憶域期間を明記。"
+      ],
+      "diagramOwners": [],
+      "reason": "図案「通常ローカル・staticローカル・ファイル変数の寿命の比較表。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [
+          "ファイルシステムの提示箇所では、大きな`disk`を`static`にして、限られたスタックを大量に使わないようにしています。これはこの教材の配置方針であり、Cがすべての通常変数を必ずスタックに置くという意味ではありません。また、`file->size = filesz;`は、`file`が指す構造体の`size`という項目へ、`filesz`の値を代入しています。"
+        ],
+        "addedParagraphs": [
+          "ファイルシステムの提示箇所では、大きな`disk`を関数の外に定義して静的記憶域期間を持たせ、限られたスタックを大量に使わないようにしています。これはこの教材の配置方針であり、Cがすべての通常変数を必ずスタックに置くという意味ではありません。また、`file->size = filesz;`は、`file`が指す構造体の`size`という項目へ、`filesz`の値を代入しています。",
+          "第16章の実際の宣言は`uint8_t disk[DISK_MAX_SIZE];`で、`static`キーワードはありません。関数外の配列はstaticなしでも実行中ずっと存在します。[[static-disk|宣言行と静的記憶域期間の違い]]も確認してください。"
+        ]
+      },
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「通常ローカル・staticローカル・ファイル変数の寿命の比較表。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "function",
+      "title": "関数・引数・戻り値",
+      "priority": "P2",
+      "diagramRating": "B",
+      "auditFinding": "値渡しは丁寧だが入門項目の後半でnakedと切替に急展開。",
+      "auditProposal": "通常呼出しの例を主軸にし、例外的な切替は関連項目へ明示参照。",
+      "diagramProposal": "add呼出しで2,3が渡り5が戻る流れ。",
+      "status": "対応済み",
+      "actions": [
+        "通常の値渡しを主軸に維持し、naked・切替の例外を関連項目へ整理。",
+        "B追加改善：目的を示した共通図への案内"
+      ],
+      "diagramOwners": [
+        "abi"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [
+          "提示された`switch_context`は、戻り値が`void`で、二つのポインタを受け取る関数です。ただし通常の関数とは違い、CPUのレジスタや、処理の途中状態を保存するスタックをアセンブリで切り替えます。CPUが関数から戻るためには戻り先の情報が必要ですが、コンテキストスイッチではその情報も含めて別の実行状態へ切り替えます。そのため「呼び出した直後に、同じ実行の流れへ戻る」という通常の関数のイメージだけでは説明できません。また、`naked`は関数の入り口や出口でコンパイラが通常生成する処理を抑制する、処理系固有の指定です。"
+        ],
+        "addedParagraphs": [
+          "ここまでが通常の関数呼び出しの読み方です。第10章の`switch_context`では戻り先やスタックも切り替えるため、通常の呼び出しだけでは動きを説明できません。そこに進んだ時点で[[context|別の実行の続きへ戻る仕組み]]を参照してください。`naked`の指定については[[attribute|関数の属性]]で説明しています。"
+        ]
+      },
+      "diagramDisposition": "既存図への参照で対応した",
+      "bFollowup": {
+        "addedText": [
+          "[[abi|図：呼び出し規約・ABI]]では、add(2,3)の引数2・3と結果5が、呼出しの前後でどこを通るか確認できます。"
+        ],
+        "owners": [
+          "abi"
+        ]
+      },
+      "bStatus": "既存図への参照で対応した",
+      "bReason": "対応先：abi"
+    },
+    {
+      "id": "static-local",
+      "title": "static：呼び出しをまたぐ変数",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "呼出し間の値の保持を具体的に追える。例の0x80000000は仮定で実際の空きRAM先頭ではない。",
+      "auditProposal": "数値例をallocationと共通化すると比較しやすい。",
+      "diagramProposal": "2回の呼出しとnext_paddrの値の推移表。",
+      "status": "対応済み",
+      "actions": [
+        "共通図への明示案内：allocation"
+      ],
+      "diagramOwners": [
+        "allocation"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "[[allocation|図：動的なメモリ割り当て]]では、本文で扱う場所・値・処理の対応を同じ例で確認できます。"
+        ]
+      },
+      "diagramDisposition": "既存図への参照で対応した",
+      "bStatus": "既存図への参照で対応した",
+      "bReason": "対応先：allocation"
+    },
+    {
+      "id": "static",
+      "title": "static：保存期間と名前の範囲",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "保存期間と内部リンケージを正しく分離。",
+      "auditProposal": "違いを比較表として補助可能。",
+      "diagramProposal": "関数内外×static有無で寿命と名前の範囲を比較。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「関数内外×static有無で寿命と名前の範囲を比較。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「関数内外×static有無で寿命と名前の範囲を比較。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "array",
+      "title": "配列",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "配列・ポインタ・範囲外の違いが十分。",
+      "auditProposal": "12バイトの例を図にすると添字が追いやすい。",
+      "diagramProposal": "a[0..2]の連続配置とa+1、one-pastの位置。",
+      "status": "対応済み",
+      "actions": [
+        "B追加改善：共通図を新設"
+      ],
+      "diagramOwners": [
+        "array"
+      ],
+      "reason": "文章と具体例で理解可能。図の個別追加は重複・表示量を増やすため行わない。",
+      "changedFields": [
+        "detail"
+      ],
+      "diagramDisposition": "図解を追加・改善した",
+      "bFollowup": {
+        "addedText": [
+          "intが4バイト、先頭が仮に0x1000の場合です。各領域が1要素で、境界の印は要素ではありません。\n```diagram\n{\"mode\":\"layout\",\"title\":\"3要素と、読み書きできない末尾直後\",\"start\":4096,\"unit\":\"バイト\",\"segments\":[{\"label\":\"a[0] = 10\",\"size\":4},{\"label\":\"a[1] = 20\",\"size\":4},{\"label\":\"a[2] = 30\",\"size\":4}],\"marks\":[{\"label\":\"a / &a[0]\",\"offset\":0},{\"label\":\"a+1 / &a[1]\",\"offset\":4},{\"label\":\"a+3：末尾直後。*で読まない\",\"offset\":12}]}\n```\n有効なバイト範囲は[0x1000,0x100c)です。a+3というポインタを作ることと、存在しないa[3]を読むことを区別します。"
+        ],
+        "owners": [
+          "array"
+        ]
+      },
+      "bStatus": "図解を追加・改善した",
+      "bReason": "対応先：array"
+    },
+    {
+      "id": "struct",
+      "title": "構造体",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "メンバ操作・内蔵配列・パディングまで適切。",
+      "auditProposal": "パディング例を配置図へ。",
+      "diagramProposal": "char1バイト、空き3バイト、int4バイトを区別。",
+      "status": "対応済み",
+      "actions": [
+        "B追加改善：共通図を新設"
+      ],
+      "diagramOwners": [
+        "struct"
+      ],
+      "reason": "文章と具体例で理解可能。図の個別追加は重複・表示量を増やすため行わない。",
+      "changedFields": [
+        "detail"
+      ],
+      "diagramDisposition": "図解を追加・改善した",
+      "bFollowup": {
+        "addedText": [
+          "左右の同じ行は、構造体先頭から同じバイト位置です。intの先頭が4の倍数になるよう通常配置には3Bの隙間が入ります。\n```diagram\n{\"mode\":\"table\",\"title\":\"同じメンバでも、置く位置と全体サイズは違う\",\"columns\":[\"通常配置の例\",\"packedの例\"],\"rows\":[[\"0：char c（1B）\",\"0：char c（1B）\"],[\"1〜3：位置合わせの隙間（3B）\",\"1〜3：int nの先頭3B\"],[\"4：int nの先頭1B\",\"4：int nの最後1B\"],[\"5〜7：int nの残り3B\",\"5〜7：この構造体の外\"],[\"offsetof(n)=4 / sizeof=8\",\"offsetof(n)=1 / sizeof=5\"]],\"note\":\"char=1B、int=4B・自然整列4Bの環境でstruct { char c; int n; }を比較。packedはGCC/Clangの拡張例。\"}\n```\npacked側はintの先頭が+1になり、自然な整列から外れます。メンバの順番やバイト順を変える指定ではありません。実際の配置は処理系・属性を確認し、教材のusedへのaligned指定による隙間は[[virtqueue|図：Legacyキューの配置]]と比較できます。"
+        ],
+        "owners": [
+          "struct"
+        ]
+      },
+      "bStatus": "図解を追加・改善した",
+      "bReason": "対応先：struct"
+    },
+    {
+      "id": "cast",
+      "title": "キャスト",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "strcmpの符号問題を具体的に説明。長さは二つの用途に見合う。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "unsigned",
+      "title": "符号なし整数・固定幅型",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "整数昇格と固定幅別名の条件を正しく説明。",
+      "auditProposal": "昇格と格納を分けた小表は有益。",
+      "diagramProposal": "uint8_t 255→intで256→uint8_tで0の型付き変換。",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「uint8_t 255→intで256→uint8_tで0の型付き変換。」の個別追加は今回は不要と判断。",
+      "changedFields": [],
+      "diagramDisposition": "現状の文章・コード例で十分と判断した",
+      "bStatus": "現状の文章・コード例で十分と判断した",
+      "bReason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「uint8_t 255→intで256→uint8_tで0の型付き変換。」の個別追加は今回は不要と判断。"
+    },
+    {
+      "id": "size",
+      "title": "sizeof・size_t",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "例外に配慮し配列とポインタの違いも十分。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "macro",
+      "title": "マクロとプリプロセッサ",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "置換、優先順位、重複評価の危険が具体的。",
+      "auditProposal": "図より展開前後の対応表示が有益。",
+      "diagramProposal": "マクロ呼出しと展開結果の対照表。",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「マクロ呼出しと展開結果の対照表。」の個別追加は今回は不要と判断。",
+      "changedFields": [],
+      "diagramDisposition": "現状の文章・コード例で十分と判断した",
+      "bStatus": "現状の文章・コード例で十分と判断した",
+      "bReason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「マクロ呼出しと展開結果の対照表。」の個別追加は今回は不要と判断。"
+    },
+    {
+      "id": "compiler",
+      "title": "コンパイル・コンパイラ",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "クロスコンパイルとコマンドの役割を明確に説明。",
+      "auditProposal": "linkerと同じ工程図を参照。",
+      "diagramProposal": "C→前処理→コンパイル→オブジェクト→リンク→ELF。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「C→前処理→コンパイル→オブジェクト→リンク→ELF。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「C→前処理→コンパイル→オブジェクト→リンク→ELF。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "linker",
+      "title": "リンク・リンカ",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "シンボル解決・再配置・ロードとの違いが具体的。",
+      "auditProposal": "工程図でcompilerと共用。",
+      "diagramProposal": "kernel.oの未解決memset→common.oの定義→配置済ELF。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「kernel.oの未解決memset→common.oの定義→配置済ELF。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「kernel.oの未解決memset→common.oの定義→配置済ELF。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "linker-script",
+      "title": "リンカスクリプト",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "第4章限定なら妥当だが汎用項目に章がなく第9章の__free_ram追加と矛盾して読める。ALIGN(4)の例もABI注意への案内がない。",
+      "auditProposal": "第4章時点と明記し、第9章で空きRAM範囲を追加する差分を説明。スタック整列はABIに参照。",
+      "diagramProposal": "text/rodata/data/bss/stack/free_ramの配置と章4→9の追加箇所。",
+      "status": "対応済み",
+      "actions": [
+        "第4章の配置と第9章の空きRAM追加、第12章user.ldを区別。ALIGN(4)と16B ABIを混同させない参照。",
+        "共通図への明示案内：raw"
+      ],
+      "diagramOwners": [
+        "raw"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [
+          "提示されたスクリプトの`ENTRY(boot)`は、`boot`を実行開始地点として指定します。これはCの関数呼び出しではなく、出力ファイルに開始地点を指定するための指示です。実際にそこから実行するには、起動環境もその配置や開始地点に対応している必要があります。",
+          "最後の`. = ALIGN(4);`は位置を4の倍数へ切り上げ、`. += 128 * 1024;`はそこから131,072バイト分進めます。その終端を`__stack_top`とし、ブート時のスタック上端に使います。提示されたスクリプトに、その後の未使用RAM全体を予約する記述はありません。また、位置カウンタを進めても物理RAMが新設されるわけではないので、その範囲に利用可能なRAMがあるか、他の用途と重ならないかは別途確認が必要です。"
+        ],
+        "addedParagraphs": [
+          "第4章時点の`kernel.ld`の`ENTRY(boot)`は、`boot`を実行開始地点として指定します。これはCの関数呼び出しではなく、出力ファイルに開始地点を指定するための指示です。実際にそこから実行するには、起動環境もその配置や開始地点に対応している必要があります。",
+          "最後の`. = ALIGN(4);`は位置を4の倍数へ切り上げ、`. += 128 * 1024;`はそこから131,072バイト分進めます。その終端を`__stack_top`とし、ブート時のスタック上端に使います。第4章時点には、その後の動的割り当て用RAMの範囲指定はありません。第9章では4096バイト境界へそろえ、`__free_ram`から64MiB先の`__free_ram_end`までを追加します。これは利用する範囲の指定であって、搭載RAMの全てを自動検出する処理ではありません。また、位置カウンタを進めても物理RAMが新設されるわけではないので、その範囲に利用可能なRAMがあるか、他の用途と重ならないかは別途確認が必要です。",
+          "4バイト境界にそろえても、標準ABIのスタックに必要な16バイト境界を保証するわけではありません。[[sp|スタックの整列条件]]を別に確認します。第12章の`user.ld`は入口が`start`、開始位置が`0x01000000`で、64KiBのユーザースタックを`.bss`の内側に予約します。[[raw|生バイナリ化とロード]]ではこの違いが重要です。",
+          "[[raw|図：生バイナリとローダ]]では、本文で扱う場所・値・処理の対応を同じ例で確認できます。"
+        ]
+      },
+      "diagramDisposition": "共通図へ案内"
+    },
+    {
+      "id": "alignment",
+      "title": "境界にそろえる（アラインメント）",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "境界条件とpackedの副作用を説明。",
+      "auditProposal": "丸め前後を図示可能。",
+      "diagramProposal": "0x1000〜0x2000の区間と0x1234から次境界への切上げ。",
+      "status": "対応済み",
+      "actions": [
+        "B追加改善：目的を示した共通図への案内"
+      ],
+      "diagramOwners": [
+        "struct"
+      ],
+      "reason": "文章と具体例で理解可能。図の個別追加は重複・表示量を増やすため行わない。",
+      "changedFields": [
+        "detail"
+      ],
+      "diagramDisposition": "既存図への参照で対応した",
+      "bFollowup": {
+        "addedText": [
+          "[[struct|図：構造体]]では、4バイト境界へそろえるために空く位置を、同じバイト番号で比較できます。"
+        ],
+        "owners": [
+          "struct"
+        ]
+      },
+      "bStatus": "既存図への参照で対応した",
+      "bReason": "対応先：struct"
+    },
+    {
+      "id": "symbol",
+      "title": "リンカシンボルとextern",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "位置とその位置からの読出しの違いを丁寧に説明。文章だけだと宣言の差を保持しにくい。",
+      "auditProposal": "3宣言を同じメモリ図で比較。",
+      "diagramProposal": "シンボルの値、配列先頭、単一charの&、ポインタ変数としての読出しを対照。",
+      "status": "対応済み",
+      "actions": [
+        "図：リンカの名前とCからの参照"
+      ],
+      "diagramOwners": [
+        "symbol"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "同じ名前でも、宣言によって「値を番地として使う」のか「そこから内容を読む」のかが違います。\n［図の定義］\nリンカが付けた位置の名前は、ポインタ値を保存する変数を自動的に作るものではありません。"
+        ]
+      },
+      "diagramDisposition": "図を搭載"
+    },
+    {
+      "id": "half-open",
+      "title": "終端は含めない：先頭と終端の数え方",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "境界・長さ・桁あふれ条件まで十分。",
+      "auditProposal": "端点の図は有益。",
+      "diagramProposal": "先頭を含む区間と終端を含まない区間、終端一致の成功例。",
+      "status": "対応済み",
+      "actions": [
+        "B追加改善：目的を示した共通図への案内"
+      ],
+      "diagramOwners": [
+        "array"
+      ],
+      "reason": "文章と具体例で理解可能。図の個別追加は重複・表示量を増やすため行わない。",
+      "changedFields": [
+        "detail"
+      ],
+      "diagramDisposition": "既存図への参照で対応した",
+      "bFollowup": {
+        "addedText": [
+          "[[array|図：配列]]では、先頭を含み終端を含まない範囲と、末尾直後が要素ではないことを確認できます。"
+        ],
+        "owners": [
+          "array"
+        ]
+      },
+      "bStatus": "既存図への参照で対応した",
+      "bReason": "対応先：array"
+    },
+    {
+      "id": "page",
+      "title": "メモリのページ",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "ページとオフセットの保存を数値で理解できる。",
+      "auditProposal": "対応付けの共用図を案内。",
+      "diagramProposal": "仮想・物理ページを並べ、同じ0xab位置を対応付ける。",
+      "status": "対応済み",
+      "actions": [
+        "B追加改善：目的を示した共通図への案内"
+      ],
+      "diagramOwners": [
+        "sv32"
+      ],
+      "reason": "文章と具体例で理解可能。図の個別追加は重複・表示量を増やすため行わない。",
+      "changedFields": [
+        "detail"
+      ],
+      "diagramDisposition": "既存図への参照で対応した",
+      "bFollowup": {
+        "addedText": [
+          "[[sv32|図：Sv32の2段階変換]]では、ページを選んだ後も12ビットのページ内位置が引き継がれることを確認できます。"
+        ],
+        "owners": [
+          "sv32"
+        ]
+      },
+      "bStatus": "既存図への参照で対応した",
+      "bReason": "対応先：sv32"
+    },
+    {
+      "id": "allocation",
+      "title": "動的なメモリ割り当て",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "説明と既存図は正確。末尾の前提再説明は本文・既存項目との重複が目立つ。",
+      "auditProposal": "補足を明示リンクに整理。図の行は縮尺や領域サイズを表していないと注記。",
+      "diagramProposal": "既存配置図を維持し、返す先頭と更新後next_paddrを明示。",
+      "status": "対応済み",
+      "actions": [
+        "前提の重複説明をリンクへ整理。領域の量と返却先頭・更新境界を比例配置で分離。",
+        "図：返す先頭と、次に配る境界"
+      ],
+      "diagramOwners": [
+        "allocation"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [
+          "リンカスクリプト：プログラムのコードやデータを、どのアドレスに配置するか指定するファイルです。\nコンパイルされた部品をまとめるリンカに対し、コードやデータの配置と、特定の位置に付ける名前を指定します。教材の`__free_ram`と`__free_ram_end`は、割り当てに使う範囲の開始位置と終端位置に付けた名前です。位置を定める仕組みであり、指定したアドレスにRAMが実在することを保証するものではありません。",
+          "staticなローカル変数：関数内で宣言されても、関数の呼び出しが終わった後に値を保持する変数です。\nCでは、関数内の変数に`static`を付けると、その変数のための保存場所がプログラムの実行中ずっと存在します。初期化は呼び出しのたびには行われません。教材の`next_paddr`は、この性質により前回の割り当て後の位置を覚え、次回はその続きから割り当てられます。",
+          "次の図は上の数値例の配置です。上から下へアドレスが増えます。返す値は確保した領域の先頭の番号であり、領域の内容そのものではありません。\n［図の定義］\n次の割り当て位置を更新するだけでは、確保したメモリの中身は変わりません。教材では別途memsetでゼロにします。"
+        ],
+        "addedParagraphs": [
+          "配置を決める前提は[[linker-script|リンカスクリプト]]、値を保持する前提は[[static-local|staticなローカル変数]]で確認できます。",
+          "次の図は上の数値例の配置です。上から下へアドレスが増えます。返す値は確保した領域の先頭の番号であり、領域の内容そのものではありません。",
+          "［図の定義］\n最初は0x80221000、次は0x80223000を返します。0x80224000は次回の開始位置で、そこまでの3ページが確保済みです。"
+        ]
+      },
+      "diagramDisposition": "図を搭載"
+    },
+    {
+      "id": "bump",
+      "title": "Bumpアロケータ",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "手順・例・解放不能・ゼロ化のコストまで十分。",
+      "auditProposal": "allocationの図を共有し重複図を避ける。",
+      "diagramProposal": "同じ配置図に2回の呼出し前後の境界移動を添える。",
+      "status": "対応済み",
+      "actions": [
+        "共通図への明示案内：allocation"
+      ],
+      "diagramOwners": [
+        "allocation"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "[[allocation|図：動的なメモリ割り当て]]では、本文で扱う場所・値・処理の対応を同じ例で確認できます。"
+        ]
+      },
+      "diagramDisposition": "既存図への参照で対応した",
+      "bStatus": "既存図への参照で対応した",
+      "bReason": "対応先：allocation"
+    },
+    {
+      "id": "malloc",
+      "title": "mallocとページ割り当て",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "alloc_pagesとの違いが必要十分。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "null",
+      "title": "NULLとゼロ",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "定数0・NULL・ゼロ値のオブジェクトを区別。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "zero",
+      "title": "memset・ゼロ初期化",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "関数仕様と式の動作、C一般の注意を適切に説明。",
+      "auditProposal": "初学者には1反復の状態表が補助になる。",
+      "diagramProposal": "p・n・書込先バイトの前後表。",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「p・n・書込先バイトの前後表。」の個別追加は今回は不要と判断。",
+      "changedFields": [],
+      "diagramDisposition": "現状の文章・コード例で十分と判断した",
+      "bStatus": "現状の文章・コード例で十分と判断した",
+      "bReason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「p・n・書込先バイトの前後表。」の個別追加は今回は不要と判断。"
+    },
+    {
+      "id": "free",
+      "title": "解放・メモリリーク",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "寿命とリークを混同せず教材の制約を説明。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "bitmap",
+      "title": "ビットマップで空きを管理する",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "表の容量と連続空きの条件も説明できている。",
+      "auditProposal": "ビット位置とページ番号の対応を視覚化。",
+      "diagramProposal": "8ページの使用状況と8ビットを1対1で結ぶ表。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「8ページの使用状況と8ビットを1対1で結ぶ表。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「8ページの使用状況と8ビットを1対1で結ぶ表。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "buddy",
+      "title": "バディシステム",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "分割・結合条件は正確だが木構造を文章だけで追う負荷が大きい。",
+      "auditProposal": "8→4→2の同じ例を図示。",
+      "diagramProposal": "分割木に使用中と空きを色分けし、中央の非バディは結合不可と示す。",
+      "status": "対応済み",
+      "actions": [
+        "図：8ページを分ける：同じ親から生まれた相方"
+      ],
+      "diagramOwners": [
+        "buddy"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "ページ番号は0起点。同じ親から分かれた領域同士を線でたどります。\n［図の定義］\n2〜3と4〜5は隣接していても親が違うためバディではありません。0〜1と2〜3が両方空なら0〜3へ結合できます。教材本編ではまだこの方式を実装していません。"
+        ]
+      },
+      "diagramDisposition": "図を搭載"
+    },
+    {
+      "id": "physical",
+      "title": "物理アドレス",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "RAM以外の物理空間やキャストの限界も説明。",
+      "auditProposal": "virtual/pageと図を共有。",
+      "diagramProposal": "仮想ページ→物理RAM/MMIOの対応、32ビット型と34ビット仕様の区別。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「仮想ページ→物理RAM/MMIOの対応、32ビット型と34ビット仕様の区別。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「仮想ページ→物理RAM/MMIOの対応、32ビット型と34ビット仕様の区別。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "panic",
+      "title": "カーネルパニック",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "無限ループ、マクロの理由、教材の簡略化が明瞭。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "uefi",
+      "title": "UEFIとメモリマップ",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "教材では未実装と明示しメモリマップとページテーブルを区別。ただしBIOSのaliasに対応する説明がない。",
+      "auditProposal": "BIOSはUEFIと同義でない旨を1文追加するかaliasを整理。",
+      "diagramProposal": "使用可能RAM・予約・MMIOの物理空間とサービス終了前後の用途。",
+      "status": "追加図は保留",
+      "actions": [
+        "BIOS/UEFIの相違と教材の-bios default=OpenSBIという文脈を説明。"
+      ],
+      "diagramOwners": [],
+      "reason": "図案「使用可能RAM・予約・MMIOの物理空間とサービス終了前後の用途。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "BIOSはUEFIの同義語ではありません。PCの従来型BIOSとUEFIは異なる起動インターフェースです。また教材のQEMUオプション`-bios default`はファームウェアを選ぶ指定で、このRISC-V環境ではOpenSBIを使います。"
+        ]
+      },
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「使用可能RAM・予約・MMIOの物理空間とサービス終了前後の用途。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "nm",
+      "title": "llvm-nmで配置を確認する",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "出力の値を常にアドレスと誤認しないよう説明できている。",
+      "auditProposal": "出力例を列対応で提示すると読みやすい。",
+      "diagramProposal": "nm出力の値・種別・名前を列分けしサイズシンボルを対比。",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「nm出力の値・種別・名前を列分けしサイズシンボルを対比。」の個別追加は今回は不要と判断。",
+      "changedFields": [],
+      "diagramDisposition": "現状の文章・コード例で十分と判断した",
+      "bStatus": "現状の文章・コード例で十分と判断した",
+      "bReason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「nm出力の値・種別・名前を列分けしサイズシンボルを対比。」の個別追加は今回は不要と判断。"
+    },
+    {
+      "id": "overflow",
+      "title": "整数の桁あふれ",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "具体的な見逃し例と計算前検査を説明。",
+      "auditProposal": "計算後検査の失敗を状態表にできる。",
+      "diagramProposal": "数学的2^32→32ビットで0→境界検査を通過する過程。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「数学的2^32→32ビットで0→境界検査を通過する過程。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「数学的2^32→32ビットで0→境界検査を通過する過程。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "os",
+      "title": "OSとカーネル",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "範囲の用法と教材の起動基盤を区別。",
+      "auditProposal": "全体構成図をapp/sbiと共有。",
+      "diagramProposal": "アプリ・カーネル・OpenSBI・機器の役割と依頼方向。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「アプリ・カーネル・OpenSBI・機器の役割と依頼方向。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「アプリ・カーネル・OpenSBI・機器の役割と依頼方向。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "app",
+      "title": "アプリケーションとユーザーランド",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "似た語を分離し必要な起動準備も説明。",
+      "auditProposal": "権限とソフト構成の共用図を参照。",
+      "diagramProposal": "ユーザーアプリ→システムコール→カーネル、各々のメモリと特権。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「ユーザーアプリ→システムコール→カーネル、各々のメモリと特権。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「ユーザーアプリ→システムコール→カーネル、各々のメモリと特権。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "source",
+      "title": "ソースコードと実装",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "ビルド・実装・仕様の違いを短く補える。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "debug",
+      "title": "デバッグ",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "観測手段の限界と調査手順が具体的。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "shell",
+      "title": "シェル・端末・コマンド",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "プロンプト記号・権限・ホストとゲストを適切に説明。",
+      "auditProposal": "2つのシェルをqemuの構成図で共有。",
+      "diagramProposal": "端末内のホストシェル→QEMU→ゲストシェルの入れ子図。",
+      "status": "対応済み",
+      "actions": [
+        "B追加改善：目的を示した共通図への案内"
+      ],
+      "diagramOwners": [
+        "qemu"
+      ],
+      "reason": "文章と具体例で理解可能。図の個別追加は重複・表示量を増やすため行わない。",
+      "changedFields": [
+        "detail"
+      ],
+      "diagramDisposition": "既存図への参照で対応した",
+      "bFollowup": {
+        "addedText": [
+          "[[qemu|図：QEMUとホスト・ゲスト]]では、ビルドを行うホストシェルと、完成したゲストのシェルの居場所を区別できます。"
+        ],
+        "owners": [
+          "qemu"
+        ]
+      },
+      "bStatus": "既存図への参照で対応した",
+      "bReason": "対応先：qemu"
+    },
+    {
+      "id": "directory",
+      "title": "パス・カレントディレクトリ",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "相対パスの基準が具体的で十分。",
+      "auditProposal": "階層例を図にできる。",
+      "diagramProposal": "/home/user/osからkernel.cと../notes.txtへの木構造。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「/home/user/osからkernel.cと../notes.txtへの木構造。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「/home/user/osからkernel.cと../notes.txtへの木構造。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "path",
+      "title": "環境変数PATH",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "教材のPATHの落とし穴まで説明できている。",
+      "auditProposal": "探索順を視覚化すると効果的。",
+      "diagramProposal": "PATHの各ディレクトリを左から調べ最初のclangで停止する表。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「PATHの各ディレクトリを左から調べ最初のclangで停止する表。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「PATHの各ディレクトリを左から調べ最初のclangで停止する表。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "package",
+      "title": "パッケージと開発環境",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "導入と実行可能な開発環境の違いが十分。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "wsl",
+      "title": "WSL2・UNIX系環境",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "OS・端末・シェルの混同を解消。",
+      "auditProposal": "QEMUまで含めた配置を示すと実行場所が分かる。",
+      "diagramProposal": "Windows→WSL2 Ubuntu→QEMU→自作OSの入れ子と実行コマンド。",
+      "status": "対応済み",
+      "actions": [
+        "B追加改善：目的を示した共通図への案内"
+      ],
+      "diagramOwners": [
+        "qemu"
+      ],
+      "reason": "文章と具体例で理解可能。図の個別追加は重複・表示量を増やすため行わない。",
+      "changedFields": [
+        "detail"
+      ],
+      "diagramDisposition": "既存図への参照で対応した",
+      "bFollowup": {
+        "addedText": [
+          "[[qemu|図：QEMUとホスト・ゲスト]]では、Windows、Ubuntu、QEMU、ゲストが同じ環境ではないことを追えます。"
+        ],
+        "owners": [
+          "qemu"
+        ]
+      },
+      "bStatus": "既存図への参照で対応した",
+      "bReason": "対応先：qemu"
+    },
+    {
+      "id": "git",
+      "title": "Git・リポジトリ",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "履歴・GitHub・無視規則の違いが教材に十分。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "qemu",
+      "title": "QEMUとホスト・ゲスト",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "仮想マシン・起動・ディスクの関係が適切。",
+      "auditProposal": "wslと共用の実行環境図を用意。",
+      "diagramProposal": "ホスト上のQEMU、仮想CPU/RAM/ディスク、disk.imgとの対応。",
+      "status": "対応済み",
+      "actions": [
+        "B追加改善：共通図を新設"
+      ],
+      "diagramOwners": [
+        "qemu"
+      ],
+      "reason": "文章と具体例で理解可能。図の個別追加は重複・表示量を増やすため行わない。",
+      "changedFields": [
+        "detail"
+      ],
+      "diagramDisposition": "図解を追加・改善した",
+      "bFollowup": {
+        "addedText": [
+          "WindowsでWSL2を使う例です。Ubuntuのシェルでclangや./run.shを実行し、そのスクリプトがQEMUを起動します。\n```diagram\n{\"mode\":\"map\",\"title\":\"Windowsで教材を動かす場合の実行環境\",\"columns\":[\"実行環境の階層\"],\"nodes\":[{\"id\":\"win\",\"label\":\"Windows\",\"column\":0,\"row\":0},{\"id\":\"linux\",\"label\":\"WSL2のUbuntu\\nLinuxカーネルとホストシェル\",\"column\":0,\"row\":1},{\"id\":\"q\",\"label\":\"qemu-system-riscv32\\n仮想CPU・RAM・機器\",\"column\":0,\"row\":2},{\"id\":\"guest\",\"label\":\"RISC-Vのゲスト\\nOpenSBI → 自作OS\",\"column\":0,\"row\":3}],\"edges\":[{\"from\":\"win\",\"to\":\"linux\",\"label\":\"WSL2で動く\"},{\"from\":\"linux\",\"to\":\"q\",\"label\":\"Linuxプロセス\"},{\"from\":\"q\",\"to\":\"guest\",\"label\":\"機器を再現\"}],\"note\":\"矢印は起動時刻ではなく実行基盤の関係。Mac/Linuxから直接QEMUを動かす構成ではWindows/WSL2部分は不要。\"}\n```\nQEMUから見たホスト環境はここではUbuntuです。Windowsの端末ウィンドウは操作画面で、ゲストシェルそのものではありません。ゲストのプロンプトに入力するコマンドと、Ubuntuでビルドするコマンドを区別してください。"
+        ],
+        "owners": [
+          "qemu"
+        ]
+      },
+      "bStatus": "図解を追加・改善した",
+      "bReason": "対応先：qemu"
+    },
+    {
+      "id": "virt",
+      "title": "virtマシンと命令セット",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "ISAと機器構成を必要十分に区別。",
+      "auditProposal": "QEMU構成図にISAとmachineの別レイヤーを表示。",
+      "diagramProposal": "RISC-V命令仕様とvirtのCPU・RAM・UART・Virtioの構成。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「RISC-V命令仕様とvirtのCPU・RAM・UART・Virtioの構成。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「RISC-V命令仕様とvirtのCPU・RAM・UART・Virtioの構成。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "rv32",
+      "title": "32ビットと64ビット",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "XLEN、型、アドレス空間を混同しない説明。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "assembly",
+      "title": "アセンブリと機械語",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "命令の読み方と疑似命令を丁寧に説明。",
+      "auditProposal": "オペランドの対応小表を補助に。",
+      "diagramProposal": "addiの各部分と実行前後のa0の値。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「addiの各部分と実行前後のa0の値。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「addiの各部分と実行前後のa0の値。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "disassembly",
+      "title": "逆アセンブルとダンプ",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "逆コンパイルとの区別と調査の使い分けが適切。",
+      "auditProposal": "実際の教材出力を短く併記するとさらに良い。",
+      "diagramProposal": "逆アセンブル1行のアドレス・機械語・命令欄をラベル付け。",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「逆アセンブル1行のアドレス・機械語・命令欄をラベル付け。」の個別追加は今回は不要と判断。",
+      "changedFields": [],
+      "diagramDisposition": "現状の文章・コード例で十分と判断した",
+      "bStatus": "現状の文章・コード例で十分と判断した",
+      "bReason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「逆アセンブル1行のアドレス・機械語・命令欄をラベル付け。」の個別追加は今回は不要と判断。"
+    },
+    {
+      "id": "pc",
+      "title": "プログラムカウンタ",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "命令長とsepcの扱いが正確。",
+      "auditProposal": "例外からの復帰をtrap-stateと共有。",
+      "diagramProposal": "通常PC更新とトラップ時PC→sepc、stvec→ハンドラの流れ。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「通常PC更新とトラップ時PC→sepc、stvec→ハンドラの流れ。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「通常PC更新とトラップ時PC→sepc、stvec→ハンドラの流れ。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "load-store",
+      "title": "ロード・ストア・分岐命令",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "オフセットとsp更新の区別が明確。",
+      "auditProposal": "lw/swの方向を図示可能。",
+      "diagramProposal": "RAM[sp+8]とa0間のロード・ストアを逆向き矢印で示す。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「RAM[sp+8]とa0間のロード・ストアを逆向き矢印で示す。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「RAM[sp+8]とa0間のロード・ストアを逆向き矢印で示す。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "stack",
+      "title": "スタック",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "後入れ先出し、領域確保、実値保存の違いが十分。",
+      "auditProposal": "アドレス方向と関数の入れ子を共通図へ。",
+      "diagramProposal": "低位/高位を明示しsp減算前後と16バイトの使用範囲を示す。",
+      "status": "対応済み",
+      "actions": [
+        "共通図への明示案内：context, first-switch"
+      ],
+      "diagramOwners": [
+        "context",
+        "first-switch"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "[[context|図：実行コンテキストと切り替え]]では、本文で扱う場所・値・処理の対応を同じ例で確認できます。",
+          "[[first-switch|図：スタックの番地と復元順]]では、低い番地へ確保して高い番地へ戻す方向と、保存する値の並びを確認できます。通常の関数の入れ子とは保存するレジスタの範囲が違う点は、本文の説明と区別してください。"
+        ]
+      },
+      "diagramDisposition": "共通図へ案内"
+    },
+    {
+      "id": "sp",
+      "title": "スタックポインタ",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "CPUのspと保存欄を区別。16バイト整列の注意も有用。",
+      "auditProposal": "contextと同じ図でCPUと各プロセスの保存欄を区別。",
+      "diagramProposal": "CPU sp→A/Bスタック、PCB.spの値を読み書きする矢印。",
+      "status": "対応済み",
+      "actions": [
+        "共通図への明示案内：context"
+      ],
+      "diagramOwners": [
+        "context"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "[[context|図：実行コンテキストと切り替え]]では、本文で扱う場所・値・処理の対応を同じ例で確認できます。"
+        ]
+      },
+      "diagramDisposition": "共通図へ案内"
+    },
+    {
+      "id": "abi",
+      "title": "呼び出し規約・ABI",
+      "priority": "P2",
+      "diagramRating": "B",
+      "auditFinding": "保存責任は明確だが整列値と教材のALIGN(4)/52バイト退避の関係がこの項目では未説明。",
+      "auditProposal": "標準ILP32の16バイト整列と教材コードの検証点をspへ明示参照。",
+      "diagramProposal": "caller/calleeの保存責任表と引数・戻り値のレジスタ対応。",
+      "status": "対応済み",
+      "actions": [
+        "16B ABIを明記し、124B保存・52Bの独自区間と通常のC呼出しを区別する項目へ案内。",
+        "B追加改善：共通図を新設"
+      ],
+      "diagramOwners": [
+        "abi"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "標準のRISC-V整数ABIでは、通常の手続き入口でspを16バイト境界にそろえます。教材の`ALIGN(4)`はそれだけでは不十分です。[[trap-state|トラップの124バイト退避とC呼出し]]、[[sp|整列の条件]]を区別して確認してください。"
+        ]
+      },
+      "diagramDisposition": "図解を追加・改善した",
+      "bFollowup": {
+        "addedText": [
+          "左右は同じCPUを交互に使う二つの関数です。列ごとに保存の担当を比較し、上から下へ呼出しの前後を追います。\n```diagram\n{\"mode\":\"table\",\"title\":\"add(2,3)と通常の整数ABI\",\"columns\":[\"呼出し元の仕事\",\"呼出し先addの仕事\"],\"rows\":[[\"呼出し後も必要なa/t値を退避\",\"a/tの元の値を保つ義務はない\"],[\"a0=2、a1=3を用意してcall\",\"a0とa1の値を引数として使う\"],[\"callがraへ戻り先を記録\",\"sレジスタを変更するなら元値を退避\"],[\"実行の続きは復帰を待つ\",\"計算結果5をa0へ。変更したsを復元\"],[\"復帰後、a0の5を結果として使う\",\"retでraが示す呼出し元の続きへ\"]],\"note\":\"標準RISC-V整数ABIの単純なint引数の例。最適化で呼出しが消える場合や、別の型の引数割当は省略。\"}\n```\na0は引数2の場所から結果5の場所へ役割が変わります。さらに別の関数を呼ぶ側になる関数は、自分のraを必要に応じて保存します。Cの通常callと、トラップ・SBI・教材独自syscallの保存規則は別です。"
+        ],
+        "owners": [
+          "abi"
+        ]
+      },
+      "bStatus": "図解を追加・改善した",
+      "bReason": "対応先：abi"
+    },
+    {
+      "id": "modes",
+      "title": "M/S/Uモードと特権",
+      "priority": "P3",
+      "diagramRating": "A",
+      "auditFinding": "委譲・SPP・SPIEを慎重に説明。状態遷移は文章だけでは追いにくい。",
+      "auditProposal": "ecall/sretの遷移を共通図へ。",
+      "diagramProposal": "Uアプリ→Sカーネル→M OpenSBIと各ecall、sret/mretの復帰を明示。",
+      "status": "対応済み",
+      "actions": [
+        "共通図への明示案内：syscall"
+      ],
+      "diagramOwners": [
+        "syscall"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "[[syscall|図：システムコール]]では、本文で扱う場所・値・処理の対応を同じ例で確認できます。"
+        ]
+      },
+      "diagramDisposition": "共通図へ案内"
+    },
+    {
+      "id": "csr",
+      "title": "CSR：CPUの設定・状態",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "汎用レジスタとCSRを区別し特殊値への配慮もある。",
+      "auditProposal": "trap-stateと共有し交換の前後を小表に。",
+      "diagramProposal": "csrrw sscratch/spの旧値と新値の交換図。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「csrrw sscratch/spの旧値と新値の交換図。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「csrrw sscratch/spの旧値と新値の交換図。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "inline-asm",
+      "title": "インラインアセンブリ",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "構文の区切りと入出力の約束が十分。",
+      "auditProposal": "対応関係を小表として補助。",
+      "diagramProposal": "C変数value↔出力=r↔%0↔選択レジスタの対応。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「C変数value↔出力=r↔%0↔選択レジスタの対応。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「C変数value↔出力=r↔%0↔選択レジスタの対応。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "asm-volatile",
+      "title": "asm volatileと最適化",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "volatileの限界を正確に説明。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "clobber",
+      "title": "クロバーとmemory指定",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "宣言・実命令・CPU順序を明確に区別。",
+      "auditProposal": "code-memory-clobberと図を共有。",
+      "diagramProposal": "asm前後でコンパイラが保持していたメモリ値を再利用できない関係。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「asm前後でコンパイラが保持していたメモリ値を再利用できない関係。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「asm前後でコンパイラが保持していたメモリ値を再利用できない関係。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "optimization",
+      "title": "最適化とコンパイラオプション",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "変換例と未定義動作の関係が適切。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "boot",
+      "title": "ブート・ファームウェア",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "ファームウェアとカーネルの責任を分離。",
+      "auditProposal": "起動順を図示。",
+      "diagramProposal": "QEMU/OpenSBI→boot(sp設定)→kernel_main(bss初期化)の順序。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「QEMU/OpenSBI→boot(sp設定)→kernel_main(bss初期化)の順序。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「QEMU/OpenSBI→boot(sp設定)→kernel_main(bss初期化)の順序。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "sbi",
+      "title": "SBIとOpenSBI",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "仕様と実装、旧式と現行の差に配慮。",
+      "auditProposal": "ecall-sbiの図を共有。",
+      "diagramProposal": "SカーネルとM OpenSBI間のレジスタ引数・結果の往復。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「SカーネルとM OpenSBI間のレジスタ引数・結果の往復。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「SカーネルとM OpenSBI間のレジスタ引数・結果の往復。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "ecall",
+      "title": "ecall：環境への処理要求",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "委譲・呼出規約・sepcの扱いが正確。",
+      "auditProposal": "SBIと独自syscallを比較表示。",
+      "diagramProposal": "同じecall命令からU→SとS→Mを区別した経路。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「同じecall命令からU→SとS→Mを区別した経路。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「同じecall命令からU→SとS→Mを区別した経路。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "ecall-sbi",
+      "title": "ecall：この章ではSBIを呼ぶ",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "具体的な文字出力の引数とLegacyの制約が明確。",
+      "auditProposal": "レジスタ対応を図で補助。",
+      "diagramProposal": "ch→a0、1→a7、ecall→OpenSBI→UART→復帰。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「ch→a0、1→a7、ecall→OpenSBI→UART→復帰。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「ch→a0、1→a7、ecall→OpenSBI→UART→復帰。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "serial",
+      "title": "シリアルポート・UART・標準入出力",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "接続とエコーの違いが良い。調歩同期式だけは未説明の専門語。",
+      "auditProposal": "開始/停止ビットで区切る方式と短く補うか用語を省く。",
+      "diagramProposal": "端末stdin/stdout↔QEMU↔仮想UART↔ゲスト、エコーの往復。",
+      "status": "対応済み",
+      "actions": [
+        "調歩同期式を開始・停止ビットで短く説明。",
+        "B追加改善：共通図を新設"
+      ],
+      "diagramOwners": [
+        "serial"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [
+          "シリアル通信は、データのビットを順番に送る通信方式です。UARTは、その一種である調歩同期式のシリアル通信を扱う機器です。ソフトウェアから渡されたデータを送信したり、受信したデータをソフトウェアが読めるように保持したりします。QEMUでは、実物の部品ではなく仮想的なUARTがこの役割を果たします。"
+        ],
+        "addedParagraphs": [
+          "シリアル通信は、データのビットを順番に送る通信方式です。UARTは、その一種である開始ビットと停止ビットで各文字を区切る調歩同期式のシリアル通信を扱う機器です。ソフトウェアから渡されたデータを送信したり、受信したデータをソフトウェアが読めるように保持したりします。QEMUでは、実物の部品ではなく仮想的なUARTがこの役割を果たします。"
+        ]
+      },
+      "diagramDisposition": "図解を追加・改善した",
+      "bFollowup": {
+        "addedText": [
+          "左右の列をそれぞれ上から下へ読むと、入力元と出力先が分かります。\n```diagram\n{\"mode\":\"table\",\"title\":\"同じ端末に見える入力と出力の別経路\",\"columns\":[\"入力：キーをOSへ\",\"出力：OSから画面へ\"],\"rows\":[[\"1. ホスト端末でキー入力\",\"1. ゲストが文字出力を依頼\"],[\"2. QEMUが標準入力を受け取る\",\"2. OpenSBIがUARTへ書く\"],[\"3. 仮想UARTからOpenSBIが受信\",\"3. QEMUがUART出力を転送\"],[\"4. ゲストがSBI経由で文字を取得\",\"4. ホスト端末に表示\"]],\"note\":\"教材の-nographicとSBI Legacyコンソールの経路を模式化。OS側のエコーは左で受けた文字を右へ送り返す処理。\"}\n```\n入力を取得しただけでは右の出力は起きません。キーを押した文字が画面へ現れるためには、ゲストのエコー処理や端末側の表示設定が別途必要です。"
+        ],
+        "owners": [
+          "serial"
+        ]
+      },
+      "bStatus": "図解を追加・改善した",
+      "bReason": "対応先：serial"
+    },
+    {
+      "id": "monitor",
+      "title": "QEMUモニター",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "操作方法とstop/cont/qの区別が具体的。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "section",
+      "title": "セクションと実行ファイル",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "bssのファイルとRAMの違いが適切。",
+      "auditProposal": "ELFとリンカ配置の図を共有。",
+      "diagramProposal": "ファイルのtext/dataとRAMのbss追加を並べる対応図。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「ファイルのtext/dataとRAMのbss追加を並べる対応図。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「ファイルのtext/dataとRAMのbss追加を並べる対応図。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "entry",
+      "title": "エントリポイント",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "ENTRYと物理的配置を区別できている。",
+      "auditProposal": "bootの図へリンク。",
+      "diagramProposal": "ELFの入口情報と配置済boot、OpenSBIからの制御移行。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「ELFの入口情報と配置済boot、OpenSBIからの制御移行。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「ELFの入口情報と配置済boot、OpenSBIからの制御移行。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "ld-dot",
+      "title": "リンカの「.」と領域予約",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "位置計算と実行時書込みを明確に区別。",
+      "auditProposal": "配置図の位置カウンタ移動を補助。",
+      "diagramProposal": ".の初期位置→セクションサイズ加算→ALIGN→スタック予約。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「.の初期位置→セクションサイズ加算→ALIGN→スタック予約。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「.の初期位置→セクションサイズ加算→ALIGN→スタック予約。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "attribute",
+      "title": "__attribute__：配置・naked・packed",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "nakedの制限、packed/alignedの相互作用まで十分。",
+      "auditProposal": "配置属性は同じ構造体の比較で補助。",
+      "diagramProposal": "通常配置・packed・packed+alignedのバイト配置比較。",
+      "status": "対応済み",
+      "actions": [
+        "B追加改善：目的を示した共通図への案内"
+      ],
+      "diagramOwners": [
+        "struct"
+      ],
+      "reason": "文章と具体例で理解可能。図の個別追加は重複・表示量を増やすため行わない。",
+      "changedFields": [
+        "detail"
+      ],
+      "diagramDisposition": "既存図への参照で対応した",
+      "bFollowup": {
+        "addedText": [
+          "[[struct|図：構造体]]では、packedによって消える隙間と、未整列になるメンバを比較できます。"
+        ],
+        "owners": [
+          "struct"
+        ]
+      },
+      "bStatus": "既存図への参照で対応した",
+      "bReason": "対応先：struct"
+    },
+    {
+      "id": "freestanding",
+      "title": "OSなしでCを動かす",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "よくある誤解を具体的に訂正し補助関数の必要性も説明。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "elf",
+      "title": "ELF・オブジェクトファイル",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "ファイル形式の往復変換は正確だが工程が複雑。",
+      "auditProposal": "アプリの変換工程を1枚にまとめ、.bssを内容化する教材の追加オプションはrawへ明示参照。",
+      "diagramProposal": "shell.c→shell.elf→shell.bin→shell.bin.o→kernel.elfの各段階と含む情報。",
+      "status": "対応済み",
+      "actions": [
+        "共通図への明示案内：raw"
+      ],
+      "diagramOwners": [
+        "raw"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "[[raw|図：生バイナリとローダ]]では、本文で扱う場所・値・処理の対応を同じ例で確認できます。"
+        ]
+      },
+      "diagramDisposition": "共通図へ案内"
+    },
+    {
+      "id": "addr2line",
+      "title": "アドレスからCの行を探す",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "調査方法と制約を必要十分に説明。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "printf",
+      "title": "printf・フォーマット文字列",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "書式とC演算子、教材版と標準版を適切に区別。",
+      "auditProposal": "書式と引数の対応表が有益。",
+      "diagramProposal": "%d/%sと12/OSの対応、および文字化→putcharの流れ。",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「%d/%sと12/OSの対応、および文字化→putcharの流れ。」の個別追加は今回は不要と判断。",
+      "changedFields": [],
+      "diagramDisposition": "現状の文章・コード例で十分と判断した",
+      "bStatus": "現状の文章・コード例で十分と判断した",
+      "bReason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「%d/%sと12/OSの対応、および文字化→putcharの流れ。」の個別追加は今回は不要と判断。"
+    },
+    {
+      "id": "string",
+      "title": "Cの文字列と終端文字",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "終端・容量・NULL・リテラルの可変性を説明。",
+      "auditProposal": "初学者には終端の位置を図示。",
+      "diagramProposal": "a,b,c,0の4バイト配列と長さ3、容量4の区別。",
+      "status": "対応済み",
+      "actions": [
+        "B追加改善：目的を示した共通図への案内"
+      ],
+      "diagramOwners": [
+        "buffer"
+      ],
+      "reason": "文章と具体例で理解可能。図の個別追加は重複・表示量を増やすため行わない。",
+      "changedFields": [
+        "detail"
+      ],
+      "diagramDisposition": "既存図への参照で対応した",
+      "bFollowup": {
+        "addedText": [
+          "[[buffer|図：バッファと容量]]では、文字列の長さに含まない終端1バイトが、配列の容量には必要だと確認できます。"
+        ],
+        "owners": [
+          "buffer"
+        ]
+      },
+      "bStatus": "既存図への参照で対応した",
+      "bReason": "対応先：buffer"
+    },
+    {
+      "id": "varargs",
+      "title": "可変長引数",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "型・個数が自動付属しない点と昇格を丁寧に説明。",
+      "auditProposal": "printfと共通の引数消費表を利用。",
+      "diagramProposal": "書式を1個読むごとにva_argが次へ進む概念図。実際のABI配置とは区別。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「書式を1個読むごとにva_argが次へ進む概念図。実際のABI配置とは区別。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「書式を1個読むごとにva_argが次へ進む概念図。実際のABI配置とは区別。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "typedef",
+      "title": "typedefと宣言・定義",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "型別名と宣言・定義・ヘッダの関係が十分。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "builtin",
+      "title": "ビルトイン関数",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "コンパイラ組込みと通常の関数の違いが明確。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "offset",
+      "title": "オフセット・offsetof",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "デバイスに渡す位置の計算を具体的に説明。",
+      "auditProposal": "descriptorの図と共有。",
+      "diagramProposal": "要求ヘッダ/data/statusの先頭からのバイト差と物理アドレス計算。",
+      "status": "対応済み",
+      "actions": [
+        "B追加改善：目的を示した共通図への案内"
+      ],
+      "diagramOwners": [
+        "struct"
+      ],
+      "reason": "文章と具体例で理解可能。図の個別追加は重複・表示量を増やすため行わない。",
+      "changedFields": [
+        "detail"
+      ],
+      "diagramDisposition": "既存図への参照で対応した",
+      "bFollowup": {
+        "addedText": [
+          "[[struct|図：構造体]]では、メンバのサイズを足した値と、実際のoffsetofが違う理由を確認できます。"
+        ],
+        "owners": [
+          "struct"
+        ]
+      },
+      "bStatus": "既存図への参照で対応した",
+      "bReason": "対応先：struct"
+    },
+    {
+      "id": "memcpy",
+      "title": "memcpyとポインタを進める式",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "式・反復・範囲・重なりを丁寧に説明。",
+      "auditProposal": "コピー元/先の状態表を補助に。",
+      "diagramProposal": "3バイトをコピーする各反復でd,s,nと書込済領域を示す。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「3バイトをコピーする各反復でd,s,nと書込済領域を示す。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「3バイトをコピーする各反復でd,s,nと書込済領域を示す。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "strings",
+      "title": "strcpy・strcmp・論理否定",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "主要2関数は十分だがstrcpy_sの違いが説明されず同一視の恐れ。",
+      "auditProposal": "strcpy_sは別APIで環境依存・容量引数があると補足、またはaliasを削除。",
+      "diagramProposal": "strcmpの2文字列を並べ最初の相違と戻り値の符号を示す。",
+      "status": "現状維持",
+      "actions": [
+        "strcpy_sは別APIで、教材に未実装・対応環境による違いを補足。"
+      ],
+      "diagramOwners": [],
+      "reason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「strcmpの2文字列を並べ最初の相違と戻り値の符号を示す。」の個別追加は今回は不要と判断。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "`strcpy_s`はstrcpyとは別のAPIで、コピー先容量も渡す形です。対応状況や細部はC処理系・ライブラリによって異なり、この教材は実装していません。関数名のsだけで任意の不正入力が安全になるわけではなく、その環境の契約を確認します。"
+        ]
+      },
+      "diagramDisposition": "現状の文章・コード例で十分と判断した",
+      "bStatus": "現状の文章・コード例で十分と判断した",
+      "bReason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「strcmpの2文字列を並べ最初の相違と戻り値の符号を示す。」の個別追加は今回は不要と判断。"
+    },
+    {
+      "id": "panic-macro",
+      "title": "PANICマクロの慣用句",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "do-whileとGNU可変引数の理由が具体的。",
+      "auditProposal": "マクロ展開前後の対照は有益。",
+      "diagramProposal": "if/elseの展開を裸ブロックとdo-whileで比較。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「if/elseの展開を裸ブロックとdo-whileで比較。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「if/elseの展開を裸ブロックとdo-whileで比較。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "exception",
+      "title": "例外・トラップ・ハンドラ",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "自動更新・ソフト保存・復帰方針を十分に説明。",
+      "auditProposal": "trap-stateと同じ責任分担図を参照。",
+      "diagramProposal": "CPUのCSR更新→入口asmの汎用レジスタ保存→Cハンドラ→復元/sret。",
+      "status": "対応済み",
+      "actions": [
+        "共通図への明示案内：trap-state"
+      ],
+      "diagramOwners": [
+        "trap-state"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "[[trap-state|図：例外時のCSRと保存状態]]では、本文で扱う場所・値・処理の対応を同じ例で確認できます。"
+        ]
+      },
+      "diagramDisposition": "共通図へ案内"
+    },
+    {
+      "id": "interrupt",
+      "title": "割り込みとポーリング",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "割込み・ポーリング・強制切替の関係を適切に説明。",
+      "auditProposal": "時系列比較を補助に。",
+      "diagramProposal": "待機中のCPU時間軸で繰返し確認と通知後ハンドラを比較。",
+      "status": "対応済み",
+      "actions": [
+        "B追加改善：共通図を新設"
+      ],
+      "diagramOwners": [
+        "interrupt"
+      ],
+      "reason": "文章と具体例で理解可能。図の個別追加は重複・表示量を増やすため行わない。",
+      "changedFields": [
+        "detail"
+      ],
+      "diagramDisposition": "図解を追加・改善した",
+      "bFollowup": {
+        "addedText": [
+          "機器はどちらでも要求を処理します。違いは、その間にCPUが繰り返し調べ続けるか、通知を使えるかです。\n```diagram\n{\"mode\":\"table\",\"title\":\"機器が動く間、CPUは何をするか\",\"columns\":[\"ポーリング待ち\",\"割り込みを使う待ち\"],\"rows\":[[\"t0：要求を機器へ送る\",\"t0：通知を設定し要求を送る\"],[\"t1：未完了？ と状態を再読\",\"t1：別の仕事やCPUの待機\"],[\"t2：未完了？ と再び再読\",\"t2：別の仕事やCPUの待機\"],[\"t3：機器が完了。次の確認で検出\",\"t3：機器が完了し通知を出す\"],[\"検出後：結果の状態を確認\",\"受付条件が整えばハンドラで状態確認\"]],\"note\":\"同じ時間帯を左右で比較。通知直後の即時実行は保証しない。教材のディスク待ちは左側。\"}\n```\n完了を知ることと成功を知ることは別なので、両方ともstatus等を確認します。データの順序保証も別条件です。割り込みによる待ちと別プロセスへの切替は同じ操作ではありません。"
+        ],
+        "owners": [
+          "interrupt"
+        ]
+      },
+      "bStatus": "図解を追加・改善した",
+      "bReason": "対応先：interrupt"
+    },
+    {
+      "id": "trap-state",
+      "title": "例外時のCSRと保存状態",
+      "priority": "P1",
+      "diagramRating": "A",
+      "auditFinding": "CSRとソフト保存の区別は良いが、124バイト後にC関数を呼ぶコードと16バイトABI整列の不整合を説明しない。",
+      "auditProposal": "124バイトの保存内容とC呼出し時の整列を分けて説明し、教材の検証課題として明示。",
+      "diagramProposal": "CSRの自動更新、31レジスタのフレーム、保存前spとC呼出時spを区別。",
+      "status": "対応済み",
+      "actions": [
+        "保存量124BとC呼出し時の16B整列を分離。余り4の計算、保存・復元を合わせて検証する注意を追加。",
+        "図：トラップの保存責任とC呼出し"
+      ],
+      "diagramOwners": [
+        "trap-state"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "保存データ量の124バイトと、C関数を呼ぶときのスタックの整列条件は別です。標準RISC-V整数ABIでは手続き入口のspは16バイト境界にそろえる必要があります。第8章の入口は`sp -= 124`の後に`call handle_trap`するので、元spが16の倍数でも呼出し時は余り4になり、標準ABIの条件を満たしません。教材を一般化する際は退避領域と余白を合わせた確保量、元spの保存・復元、`trap_frame`の並びを一緒に確認します。単に124という保存データ量を128へ書き換えるだけでは説明になりません。[[sp|スタックポインタの整列]]も参照してください。必ずその場でクラッシュするという意味ではなく、呼出し規約の保証を外れる問題です。",
+          "CPUが自動で行う仕事と、OSの命令で行う仕事を分けて見ます。\n［図の定義］\nC関数を呼ぶ境界でABIの整列が必要です。例外の原因を直すこと、命令を飛ばすこと、終了することもOSが判断します。"
+        ]
+      },
+      "diagramDisposition": "図を搭載"
+    },
+    {
+      "id": "sret",
+      "title": "sretと復帰・初回起動",
+      "priority": "P3",
+      "diagramRating": "A",
+      "auditFinding": "初回起動で復帰機構を使う理由とSPP/SPIEの更新が正確。",
+      "auditProposal": "初回と通常復帰の状態遷移を比較。",
+      "diagramProposal": "sepc/SPP/SPIEの設定→sret→PC/特権/SIEの結果表。",
+      "status": "対応済み",
+      "actions": [
+        "共通図への明示案内：syscall"
+      ],
+      "diagramOwners": [
+        "syscall"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "[[syscall|図：システムコール]]では、本文で扱う場所・値・処理の対応を同じ例で確認できます。"
+        ]
+      },
+      "diagramDisposition": "共通図へ案内"
+    },
+    {
+      "id": "unimp",
+      "title": "unimp・nop・wfi",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "3命令の目的と保証の限界を適切に説明。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "process",
+      "title": "プロセスとスレッド",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "プログラム・資源・実行の流れを区別し段階差も明示。",
+      "auditProposal": "共有されるものと独立するものを図示。",
+      "diagramProposal": "2プロセスと各スレッド、共有アドレス空間/個別スタックの関係。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「2プロセスと各スレッド、共有アドレス空間/個別スタックの関係。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「2プロセスと各スレッド、共有アドレス空間/個別スタックの関係。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "context",
+      "title": "実行コンテキストと切り替え",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "既存図の処理順は正確。A/BのスタックとCPUの所在は図で見えず、52バイト退避のABI条件も参照なし。",
+      "auditProposal": "既存flowは維持し、二つのスタックとCPUの対応図・spの整列注意へのリンクを補う。",
+      "diagramProposal": "Aスタック/CPU sp/Bスタックの3列。データコピーではなく参照先の切替を示す。",
+      "status": "対応済み",
+      "actions": [
+        "CPUとA/Bの保存欄を描き分け、spを替える操作を可視化。52B退避区間とC呼出し整列を区別。",
+        "図：AとBのメモリは残り、CPUのspが切り替わる"
+      ],
+      "diagramOwners": [
+        "context"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [
+          "次の図は教材の関数呼び出しによる切り替えの骨格です。AとBはそれぞれ別のスタックを持ちます。初回起動時の準備や、ページテーブルを切り替える追加処理は省略しています。\n［図の定義］\nAのスタックはメモリに残っています。後でAを選んだときは逆向きの保存・復元でAの続きへ戻れます。CPU上のspの値を変えることと、スタック全体の内容をコピーすることは異なります。"
+        ],
+        "addedParagraphs": [
+          "この独自アセンブリ区間の52バイト保存を、通常C関数を呼ぶ時点の整列と同一視しないでください。退避中にC関数は呼ばず、復元して元のspへ戻します。初回に入る通常関数のspについても[[first-switch|初回用フレーム]]と[[sp|16バイト整列]]を確認します。",
+          "AとBは別の保存領域を持ち、CPUのspは一つです。図は初回起動の準備とページテーブルの切替を省略しています。\n［図の定義］\nAの内容はAのスタックに残ります。Bのスタックをコピーしているのではなく、復元に使う場所を切り替えています。"
+        ]
+      },
+      "diagramDisposition": "図を搭載"
+    },
+    {
+      "id": "multitask",
+      "title": "並行・並列・マルチタスク",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "並行と並列、協調方式の限界が明確。",
+      "auditProposal": "時間軸の比較が有益。",
+      "diagramProposal": "1CPUでA/B交互と2CPUでA/B同時の時間軸。",
+      "status": "対応済み",
+      "actions": [
+        "B追加改善：共通図を新設"
+      ],
+      "diagramOwners": [
+        "multitask"
+      ],
+      "reason": "文章と具体例で理解可能。図の個別追加は重複・表示量を増やすため行わない。",
+      "changedFields": [
+        "detail"
+      ],
+      "diagramDisposition": "図解を追加・改善した",
+      "bFollowup": {
+        "addedText": [
+          "左では各瞬間に一つだけ、右では同じ瞬間に二つの処理が進みます。\n```diagram\n{\"mode\":\"table\",\"title\":\"同じ時刻で比べる：1CPUと2CPU\",\"columns\":[\"時刻 / 1CPU\",\"同じ時刻 / 2CPU\"],\"rows\":[[\"t0：CPU0=A\",\"t0：CPU0=A、CPU1=B\"],[\"t1：CPU0=B\",\"t1：CPU0=A、CPU1=B\"],[\"t2：CPU0=A\",\"t2：CPU0=A、CPU1=B\"]],\"note\":\"各行が同じ時間帯。同じCPUのA/B切替コストは省略。CPUは実行単位を指す模式例。\"}\n```\n左でも時間幅を取ればA/Bが両方進むので並行です。右は並列でもあります。教材は左の協調方式で、Aがyieldへの経路を通らなければBへ交代する保証はありません。"
+        ],
+        "owners": [
+          "multitask"
+        ]
+      },
+      "bStatus": "図解を追加・改善した",
+      "bReason": "対応先：multitask"
+    },
+    {
+      "id": "pcb",
+      "title": "プロセス管理構造体",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "枠・状態・保存sp・資源回収を分離できている。",
+      "auditProposal": "contextと共用の構造図を案内。",
+      "diagramProposal": "procs配列の各枠にpid/state/sp/内蔵stackとCPUを対応付ける。",
+      "status": "対応済み",
+      "actions": [
+        "共通図への明示案内：context"
+      ],
+      "diagramOwners": [
+        "context"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "[[context|図：実行コンテキストと切り替え]]では、本文で扱う場所・値・処理の対応を同じ例で確認できます。"
+        ]
+      },
+      "diagramDisposition": "既存図への参照で対応した",
+      "bStatus": "既存図への参照で対応した",
+      "bReason": "対応先：context"
+    },
+    {
+      "id": "kernel-stack",
+      "title": "カーネルスタックと信頼境界",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "信頼境界と初期/ユーザーモード段階、ネストの限界まで説明。",
+      "auditProposal": "第10章で導入するcsrrwによる交換命令を示し、後のユーザーモードとの関係を手順図へ。",
+      "diagramProposal": "ユーザーsp→sscratch退避、信頼済カーネルsp→CPU、保存フレームの関係。",
+      "status": "対応済み",
+      "actions": [
+        "csrrwによるsp/sscratchの交換と第13章以降の意味を補足。",
+        "共通図への明示案内：trap-state"
+      ],
+      "diagramOwners": [
+        "trap-state"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "交換処理は第10章の`csrrw sp, sscratch, sp`で導入します。実行直前のspをsscratchへ、準備してあったカーネルスタックの上端をspへ同時に移し、旧spをフレームに保存した後でsscratchを設定し直します。第13章以降では、旧spはユーザー側の値になり得ます。",
+          "[[trap-state|図：例外時のCSRと保存状態]]では、本文で扱う場所・値・処理の対応を同じ例で確認できます。"
+        ]
+      },
+      "diagramDisposition": "共通図へ案内"
+    },
+    {
+      "id": "scheduler",
+      "title": "スケジューラとyield",
+      "priority": "P2",
+      "diagramRating": "B",
+      "auditFinding": "pidと添字の対応は正確。教材特有のidle_procにブート時のコンテキストを保存する仕組みが薄く、NULLで作ったプロセスがなぜ動けるか追いにくい。",
+      "auditProposal": "第10章のcurrent_proc=idle_proc→最初のyieldで保存sp上書き→idleへ戻るとkernel_mainの続き、を補足。通常の待機ループとの違いを説明。",
+      "diagramProposal": "探索順の表に加え、ブートスタック→idle_proc.spへ保存→最終的なyield後のPANICへ戻る経路。",
+      "status": "追加図は保留",
+      "actions": [
+        "idle_procが最初のyieldでブート文脈を保存し、NULLの初期フレームを上書きする理由を補足。"
+      ],
+      "diagramOwners": [],
+      "reason": "図案「探索順の表に加え、ブートスタック→idle_proc.spへ保存→最終的なyield後のPANICへ戻る経路。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "教材のアイドルプロセスは、一般的な待機ループとは少し違います。第10章で`idle_proc = create_process(NULL)`としてから`current_proc = idle_proc`とすると、最初の`yield`でブート処理の実行状態とspがidle_procへ保存され、人工的に作った初期spが上書きされます。そのためNULLの開始位置へ飛ぶわけではありません。後にidleが選ばれると、ブート用スタック上の`kernel_main`のyieldの続きへ戻ります。第14章の全プロセス終了後の`PANIC(\"switched to idle process\")`はこの経路です。idleの内蔵stackフィールドと、保存されたブート用スタックを区別してください。"
+        ]
+      },
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「探索順の表に加え、ブートスタック→idle_proc.spへ保存→最終的なyield後のPANICへ戻る経路。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "first-switch",
+      "title": "初回だけ「戻り先」を用意する",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "人工フレームと復元順は良い。末尾アドレスの整列条件は未説明。",
+      "auditProposal": "proc->stack末尾を通常関数のABIに合わせる必要をspへ明示参照。",
+      "diagramProposal": "高位からs11…s0,raを積み、低位からra,s0…を復元する対応図。",
+      "status": "対応済み",
+      "actions": [
+        "末尾の16B整列が配列サイズだけでは保証されない点と、初回52Bフレームの番地・順序を説明。",
+        "図：初回に復元する52バイト（低い番地が上）"
+      ],
+      "diagramOwners": [
+        "first-switch"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "復元後は`proc->stack`の末尾がCPUのspとなって通常の開始関数へ入ります。末尾が16バイト境界になることは、`uint8_t stack[8192]`という長さだけでは保証できません。構造体の配置・配列中の各要素・末尾位置も含めて[[sp|ABIの整列条件]]を確認します。",
+          "スタック上端を仮に0x80001000とします。Cの局所変数spを--spで下げ、上端側からs11…s0,raの順で書きます。\n［図の定義］\n最初の--spは0x80000ffc、次は0x80000ff8です。13回で0x80000fccになります。復元は低い番地のraから逆向きに読み、52バイト戻すと上端です。この例の上端は16バイト整列ですが、実コードの配置も別途確認します。"
+        ]
+      },
+      "diagramDisposition": "図を搭載"
+    },
+    {
+      "id": "virtual",
+      "title": "仮想アドレスと物理アドレス",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "共有と隔離の条件、型名の限界が適切。",
+      "auditProposal": "2つの対応表を並べる。",
+      "diagramProposal": "A/Bの同じVAが別PAへ届く例と、同じPAへ共有する例。",
+      "status": "対応済み",
+      "actions": [
+        "共通図への明示案内：copy-isolate"
+      ],
+      "diagramOwners": [
+        "copy-isolate"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "[[copy-isolate|図：コピーしてからマップする理由]]では、本文で扱う場所・値・処理の対応を同じ例で確認できます。"
+        ]
+      },
+      "diagramDisposition": "共通図へ案内"
+    },
+    {
+      "id": "paging",
+      "title": "ページングとページテーブル",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "対応付け・データ移動・TLB同期を明確に区別。",
+      "auditProposal": "virtual/sv32の図へ共通参照。",
+      "diagramProposal": "連続VAページ→離れた物理ページ、オフセットと権限は別ラベル。",
+      "status": "対応済み",
+      "actions": [
+        "共通図への明示案内：sv32"
+      ],
+      "diagramOwners": [
+        "sv32"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "[[sv32|図：Sv32の2段階変換]]では、本文で扱う場所・値・処理の対応を同じ例で確認できます。"
+        ]
+      },
+      "diagramDisposition": "共通図へ案内"
+    },
+    {
+      "id": "sv32",
+      "title": "Sv32の2段階変換",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "数値例と2段表・34ビット幅は正確。既存図は流れだけでビット分割と表の位置が見えない。",
+      "auditProposal": "既存flowに加えた図または置換図で数値例を可視化。",
+      "diagramProposal": "VAの10/10/12ビット→root[128]→table[15]→0x80253000+0x034を結ぶ。",
+      "status": "対応済み",
+      "actions": [
+        "図：仮想アドレス0x2000f034の分解／添字128と15で表をたどる"
+      ],
+      "diagramOwners": [
+        "sv32"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [
+          "以下は4KiBページの変換で、各段階の対応表を読む必要がある場合の流れです。仮想ページ番号は上位側と下位側の各10ビット、ページ内オフセットは12ビットに分かれます。図は4MiBの大きなページや変換結果のキャッシュ、アクセス権検査の細部を省略しています。\n［図の定義］\n各PTEは有効で、必要なアクセス権もあることが前提です。無効な対応や権限違反なら、そのままメモリへ進まずページフォルトになります。対応表の探索とエラー処理を区別して読んでください。"
+        ],
+        "addedParagraphs": [
+          "以下は4KiBページの変換で、各段階の対応表を読む必要がある場合の流れです。仮想ページ番号は上位側と下位側の各10ビット、ページ内オフセットは12ビットに分かれます。図は4MiBの大きなページや変換結果のキャッシュ、アクセス権検査の細部を省略しています。",
+          "各PTEは有効で、必要なアクセス権もあることが前提です。無効な対応や権限違反なら、そのままメモリへ進まずページフォルトになります。対応表の探索とエラー処理を区別して読んでください。",
+          "先に32ビットを、表を選ぶ番号二つとページ内の位置に分けます。\n［図の定義］\n10+10+12=32ビットです。二つのVPNは表の添字であり、オフセットは最終ページ内のバイト位置です。",
+          "次に二つの番号で別々の表の行を選びます。\n［図の定義］\nPTEのPPNはページの番号なので、物理アドレスへ戻すときは4096倍します。元の12ビットのオフセットは最後まで引き継ぎます。"
+        ]
+      },
+      "diagramDisposition": "図を搭載"
+    },
+    {
+      "id": "ppn",
+      "title": "物理ページ番号とアドレス",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "12ビットと10ビットの異なるシフトを正確に説明。",
+      "auditProposal": "値の型とビット位置を図示。",
+      "diagramProposal": "PA[PPN|offset12]→PPN→PTE[PPN|flags10]とsatpを比較。",
+      "status": "対応済み",
+      "actions": [
+        "図：同じ番号でも格納するビット位置が違う",
+        "共通図への明示案内：pte"
+      ],
+      "diagramOwners": [
+        "ppn",
+        "pte"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "アドレス→番号→格納欄の順で、値の意味を追います。\n［図の定義］\nsatpのSv32モードビットは別に合成します。表の配置場所を指定するsatpと、ページの対応を記録するPTEを混同しないでください。",
+          "[[pte|図：ページテーブルエントリとフラグ]]では、本文で扱う場所・値・処理の対応を同じ例で確認できます。"
+        ]
+      },
+      "diagramDisposition": "図を搭載"
+    },
+    {
+      "id": "pte",
+      "title": "ページテーブルエントリとフラグ",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "葉/非葉、権限、A/Dの実装差まで十分。",
+      "auditProposal": "フラグ配置と判定を可視化。",
+      "diagramProposal": "32ビットPTEのPPN/RSW/D/A/G/U/X/W/R/V、葉/次段表の分岐。",
+      "status": "対応済み",
+      "actions": [
+        "図：Sv32の32ビットPTE（上位から）"
+      ],
+      "diagramOwners": [
+        "pte"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "アドレス中の下位12ビットと、PTEの下位10ビットは用途が違います。\n［図の定義］\nPTEの上位22ビットはPPNです。下位10ビットはRSWとフラグで、ページ内オフセットを保存する欄ではありません。R/W/Xが全て0なら次段表への参照、RまたはXが1ならリーフです。不正なR=0,W=1等は本文の条件も確認します。"
+        ]
+      },
+      "diagramDisposition": "図を搭載"
+    },
+    {
+      "id": "bitops",
+      "title": "ビット演算・マスク・シフト",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "式の意味と型幅・0bの条件を適切に説明。",
+      "auditProposal": "中間ビット列を添える。",
+      "diagramProposal": "32ビットVA→右12シフト→下位10ビットANDの3段対応。",
+      "status": "対応済み",
+      "actions": [
+        "B追加改善：目的を示した共通図への案内"
+      ],
+      "diagramOwners": [
+        "sv32"
+      ],
+      "reason": "文章と具体例で理解可能。図の個別追加は重複・表示量を増やすため行わない。",
+      "changedFields": [
+        "detail"
+      ],
+      "diagramDisposition": "既存図への参照で対応した",
+      "bFollowup": {
+        "addedText": [
+          "[[sv32|図：Sv32の2段階変換]]では、VPNの10ビット二つとoffset12ビットの切り分けを数値例で確認できます。"
+        ],
+        "owners": [
+          "sv32"
+        ]
+      },
+      "bStatus": "既存図への参照で対応した",
+      "bReason": "対応先：sv32"
+    },
+    {
+      "id": "satp",
+      "title": "satpとTLBの同期",
+      "priority": "P2",
+      "diagramRating": "B",
+      "auditFinding": "一般則は正確だが教材のsfence.vma→satp更新→sfence.vmaを具体的に解きほぐしていない。ASIDは短く定義済みだが、登録語「参照の局所性」の説明はない。",
+      "auditProposal": "教材の実際の3命令に役割を対応付ける。参照の局所性は近い時刻・近い番地を繰り返し参照する傾向と補足。",
+      "diagramProposal": "表更新→同期→satp切替→古い変換を使わせない同期→新VA参照の時系列。",
+      "status": "追加図は保留",
+      "actions": [
+        "sfence.vma→satp更新→sfence.vmaの役割と、登録語「参照の局所性」を説明。"
+      ],
+      "diagramOwners": [],
+      "reason": "図案「表更新→同期→satp切替→古い変換を使わせない同期→新VA参照の時系列。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "第11章の並びは`sfence.vma`→`csrw satp, ...`→`sfence.vma`です。切替前の同期で先行するページ表への書込みを変換処理へ反映し、satpで次のルート表を選び、切替後の同期で古い変換情報を使わせないようにします。教材の引数なしの命令は広い範囲を同期する単純な方式です。また「参照の局所性」は、同じ場所を近い時刻に再び参照したり、近い番地を続けて参照したりする傾向で、TLBに最近の変換を残す理由になります。"
+        ]
+      },
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「表更新→同期→satp切替→古い変換を使わせない同期→新VA参照の時系列。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "identity",
+      "title": "カーネルの恒等マッピング",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "恒等でも権限検査が残りユーザー許可とは別と説明。",
+      "auditProposal": "virtual/pagingの図を共用。",
+      "diagramProposal": "VA=PAのカーネル対応とVA≠PAのユーザー対応を並記。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「VA=PAのカーネル対応とVA≠PAのユーザー対応を並記。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「VA=PAのカーネル対応とVA≠PAのユーザー対応を並記。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "pagefault",
+      "title": "ページフォルト",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "教材のログの読み方と再例外の理由が具体的。",
+      "auditProposal": "デバッグ手順を分岐図にできる。",
+      "diagramProposal": "命令フェッチ→変換/権限失敗→stvecも失敗するループと修正点。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「命令フェッチ→変換/権限失敗→stvecも失敗するループと修正点。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「命令フェッチ→変換/権限失敗→stvecも失敗するループと修正点。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "dump-xp",
+      "title": "QEMUのxとxp",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "アドレスとダンプ値、仮想と物理の違いを説明。",
+      "auditProposal": "同じデータへ至るx/xpの道筋を示す。",
+      "diagramProposal": "x VA→ページ表→PAとxp PA→同じバイト列の比較。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「x VA→ページ表→PAとxp PA→同じバイト列の比較。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「x VA→ページ表→PAとxp PA→同じバイト列の比較。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "raw",
+      "title": "生バイナリとローダ",
+      "priority": "P1",
+      "diagramRating": "A",
+      "auditFinding": "一般論に寄り、教材の--set-section-flags .bss=alloc,contentsを省略。教材でスタック分を含むイメージができる理由を説明できない。",
+      "auditProposal": "一般の-O binaryと教材の追加フラグを区別し、bss/スタックをファイル内容に含める役割、コピー量と確保量を説明。",
+      "diagramProposal": "shell.elf各セクション→bssを内容化したshell.bin→コピー先ページと末尾余白。",
+      "status": "対応済み",
+      "actions": [
+        "教材の.bss=alloc,contentsと64KiBスタックを含むイメージを説明。コピー元のゼロと確保ページ末尾のゼロを分離。",
+        "図：アプリのファイルと起動時のRAM"
+      ],
+      "diagramOwners": [
+        "raw"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [
+          "教材では、この処理を簡単にするため、`objcopy -O binary`でELFから生バイナリを作ります。生成物には、対象となる命令やデータがアドレス配置に沿って並びますが、ELFのヘッダやシンボル表は含まれません。生バイナリだけを読んでも、配置先や起動位置を一般には判断できないため、ローダ側で取り決めておく必要があります。",
+          "なお、生バイナリに実行時に必要な領域のすべてがファイル内容として入るとは限りません。初期値ゼロの変数を置く`.bss`や、予約したスタック領域は、別途メモリを確保してゼロにする必要があります。教材ではページ確保処理のゼロ埋めなどと組み合わせて扱います。"
+        ],
+        "addedParagraphs": [
+          "教材では、この処理を簡単にするため、`$OBJCOPY --set-section-flags .bss=alloc,contents -O binary shell.elf shell.bin`でELFから生バイナリを作ります。生成物には、対象となる命令やデータがアドレス配置に沿って並びますが、ELFのヘッダやシンボル表は含まれません。生バイナリだけを読んでも、配置先や起動位置を一般には判断できないため、ローダ側で取り決めておく必要があります。",
+          "一般には、生バイナリに実行時の全領域が入るとは限りません。しかし第12章では`.bss=alloc,contents`が重要です。`contents`は、ELFで実データを持たないNOBITS形式の`.bss`を内容のあるPROGBITS形式として出力させます。`user.ld`では64KiBのスタック予約も`.bss`の内側にあるため、教材の`shell.bin`にはその分もゼロの内容として含まれます。単に`-O binary`とした一般例と混同しないでください。",
+          "第13章の`create_process`は`image_size`までページ単位で領域を確保して、このイメージをコピーします。そのため、ここではスタックの分もイメージサイズを通して確保・マッピングされます。最後のページでは残りのイメージサイズだけをコピーし、余った部分は`alloc_pages`によるゼロ埋めが残ります。コピー元の`.bss`のゼロと、確保ページ全体をゼロにする処理は別の段階です。",
+          "左はファイルを作る工程、右は実行するためのメモリ準備です。\n［図の定義］\nshell.bin.oはアプリのELFヘッダを復元しません。スタックがイメージサイズに含まれることと、CPUのspをその上端へ設定することも別の操作です。"
+        ]
+      },
+      "diagramDisposition": "図を搭載"
+    },
+    {
+      "id": "absolute",
+      "title": "埋め込みバイナリのサイズ記号",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "紛らわしい宣言に対する説明は正確。",
+      "auditProposal": "symbolと同じ場所/値の対比図を使う。",
+      "diagramProposal": "startはデータ位置、endは直後、sizeはend-startという数値。間接参照の違い。",
+      "status": "対応済み",
+      "actions": [
+        "共通図への明示案内：symbol"
+      ],
+      "diagramOwners": [
+        "symbol"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "[[symbol|図：リンカシンボルとextern]]では、本文で扱う場所・値・処理の対応を同じ例で確認できます。"
+        ]
+      },
+      "diagramDisposition": "共通図へ案内"
+    },
+    {
+      "id": "assert",
+      "title": "リンク時ASSERTと実行時検査",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "教材本文の曖昧な境界を訂正できている。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "copy-isolate",
+      "title": "コピーしてからマップする理由",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "共有とコピー、権限の役割が明確。",
+      "auditProposal": "共有状態と分離状態の2図を比較。",
+      "diagramProposal": "同じ初期像→A/B別物理ページ、片方の書込後に異なる内容。",
+      "status": "対応済み",
+      "actions": [
+        "図：同じVAでも、コピー先の物理ページは別"
+      ],
+      "diagramOwners": [
+        "copy-isolate"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "AとBに同じ初期イメージを別々にコピーした場合です。\n［図の定義］\n表を別にするだけでは独立しません。別の物理領域を割り当てて初期内容をコピーし、それぞれへ対応させることが要点です。"
+        ]
+      },
+      "diagramDisposition": "図を搭載"
+    },
+    {
+      "id": "syscall",
+      "title": "システムコール",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "C関数と権限移行の区別、教材規約が明確。",
+      "auditProposal": "ecall-userと1つの往復図を共有。",
+      "diagramProposal": "U側syscall→レジスタ→ecall→trap_frame→分岐→結果→sret。",
+      "status": "対応済み",
+      "actions": [
+        "図：UモードからSモードへ依頼して戻る"
+      ],
+      "diagramOwners": [
+        "syscall"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "モード間の矢印と、それぞれのモード内の通常処理を区別してください。\n［図の定義］\n初めてUモードへ入るときは先にsepcとSPP等を用意してsretします。通常の復帰と同じ命令を使いますが、その前にユーザーからトラップした必要はありません。"
+        ]
+      },
+      "diagramDisposition": "図を搭載"
+    },
+    {
+      "id": "ecall-user",
+      "title": "ecall：この章ではシステムコール",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "結果が戻る経路を具体的に説明。",
+      "auditProposal": "syscallの図へ参照。",
+      "diagramProposal": "実レジスタa0→f->a0→書換え→復元後a0の往復。",
+      "status": "対応済み",
+      "actions": [
+        "共通図への明示案内：syscall"
+      ],
+      "diagramOwners": [
+        "syscall"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "[[syscall|図：システムコール]]では、本文で扱う場所・値・処理の対応を同じ例で確認できます。"
+        ]
+      },
+      "diagramDisposition": "既存図への参照で対応した",
+      "bStatus": "既存図への参照で対応した",
+      "bReason": "対応先：syscall"
+    },
+    {
+      "id": "ecall-next",
+      "title": "sepcに4を足す理由",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "ecallに限った加算理由が明確。",
+      "auditProposal": "命令位置の小図を補助に。",
+      "diagramProposal": "ecallの4バイトとsepc旧値/更新値、未更新時の再実行ループ。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「ecallの4バイトとsepc旧値/更新値、未更新時の再実行ループ。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「ecallの4バイトとsepc旧値/更新値、未更新時の再実行ループ。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "getchar",
+      "title": "文字入力・改行・待ち合わせ",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "ポーリングと実行権譲渡、CR/LFを適切に区別。",
+      "auditProposal": "待機処理の流れ図が有益。",
+      "diagramProposal": "SBI入力→-1ならyield→再問い合わせ、文字ありなら返却。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「SBI入力→-1ならyield→再問い合わせ、文字ありなら返却。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「SBI入力→-1ならyield→再問い合わせ、文字ありなら返却。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "exit",
+      "title": "プロセス終了と資源回収",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "教材の未回収と一般的な終了処理を分けて説明。",
+      "auditProposal": "状態遷移で補助。",
+      "diagramProposal": "RUNNABLE→EXITED→選択対象外。資源回収/UNUSEDへの未実装経路を点線。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「RUNNABLE→EXITED→選択対象外。資源回収/UNUSEDへの未実装経路を点線。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「RUNNABLE→EXITED→選択対象外。資源回収/UNUSEDへの未実装経路を点線。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "driver",
+      "title": "デバイスドライバ",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "ドライバとFSの責任が明確。",
+      "auditProposal": "fs/ioと層の図を共有。",
+      "diagramProposal": "ファイル名API→FS→ブロックドライバ→Virtio→ホストイメージ。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「ファイル名API→FS→ブロックドライバ→Virtio→ホストイメージ。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「ファイル名API→FS→ブロックドライバ→Virtio→ホストイメージ。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "virtio",
+      "title": "VirtioとLegacyインターフェース",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "3領域の役割とLegacy/Modernの違いが適切。",
+      "auditProposal": "virtqueueの共有メモリ図を参照。",
+      "diagramProposal": "ドライバ/デバイス間の3領域と、誰が書くかを矢印で示す。",
+      "status": "対応済み",
+      "actions": [
+        "共通図への明示案内：virtqueue"
+      ],
+      "diagramOwners": [
+        "virtqueue"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "[[virtqueue|図：virtqueue：共有メモリ上の要求表]]では、本文で扱う場所・値・処理の対応を同じ例で確認できます。"
+        ]
+      },
+      "diagramDisposition": "共通図へ案内"
+    },
+    {
+      "id": "mmio",
+      "title": "MMIO：メモリのように機器を操作する",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "単位、volatile、順序、マッピング条件が十分。",
+      "auditProposal": "RAMアクセスとの差を図で補助。",
+      "diagramProposal": "同じCPU load/storeが物理空間のRAMかMMIO窓口へ届く構成。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「同じCPU load/storeが物理空間のRAMかMMIO窓口へ届く構成。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「同じCPU load/storeが物理空間のRAMかMMIO窓口へ届く構成。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "device-register",
+      "title": "デバイスのレジスタ",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "整数加算→キャスト→アクセスの順が明確。",
+      "auditProposal": "mmioの図を共用。",
+      "diagramProposal": "base+0x70→32ビットレジスタとCPU a0の別枠表示。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「base+0x70→32ビットレジスタとCPU a0の別枠表示。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「base+0x70→32ビットレジスタとCPU a0の別枠表示。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "volatile",
+      "title": "Cのvolatile",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "修飾対象とasm volatile、同期の限界を明確に区別。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "virtqueue",
+      "title": "virtqueue：共有メモリ上の要求表",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "3領域の役割は明確だがvirtq_initもaliasなのに実際の配置・QUEUE_PFN・4096整列を追えない。",
+      "auditProposal": "教材の構造体と初期化の各設定を1組の数値例で説明。",
+      "diagramProposal": "desc/avail/padding/usedのRAM配置、PFNとCPU用管理情報を区別。",
+      "status": "対応済み",
+      "actions": [
+        "virtq_init、16個のdesc、4096境界、QUEUE_SEL/NUM/PFN、CPU用管理欄を数値と配置で説明。",
+        "図：Legacyキューの先頭からusedまでの配置例"
+      ],
+      "diagramOwners": [
+        "virtqueue"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "第15章の`virtq_init(index)`は、構造体のサイズをページ単位へ切り上げて連続する物理ページをゼロ付きで確保し、CPU用の管理欄を初期化します。QUEUE_SELにはキュー番号、QUEUE_NUMにはディスクリプタ数16、QUEUE_PFNには領域先頭の物理アドレスを4096で割った番号を書きます。例えば先頭が`0x80240000`ならPFNは`0x80240`です。used領域は構造体のaligned指定で4096バイト境界に置きます。queue_index・used_index・last_used_indexはドライバの管理用であり、機器へ渡すデータ本体とは区別します。教材は利用可能なキューサイズの確認等も簡略化しています。",
+          "先頭を0x80240000と仮定し、教材のディスクリプタ数16で配置を追います。\n［図の定義］\nusedの前の隙間はデータ本体ではありません。QUEUE_PFNへは0x80240を渡します。デバイスが読む要求ヘッダ等の場所は、別のディスクリプタのaddrで渡します。"
+        ]
+      },
+      "diagramDisposition": "図を搭載"
+    },
+    {
+      "id": "descriptor",
+      "title": "ディスクリプタとチェーン",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "番号とアドレス、方向の説明は正確。二重の参照関係は図で効果大。",
+      "auditProposal": "チェーンとデータ領域を別枠にする。",
+      "diagramProposal": "desc0→desc1→desc2、それぞれaddr→header/data/status。len/WRITEも明記。",
+      "status": "対応済み",
+      "actions": [
+        "図：番号のチェーンと、addrが指すメモリを分ける"
+      ],
+      "diagramOwners": [
+        "descriptor"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "nextは同じ表の行番号、addrは別のメモリ領域の物理位置です。\n［図の定義］\nINではdisk→デバイス→RAMなのでdataにWRITEが必要です。OUTではRAM→デバイス→diskなのでdataにWRITEを付けません。要求ヘッダは両方で機器が読み、statusは両方で機器が書きます。"
+        ]
+      },
+      "diagramDisposition": "図を搭載"
+    },
+    {
+      "id": "rings",
+      "title": "available・used・リングバッファ",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "カウンタ・スロット・完了を正確に区別。",
+      "auditProposal": "used側も同じ時系列で対応。",
+      "diagramProposal": "単調に進む16ビットindexとindex%Nの配列位置、要求公開と完了の2列。",
+      "status": "対応済み",
+      "actions": [
+        "図：増えるカウンタと折り返す配列位置"
+      ],
+      "diagramOwners": [
+        "rings"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "カウンタと配列添字の二つを分けて追います。\n［図の定義］\n教材は一件ずつ完了を待つ簡略化です。一般の複数要求では未完了のディスクリプタや使用中スロットを再利用しない管理も必要です。"
+        ]
+      },
+      "diagramDisposition": "図を搭載"
+    },
+    {
+      "id": "barrier",
+      "title": "メモリフェンスと公開順序",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "教材のバリア不足の可能性を明示し、完了側の順序も説明できている。",
+      "auditProposal": "問題となる掲載順と保証すべき順を対照。",
+      "diagramProposal": "内容書込→公開前バリア→avail.index→通知、完了確認→読取側同期→データ。",
+      "status": "対応済み",
+      "actions": [
+        "共通図への明示案内：io"
+      ],
+      "diagramOwners": [
+        "io"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "[[io|図：I/Oリクエストと完了]]では、本文で扱う場所・値・処理の対応を同じ例で確認できます。"
+        ]
+      },
+      "diagramDisposition": "共通図へ案内"
+    },
+    {
+      "id": "busy",
+      "title": "ビジーウェイト",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "一件待機の簡略化とタイムアウト不足まで説明。",
+      "auditProposal": "interrupt/getcharと待機の比較図を共有。",
+      "diagramProposal": "通知後にused.indexを再読し、一致後statusを確認する流れ。",
+      "status": "対応済み",
+      "actions": [
+        "B追加改善：目的を示した共通図への案内"
+      ],
+      "diagramOwners": [
+        "interrupt"
+      ],
+      "reason": "文章と具体例で理解可能。図の個別追加は重複・表示量を増やすため行わない。",
+      "changedFields": [
+        "detail"
+      ],
+      "diagramDisposition": "既存図への参照で対応した",
+      "bFollowup": {
+        "addedText": [
+          "[[interrupt|図：割り込みとポーリング]]では、空のループでもCPUが状態を再読し続けることを、通知を待つ方式と比較できます。"
+        ],
+        "owners": [
+          "interrupt"
+        ]
+      },
+      "bStatus": "既存図への参照で対応した",
+      "bReason": "対応先：interrupt"
+    },
+    {
+      "id": "sector",
+      "title": "セクタとブロック",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "物理セクタ・要求単位・ページを正しく区別。",
+      "auditProposal": "単位対応表を添えられる。",
+      "diagramProposal": "セクタ0/1のバイト範囲と4KiBページ=8セクタ分という量の比較。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「セクタ0/1のバイト範囲と4KiBページ=8セクタ分という量の比較。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「セクタ0/1のバイト範囲と4KiBページ=8セクタ分という量の比較。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "disk-image",
+      "title": "ディスクイメージと永続化",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "保存された変更が消える理由まで説明している。",
+      "auditProposal": "flushの保存経路図を共有。",
+      "diagramProposal": "ゲストRAM→Virtio→ホストdisk.tar、次回起動の再生成による上書き。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「ゲストRAM→Virtio→ホストdisk.tar、次回起動の再生成による上書き。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「ゲストRAM→Virtio→ホストdisk.tar、次回起動の再生成による上書き。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "fs",
+      "title": "ファイルシステム",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "形式と操作機能を混同しない。",
+      "auditProposal": "file-api/flushと共用構成図を案内。",
+      "diagramProposal": "ファイル名→files管理情報→tarバイト列→セクタの層構成。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「ファイル名→files管理情報→tarバイト列→セクタの層構成。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「ファイル名→files管理情報→tarバイト列→セクタの層構成。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "tar",
+      "title": "tar・ustar・アーカイブ",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "目的と教材の形式制約は十分。",
+      "auditProposal": "tar-layoutの図を共有。",
+      "diagramProposal": "複数ファイルのheader/data/paddingの連続配置。",
+      "status": "対応済み",
+      "actions": [
+        "共通図への明示案内：tar-layout"
+      ],
+      "diagramOwners": [
+        "tar-layout"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "[[tar-layout|図：tarヘッダ・512バイトへの切り上げ]]では、本文で扱う場所・値・処理の対応を同じ例で確認できます。"
+        ]
+      },
+      "diagramDisposition": "既存図への参照で対応した",
+      "bStatus": "既存図への参照で対応した",
+      "bReason": "対応先：tar-layout"
+    },
+    {
+      "id": "tar-layout",
+      "title": "tarヘッダ・512バイトへの切り上げ",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "境界計算の具体例と終了判定の簡略化が正確。",
+      "auditProposal": "数値例をそのまま配置図へ。",
+      "diagramProposal": "0..511ヘッダ、512..1111内容、1112..1535詰物、1536次ヘッダ。",
+      "status": "対応済み",
+      "actions": [
+        "図：600バイトのファイルの次は1536から"
+      ],
+      "diagramOwners": [
+        "tar-layout"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "ここではアーカイブの先頭からのバイト位置をアドレス欄として表示します。\n［図の定義］\n512+600+424=1536です。内容600バイトと、占める領域1024バイトを区別してください。data[]はヘッダ直後の512から始まります。"
+        ]
+      },
+      "diagramDisposition": "図を搭載"
+    },
+    {
+      "id": "octal",
+      "title": "8進数の文字列",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "文字列と数値を区別し逐次変換を追える。",
+      "auditProposal": "計算表にするとさらに読みやすい。",
+      "diagramProposal": "1130の各文字、前値×8、追加桁、結果の4行表。",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「1130の各文字、前値×8、追加桁、結果の4行表。」の個別追加は今回は不要と判断。",
+      "changedFields": [],
+      "diagramDisposition": "現状の文章・コード例で十分と判断した",
+      "bStatus": "現状の文章・コード例で十分と判断した",
+      "bReason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「1130の各文字、前値×8、追加桁、結果の4行表。」の個別追加は今回は不要と判断。"
+    },
+    {
+      "id": "subshell",
+      "title": "サブシェル",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "環境分離とファイルの副作用を短く説明。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "buffer",
+      "title": "バッファと容量",
+      "priority": "P2",
+      "diagramRating": "B",
+      "auditFinding": "容量と有効長の区別は適切だが教材のreadfileが実ファイル長を上限にしない注意への案内がない。",
+      "auditProposal": "file-apiへの明示リンクで掲載実装の注意へ誘導。",
+      "diagramProposal": "容量100/有効20/終端1バイトを区別した配置図。",
+      "status": "対応済み",
+      "actions": [
+        "readfileの実際の長さ調整と終端書込みの問題をfile-apiへ明示案内。",
+        "B追加改善：共通図を新設"
+      ],
+      "diagramOwners": [
+        "buffer"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "一般的な上限の考え方と、掲載コードの動作は区別してください。[[file-api|教材のreadfileと戻り値]]は実ファイル長を常に上限にせず、終端用の余白も自動では確保しません。"
+        ]
+      },
+      "diagramDisposition": "図解を追加・改善した",
+      "bFollowup": {
+        "addedText": [
+          "char buf[8]にabcを文字列として置く例です。図の位置はRAM番地ではなく、buf先頭からのバイト差です。\n```diagram\n{\"mode\":\"layout\",\"title\":\"容量8・内容3・終端1・残り4\",\"start\":0,\"unit\":\"バイト\",\"segments\":[{\"label\":\"buf[0..2]：a,b,c\",\"size\":3},{\"label\":\"buf[3]：終端 '\\\\0'\",\"size\":1},{\"label\":\"buf[4..7]：未使用\",\"size\":4}],\"marks\":[{\"label\":\"内容の末尾直後＝終端を書く位置\",\"offset\":3},{\"label\":\"配列の末尾直後：書込み不可\",\"offset\":8}]}\n```\n文字列の長さは3、終端を含めた使用量は4、容量は8です。8バイト全部を内容で埋めるとbuf[8]へ終端を書く余地はありません。教材のreadfileは終端用の余白も実ファイル長の上限も自動では保証しません。"
+        ],
+        "owners": [
+          "buffer"
+        ]
+      },
+      "bStatus": "図解を追加・改善した",
+      "bReason": "対応先：buffer"
+    },
+    {
+      "id": "flush",
+      "title": "読み込み・書き戻し・flush",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "書戻しと永続性の違いは十分。fs_lookupを直接調べた読者には名前検索の説明不足。",
+      "auditProposal": "fs_lookupはfiles配列をstrcmpで探索する旨を追加、または関連項目へ。",
+      "diagramProposal": "files→tar形式disk→Virtio→ホストイメージの2段階を図示。",
+      "status": "追加図は保留",
+      "actions": [
+        "fs_lookupは名前で検索し、一致ポインタまたはNULLを返す処理と説明。"
+      ],
+      "diagramOwners": [],
+      "reason": "図案「files→tar形式disk→Virtio→ホストイメージの2段階を図示。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "`fs_lookup(filename)`は書き戻しではなく名前の検索です。教材ではfiles配列を順に調べ、`strcmp(file->name, filename) == 0`の項目へのポインタを返し、見つからなければNULLを返します。読み書き処理との接続は[[file-api|ファイルAPI]]を参照してください。"
+        ]
+      },
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「files→tar形式disk→Virtio→ホストイメージの2段階を図示。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "file-api",
+      "title": "readfile・writefileと戻り値",
+      "priority": "P2",
+      "diagramRating": "B",
+      "auditFinding": "掲載コードの不備を正しく説明する重要項目。パース/FILES_MAX/DISK_MAX_SIZEというaliasは十分に説明しない。",
+      "auditProposal": "境界注意を概要にも短く反映し、制限定数とパースの意味を別参照へ。",
+      "diagramProposal": "要求長・実ファイル長・内部容量・ユーザー容量を列で比較し終端位置を示す。",
+      "status": "対応済み",
+      "actions": [
+        "概要に境界注意を追加。パースとFILES_MAX=2、DISK_MAX_SIZEの容量計算と検査の違いを補足。",
+        "B追加改善：目的を示した共通図への案内"
+      ],
+      "diagramOwners": [
+        "buffer"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail",
+        "short"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "「パース（解析）」とは、バイト列を決まった形式に従って区切り、ファイル名やサイズなどの意味のある情報へ変えることです。第16章のFILES_MAXは管理できるファイル枠の最大数2、DISK_MAX_SIZEは`sizeof(struct file) * FILES_MAX`をセクタ境界へ切り上げたdisk配列の容量です。この容量計算だけで任意のtar入力が安全に収まるとは限らず、ヘッダ・内容・パディングを含む実際の範囲も検査する必要があります。"
+        ]
+      },
+      "shortChange": {
+        "before": "ファイル名・バッファ・長さを渡して読み書きする、教材独自のシステムコールです。",
+        "after": "ファイル名を指定してデータを読み書きする教材のAPIです。掲載実装には長さ検査と終端位置の注意があります。"
+      },
+      "diagramDisposition": "既存図への参照で対応した",
+      "bFollowup": {
+        "addedText": [
+          "[[buffer|図：バッファと容量]]では、要求長とは別に、内容・終端・実際の容量が収まるかを確認できます。"
+        ],
+        "owners": [
+          "buffer"
+        ]
+      },
+      "bStatus": "既存図への参照で対応した",
+      "bReason": "対応先：buffer"
+    },
+    {
+      "id": "sum",
+      "title": "SUMビットとユーザーメモリ",
+      "priority": "P2",
+      "diagramRating": "B",
+      "auditFinding": "SUMの意味は正確。18番目は0起点を明記したい。SMAPはaliasのみでx86との差を説明しない。",
+      "auditProposal": "ビット番号18（最下位を0）とし、SMAPは別ISAの類似目的と補足。",
+      "diagramProposal": "S/U×PTE.U×SUMのデータアクセス表。Sモード命令実行は別欄。",
+      "status": "追加図は保留",
+      "actions": [
+        "最下位0起点のビット番号18に修正。SMAPはx86の類似目的の別機構と説明。"
+      ],
+      "diagramOwners": [],
+      "reason": "図案「S/U×PTE.U×SUMのデータアクセス表。Sモード命令実行は別欄。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [
+          "`sstatus`はSモードの動作状態を保持するレジスタです。その18番目のビットである`SUM`が0なら、Sモードから`U=1`のページへのデータの読み書きは許されません。SUMを1にすると、この制限が緩和されます。ただし、ページが存在することや、読み書きに必要な他の権限などの条件は引き続き満たす必要があります。また、SUMを1にしても、Sモードでユーザーページの命令を実行できるようにはなりません。"
+        ],
+        "addedParagraphs": [
+          "`sstatus`はSモードの動作状態を保持するレジスタです。最下位を0と数えたビット番号18の`SUM`が0なら、Sモードから`U=1`のページへのデータの読み書きは許されません。SUMを1にすると、この制限が緩和されます。ただし、ページが存在することや、読み書きに必要な他の権限などの条件は引き続き満たす必要があります。また、SUMを1にしても、Sモードでユーザーページの命令を実行できるようにはなりません。",
+          "SMAPはx86の別の仕組みで、カーネルが不用意にユーザーメモリへアクセスするのを防ぐという目的が似ています。RISC-VのSUMと同じレジスタや同じ設定方法ではありません。"
+        ]
+      },
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「S/U×PTE.U×SUMのデータアクセス表。Sモード命令実行は別欄。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "trust",
+      "title": "ユーザーからの入力を信頼しない",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "具体的な破壊・漏洩と多ページ検査を必要十分に説明。",
+      "auditProposal": "境界またぎ例を補助。",
+      "diagramProposal": "許可ユーザーページから禁止ページへバッファがまたがる図。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「許可ユーザーページから禁止ページへバッファがまたがる図。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「許可ユーザーページから禁止ページへバッファがまたがる図。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "ipc",
+      "title": "プロセス間通信",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "隔離と通信、同期の必要が発展項目として十分。",
+      "auditProposal": "メッセージ/共有の比較図は有益。",
+      "diagramProposal": "A→OS→BのメッセージとA/B→共有ページの対比。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「A→OS→BのメッセージとA/B→共有ページの対比。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「A→OS→BのメッセージとA/B→共有ページの対比。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "multiprocessor",
+      "title": "複数CPUと競合",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "二重割当の具体例と単一CPUでの競合も説明。",
+      "auditProposal": "交錯順を図で固定すると理解しやすい。",
+      "diagramProposal": "CPU A/Bの読取・更新の時間軸と同一ページを返す結果。",
+      "status": "対応済み",
+      "actions": [
+        "図：同期なしでは同じ空きページを二重に渡す"
+      ],
+      "diagramOwners": [
+        "multiprocessor"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "時間を上から下へ追うと、各CPUの処理が正しそうでも組合せが壊れることが分かります。\n［図の定義］\n二つの要求に同じページを渡しています。読取りから更新までを競合しない一つの操作として守る必要があります。"
+        ]
+      },
+      "diagramDisposition": "図を搭載"
+    },
+    {
+      "id": "microkernel",
+      "title": "マイクロカーネル・HinaOS・xv6",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "設計比較は適切。seL4のaliasには説明がない。",
+      "auditProposal": "seL4の位置付けを1文補うかaliasを外す。",
+      "diagramProposal": "モノリシックのカーネル内FS/driverとマイクロカーネルのサービスプロセスを比較。",
+      "status": "追加図は保留",
+      "actions": [
+        "seL4はマイクロカーネルの一例で、OS一式ではないと説明。"
+      ],
+      "diagramOwners": [],
+      "reason": "図案「モノリシックのカーネル内FS/driverとマイクロカーネルのサービスプロセスを比較。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "seL4もマイクロカーネルの一例です。最小限の特権機能を提供するカーネルであり、単体でファイルシステム等を備えた完全なOS一式という意味ではありません。"
+        ]
+      },
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「モノリシックのカーネル内FS/driverとマイクロカーネルのサービスプロセスを比較。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "network",
+      "title": "TCP/IPとプロトコル",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "IPとTCPの保証を正しく分離。発展学習として十分。",
+      "auditProposal": "層の役割図を任意追加。",
+      "diagramProposal": "アプリのバイト列→TCP→IP→ドライバ、受信側の逆経路。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「アプリのバイト列→TCP→IP→ドライバ、受信側の逆経路。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「アプリのバイト列→TCP→IP→ドライバ、受信側の逆経路。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "fork",
+      "title": "fork(2)とは",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "戻り値、独立メモリ、execとの差が十分。",
+      "auditProposal": "実行の分岐図が有益。",
+      "diagramProposal": "forkの1呼出し→親pid>0/子pid=0、共通の次行へ続く流れ。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「forkの1呼出し→親pid>0/子pid=0、共通の次行へ続く流れ。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「forkの1呼出し→親pid>0/子pid=0、共通の次行へ続く流れ。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "async",
+      "title": "非同期処理とstackless/stackful",
+      "priority": "P3",
+      "diagramRating": "A",
+      "auditFinding": "概念の比較は丁寧で長さも必要性がある。スタック保持と状態機械は図が特に有効。",
+      "auditProposal": "同じ待機処理で保存場所を比較。",
+      "diagramProposal": "stackfulのA→B→C呼出し列保持とstacklessの状態番号+生存変数を並べる。",
+      "status": "対応済み",
+      "actions": [
+        "図：中断を越えて、何をどこに残すか"
+      ],
+      "diagramOwners": [
+        "async"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "どちらも再開位置と必要な値を残しますが、残し方が違います。\n［図の定義］\nstacklessでも通常の関数実行にはスタックを使います。言語の非同期処理とOSプロセスを同じ仕組みとみなさないでください。"
+        ]
+      },
+      "diagramDisposition": "図を搭載"
+    },
+    {
+      "id": "api",
+      "title": "APIという約束",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "関数名だけでなく単位・寿命・結果の契約を説明。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "shell-syntax",
+      "title": "シェルスクリプトの記号",
+      "priority": "P2",
+      "diagramRating": "B",
+      "auditFinding": "主要記号の説明は丁寧だが登録表記cfのc/fが説明されない。長文の検索性も改善余地。",
+      "auditProposal": "tar cfのc=作成/f=アーカイブ名指定と対象例を補足。既存のsubshell/tarへ明示参照。",
+      "diagramProposal": "run.shの変数展開前後と、各トークンが引数になる対応表。",
+      "status": "追加図は保留",
+      "actions": [
+        "tar cfのc/fを具体例で説明し、tar/subshellへ明示案内。"
+      ],
+      "diagramOwners": [],
+      "reason": "図案「run.shの変数展開前後と、各トークンが引数になる対応表。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "第16章の`tar cf ../disk.tar --format=ustar *.txt`では、`c`がアーカイブの作成、`f`が続く引数をアーカイブ名として使う指定です。`*.txt`が対象ファイルに展開されます。形式は[[tar|tarとustar]]、丸括弧で囲んだ`cd`の範囲は[[subshell|サブシェル]]で確認できます。"
+        ]
+      },
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「run.shの変数展開前後と、各トークンが引数になる対応表。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "build-options",
+      "title": "ビルド設定と対象CPU",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "正確で必要な内容だが多オプションを文章で探しにくい。",
+      "auditProposal": "説明を削らずオプション/工程/役割の索引表を付ける。",
+      "diagramProposal": "コンパイル・リンク・QEMU実行の工程と各オプションの対応表。",
+      "status": "対応済み",
+      "actions": [
+        "図：どの工程に効くオプションか"
+      ],
+      "diagramOwners": [
+        "build-options"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "各オプションの詳細は上の文章に残し、探すための索引として工程で整理します。\n［図の定義］\nコンパイラへ渡す指定とQEMUへ渡す指定は、別のコマンドの引数です。"
+        ]
+      },
+      "diagramDisposition": "図解を追加・改善した",
+      "bStatus": "図解を追加・改善した",
+      "bReason": "対応先：build-options"
+    },
+    {
+      "id": "fixed-register",
+      "title": "a0などの役割と固定レジスタ変数",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "固定レジスタの適用範囲と生存期間を混同しない。",
+      "auditProposal": "inline-asm/SBIの受渡し図を共有。",
+      "diagramProposal": "arg0→C変数→asm operand→CPU x10=a0の対応。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「arg0→C変数→asm operand→CPU x10=a0の対応。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「arg0→C変数→asm operand→CPU x10=a0の対応。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "statement-expression",
+      "title": "文字列化と文式のマクロ",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "前処理・C・アセンブリの各段階を丁寧に説明。",
+      "auditProposal": "展開の中間表現を図示。",
+      "diagramProposal": "READ_CSR(scause)→#reg文字列化→文字列結合→asm出力→文式の値。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「READ_CSR(scause)→#reg文字列化→文字列結合→asm出力→文式の値。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「READ_CSR(scause)→#reg文字列化→文字列結合→asm出力→文式の値。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "float",
+      "title": "浮動小数点レジスタ",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "保存省略の前提とfcsr、スレッド切替との差を説明。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "static-disk",
+      "title": "第16章の静的データとスタック",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "教材本文と実コードの差を正しく補正している。variableにも同じ訂正が必要。",
+      "auditProposal": "この説明をvariableの基準として統一。",
+      "diagramProposal": "仮定の数値例として8KiBスタックと16KiB配列、別の静的領域へ置く配置比較。教材diskの実サイズとは区別。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「仮定の数値例として8KiBスタックと16KiB配列、別の静的領域へ置く配置比較。教材diskの実サイズとは区別。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「仮定の数値例として8KiBスタックと16KiB配列、別の静的領域へ置く配置比較。教材diskの実サイズとは区別。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "endian",
+      "title": "バイト順（エンディアン）",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "数値の桁・バイト順・文字列を区別。対応が視覚的だと効果大。",
+      "auditProposal": "同じ4バイトを左右の方式で比較。",
+      "diagramProposal": "0x12345678→低アドレスから78/56/34/12、big-endianを併記。",
+      "status": "対応済み",
+      "actions": [
+        "図：0x12345678を4バイトで置く"
+      ],
+      "diagramOwners": [
+        "endian"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "数値そのものは同じでも、低い番地に置くバイトが異なります。\n［図の定義］\n教材の環境はlittle-endianです。これはバイトを並べる順序で、各バイト内のビットを逆転する話ではありません。"
+        ]
+      },
+      "diagramDisposition": "図を搭載"
+    },
+    {
+      "id": "flex-array",
+      "title": "フレキシブル配列メンバ",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "宣言と実際の確保、sizeofとの差を説明。",
+      "auditProposal": "通常ポインタメンバとの配置差を図示。",
+      "diagramProposal": "512バイトヘッダの直後のdata[]と、別領域を指すdata*を比較。",
+      "status": "対応済み",
+      "actions": [
+        "図：data[]とポインタメンバは別の配置",
+        "共通図への明示案内：tar-layout"
+      ],
+      "diagramOwners": [
+        "flex-array",
+        "tar-layout"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "フレキシブル配列メンバは、構造体末尾に続くデータを同じまとまりとして扱います。\n［図の定義］\n宣言だけでは追加領域を確保しません。tarではすでに読み込んだdiskのヘッダの直後に内容があるため、その連続配置を利用しています。",
+          "[[tar-layout|図：tarヘッダ・512バイトへの切り上げ]]では、本文で扱う場所・値・処理の対応を同じ例で確認できます。"
+        ]
+      },
+      "diagramDisposition": "図を搭載"
+    },
+    {
+      "id": "checksum",
+      "title": "チェックサムとマジック値",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "教材の事前ゼロ化に依存する計算と破損検出の限界を説明。",
+      "auditProposal": "fs_flushのmemsetに明示参照すると条件を確認しやすい。",
+      "diagramProposal": "512バイト中8バイトのchecksum欄を空白値として合算する図。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「512バイト中8バイトのchecksum欄を空白値として合算する図。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「512バイト中8バイトのchecksum欄を空白値として合算する図。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "device-direction",
+      "title": "読み書きは誰から見た方向か",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "要求種別とデバイスのメモリ方向を明確に説明。",
+      "auditProposal": "descriptor図と共有し視点の反転を示す。",
+      "diagramProposal": "IN:disk→device→RAM、OUT:RAM→device→disk。header/data/status各WRITE値。",
+      "status": "対応済み",
+      "actions": [
+        "共通図への明示案内：descriptor"
+      ],
+      "diagramOwners": [
+        "descriptor"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "[[descriptor|図：ディスクリプタとチェーン]]では、本文で扱う場所・値・処理の対応を同じ例で確認できます。"
+        ]
+      },
+      "diagramDisposition": "共通図へ案内"
+    },
+    {
+      "id": "io",
+      "title": "I/Oリクエストと完了",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "公開前バリアの教材上の不足まで適切に補正済み。",
+      "auditProposal": "virtqueue/barrierと時系列図を共有。",
+      "diagramProposal": "CPU/共有RAM/deviceの3列でprepare→publish→notify→complete→status確認。",
+      "status": "対応済み",
+      "actions": [
+        "図：要求の公開から完了確認まで"
+      ],
+      "diagramOwners": [
+        "io"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "機器はindexが公開された後、通知を待たずに共有メモリを見てもよい点が重要です。\n［図の定義］\n内容を見せる前に準備が完了している必要があります。完了後もstatusを確認するまで処理成功とは限りません。"
+        ]
+      },
+      "diagramDisposition": "図を搭載"
+    },
+    {
+      "id": "init-virtio",
+      "title": "Virtioの初期化は状態の積み重ね",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "教材の最終write32が累積ビットを落とす問題と、Legacy/Modernの差をすでに適切に注意している。重大な本文修正は不要。",
+      "auditProposal": "期待値1→3→7と掲載コードの書込値1→3→4を対応させると、注意の対象行が特定しやすい。",
+      "diagramProposal": "リセット→ACK(1)→ACK|DRIVER(3)→キュー準備→累積DRIVER_OK(7)。掲載コードの最終単独書込4を別欄で示す。",
+      "status": "対応済み",
+      "actions": [
+        "図：状態ビットは累積する"
+      ],
+      "diagramOwners": [
+        "init-virtio"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "最後の単独書込みが、それまでのビットを落とす点を数値で確認します。\n［図の定義］\n教材のACKとDRIVERはfetch-and-orなので1→3です。最後は4のみを書いているため3→4となり、累積の7にはなりません。"
+        ]
+      },
+      "diagramDisposition": "図を搭載"
+    },
+    {
+      "id": "code-basics",
+      "title": "Cの条件・ループ・演算子",
+      "priority": "P2",
+      "diagramRating": "B",
+      "auditFinding": "if/for/whileは具体的だが登録語のうちswitch/return/bool類を説明しない。",
+      "auditProposal": "switch/returnはcode-controlへ明示参照。教材のtypedef int boolとtrue/falseの定義を補足。",
+      "diagramProposal": "forの初期化→条件→本体→更新の流れ、while(n--)の値表。",
+      "status": "追加図は保留",
+      "actions": [
+        "return/switchをcode-controlへ移管。教材のtypedef int boolとtrue/false=1/0を説明。"
+      ],
+      "diagramOwners": [],
+      "reason": "図案「forの初期化→条件→本体→更新の流れ、while(n--)の値表。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [
+        "aliases",
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [
+          "switch",
+          "return"
+        ],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "`return`で関数から戻る処理と`switch`による分岐は[[code-control|return・switch・break・continue]]を参照してください。第6章では`typedef int bool;`、`#define true 1`、`#define false 0`を定義しています。教材のboolはintの別名で、true/falseは1/0へ置換する名前です。boolという名前だけで代入値が必ず0または1に制限されるわけではありません。"
+        ]
+      },
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「forの初期化→条件→本体→更新の流れ、while(n--)の値表。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "pointer-int",
+      "title": "整数の加算とポインタの加算",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "型による単位差と範囲制約が十分。",
+      "auditProposal": "address/pointerの共有図へ。",
+      "diagramProposal": "同じ数値0x1000から整数+1、char*+1、uint32_t*+1の移動量を比較。",
+      "status": "対応済み",
+      "actions": [
+        "共通図への明示案内：pointer"
+      ],
+      "diagramOwners": [
+        "pointer"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "[[pointer|図：ポインタと間接参照]]では、本文で扱う場所・値・処理の対応を同じ例で確認できます。"
+        ]
+      },
+      "diagramDisposition": "共通図へ案内"
+    },
+    {
+      "id": "zero-security",
+      "title": "初期化と情報の持ち越し",
+      "priority": "P2",
+      "diagramRating": "B",
+      "auditFinding": "情報持越しと権限の違いは良いがraw同様、教材のbss内容化とコピー後のゼロの関係へ案内が必要。",
+      "auditProposal": "raw修正と合わせ、コピー元のbssゼロとページ末尾ゼロを区別。",
+      "diagramProposal": "確保→全体ゼロ→イメージコピー→ユーザーに公開の順序。",
+      "status": "追加図は保留",
+      "actions": [
+        "コピー元.bssのゼロとページ末尾のゼロをrawへ案内。"
+      ],
+      "diagramOwners": [],
+      "reason": "図案「確保→全体ゼロ→イメージコピー→ユーザーに公開の順序。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "第12章では`.bss=alloc,contents`によって、スタック予約を含む`.bss`のゼロがコピー元イメージにも含まれます。一方alloc_pagesのゼロ埋めは、コピーされない最後のページの余白などにも効きます。[[raw|生バイナリ化からコピーまでの具体的な手順]]で両者を区別してください。"
+        ]
+      },
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「確保→全体ゼロ→イメージコピー→ユーザーに公開の順序。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "license",
+      "title": "教材のライセンス",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "対象別の許諾と表示義務を適切に説明。",
+      "auditProposal": "公式ライセンスへの出典をsourcesへ追加すると確認しやすい。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "entry-item",
+      "title": "表のエントリ",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "定義と例は十分。後半のSv32再説明は他項目と重複する。",
+      "auditProposal": "表1件と添字の例を主軸にし、2段変換はsv32へ案内。",
+      "diagramProposal": "",
+      "status": "対応済み",
+      "actions": [
+        "Sv32の重複説明を既存項目への明示参照に整理。"
+      ],
+      "diagramOwners": [],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [
+          "教材で使うSv32方式では、ページテーブルを通常2段階でたどります。仮想アドレスの一部をインデックスとして1段目のエントリを選び、そこから次の表へ進み、別の部分で2段目のエントリを選びます。この教材の4KiBページの対応付けでは、1段目のエントリは次の表の場所を示し、2段目のエントリは対応先のメモリのページとアクセス権などを示します。したがって、すべてのエントリが直接、最終的なアクセス先を示すわけではありません。なお、Sv32自体には1段目で大きなページの対応付けを完了する使い方もあります。"
+        ],
+        "addedParagraphs": [
+          "ページ表では、エントリが「次の表」を指す場合と「最終的なページ」を指す場合があります。[[sv32|Sv32の二段階の探索]]で具体例を確認できます。"
+        ]
+      },
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "flag",
+      "title": "フラグ：状態を表す印",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "ビット集合と要求番号の違いまで説明。",
+      "auditProposal": "OR/ANDの小表を共用。",
+      "diagramProposal": "NEXT=0001とWRITE=0010→0011、ANDでWRITEだけを抽出。",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「NEXT=0001とWRITE=0010→0011、ANDでWRITEだけを抽出。」の個別追加は今回は不要と判断。",
+      "changedFields": [],
+      "diagramDisposition": "現状の文章・コード例で十分と判断した",
+      "bStatus": "現状の文章・コード例で十分と判断した",
+      "bReason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「NEXT=0001とWRITE=0010→0011、ANDでWRITEだけを抽出。」の個別追加は今回は不要と判断。"
+    },
+    {
+      "id": "code-predecrement",
+      "title": "--sp と *--sp：先にポインタを戻して書く",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "優先順位・単位・末尾直後・レジスタ保存を丁寧に分離。",
+      "auditProposal": "first-switchの図を共用。",
+      "diagramProposal": "0x80001000→0x80000ffc→0x80000ff8の移動と各4バイトへの書込。",
+      "status": "対応済み",
+      "actions": [
+        "共通図への明示案内：first-switch"
+      ],
+      "diagramOwners": [
+        "first-switch"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "[[first-switch|図：初回だけ「戻り先」を用意する]]では、本文で扱う場所・値・処理の対応を同じ例で確認できます。"
+        ]
+      },
+      "diagramDisposition": "共通図へ案内"
+    },
+    {
+      "id": "code-increment",
+      "title": "++ / --：前置と後置",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "後置を単純な遅延実行と誤解させず未定義動作も説明。",
+      "auditProposal": "実行前・式の値・実行後を比較。",
+      "diagramProposal": "i=5から++iとi++を別行にし、p++/(*p)++も対比。",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「i=5から++iとi++を別行にし、p++/(*p)++も対比。」の個別追加は今回は不要と判断。",
+      "changedFields": [],
+      "diagramDisposition": "現状の文章・コード例で十分と判断した",
+      "bStatus": "現状の文章・コード例で十分と判断した",
+      "bReason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「i=5から++iとi++を別行にし、p++/(*p)++も対比。」の個別追加は今回は不要と判断。"
+    },
+    {
+      "id": "code-star",
+      "title": "*：掛け算・ポインタ宣言・間接参照",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "宣言・式・別言語の意味を十分に説明。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "code-amp",
+      "title": "&：アドレス取得とビットAND",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "2種類の&と保存先指定を具体的に説明。",
+      "auditProposal": "context/二重ポインタ図を共有。",
+      "diagramProposal": "&prev->spの値→PCB保存欄→スタックのアドレスという2段階。",
+      "status": "対応済み",
+      "actions": [
+        "共通図への明示案内：code-array-pointer"
+      ],
+      "diagramOwners": [
+        "code-array-pointer"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "[[code-array-pointer|図：二重ポインタと保存先]]では、保存欄の番地と、その欄に保存する値を区別できます。"
+        ]
+      },
+      "diagramDisposition": "既存図への参照で対応した",
+      "bStatus": "既存図への参照で対応した",
+      "bReason": "対応先：code-array-pointer"
+    },
+    {
+      "id": "code-or",
+      "title": "| と ^：ビットOR・XOR",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "フラグ設定と反転、論理ORの違いが十分。",
+      "auditProposal": "bitopsのビット対応表を共有。",
+      "diagramProposal": "0101と0011のOR=0111/XOR=0110を縦に整列。",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「0101と0011のOR=0111/XOR=0110を縦に整列。」の個別追加は今回は不要と判断。",
+      "changedFields": [],
+      "diagramDisposition": "現状の文章・コード例で十分と判断した",
+      "bStatus": "現状の文章・コード例で十分と判断した",
+      "bReason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「0101と0011のOR=0111/XOR=0110を縦に整列。」の個別追加は今回は不要と判断。"
+    },
+    {
+      "id": "code-logic",
+      "title": "&& / || / !：条件を組み合わせる",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "短絡評価とC/シェルの真偽差を説明。",
+      "auditProposal": "右式が評価される条件を表に。",
+      "diagramProposal": "&&/||の左の真偽による右側評価の有無。",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「&&/||の左の真偽による右側評価の有無。」の個別追加は今回は不要と判断。",
+      "changedFields": [],
+      "diagramDisposition": "現状の文章・コード例で十分と判断した",
+      "bStatus": "現状の文章・コード例で十分と判断した",
+      "bReason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「&&/||の左の真偽による右側評価の有無。」の個別追加は今回は不要と判断。"
+    },
+    {
+      "id": "code-assign",
+      "title": "= と複合代入",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "複合代入の重要な意味と型の単位を十分に説明。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "code-compare",
+      "title": "比較演算子と境界",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "境界と型変換、ポインタ比較の制約まで十分。",
+      "auditProposal": "half-openの端点図を共有。",
+      "diagramProposal": "0..3有効、4は終端、<と<=で含む範囲を比較。",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「0..3有効、4は終端、<と<=で含む範囲を比較。」の個別追加は今回は不要と判断。",
+      "changedFields": [],
+      "diagramDisposition": "現状の文章・コード例で十分と判断した",
+      "bStatus": "現状の文章・コード例で十分と判断した",
+      "bReason": "既存監査の本文評価を引き継ぎ、短いコード・値・手順の具体例を維持する。図案「0..3有効、4は終端、<と<=で含む範囲を比較。」の個別追加は今回は不要と判断。"
+    },
+    {
+      "id": "code-shift",
+      "title": "<< / >>：ビットシフト",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "教材のVPN/PPNに即し型の制約も適切。",
+      "auditProposal": "ppn/bitopsと図を共用。",
+      "diagramProposal": "VAのビット31..22、21..12の抽出とPPNをPTEへ配置する図。",
+      "status": "対応済み",
+      "actions": [
+        "B追加改善：目的を示した共通図への案内"
+      ],
+      "diagramOwners": [
+        "sv32",
+        "pte"
+      ],
+      "reason": "文章と具体例で理解可能。図の個別追加は重複・表示量を増やすため行わない。",
+      "changedFields": [
+        "detail"
+      ],
+      "diagramDisposition": "既存図への参照で対応した",
+      "bFollowup": {
+        "addedText": [
+          "[[sv32|図：Sv32の2段階変換]]では、VAの上位から10/10/12を切り出す位置を確認できます。",
+          "[[pte|図：ページテーブルエントリとフラグ]]では、PPNをPTEの上位へ置く左10シフトが、VAから番号を得る右12シフトとは別だと確認できます。"
+        ],
+        "owners": [
+          "sv32",
+          "pte"
+        ]
+      },
+      "bStatus": "既存図への参照で対応した",
+      "bReason": "対応先：sv32, pte"
+    },
+    {
+      "id": "code-arithmetic",
+      "title": "+ / - / / / %：演算と型",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "剰余の符号、ゼロ除算、型と単位を必要十分に説明。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "code-arrow",
+      "title": "-> と .：構造体のメンバ",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "構造体そのものと参照経由を具体的に説明。",
+      "auditProposal": "structの図と共用。",
+      "diagramProposal": "p→構造体fのsize欄、f.sizeとp->sizeが同じ欄を指す。",
+      "status": "対応済み",
+      "actions": [
+        "共通図への明示案内：code-array-pointer"
+      ],
+      "diagramOwners": [
+        "code-array-pointer"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "[[code-array-pointer|図：二重ポインタと保存先]]では、保存欄の番地と、その欄に保存する値を区別できます。"
+        ]
+      },
+      "diagramDisposition": "既存図への参照で対応した",
+      "bStatus": "既存図への参照で対応した",
+      "bReason": "対応先：code-array-pointer"
+    },
+    {
+      "id": "code-brackets",
+      "title": "[]：配列の宣言と要素参照",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "配列宣言・添字・仮引数・FAMの違いを説明。",
+      "auditProposal": "arrayの連続配置図を共有。",
+      "diagramProposal": "4要素の位置とa[2]=*(a+2)、a[4]はone-past。",
+      "status": "対応済み",
+      "actions": [
+        "B追加改善：目的を示した共通図への案内"
+      ],
+      "diagramOwners": [
+        "array"
+      ],
+      "reason": "文章と具体例で理解可能。図の個別追加は重複・表示量を増やすため行わない。",
+      "changedFields": [
+        "detail"
+      ],
+      "diagramDisposition": "既存図への参照で対応した",
+      "bFollowup": {
+        "addedText": [
+          "[[array|図：配列]]では、a[i]とa+iの対応、範囲外のa[3]を同じ番地で比較できます。"
+        ],
+        "owners": [
+          "array"
+        ]
+      },
+      "bStatus": "既存図への参照で対応した",
+      "bReason": "対応先：array"
+    },
+    {
+      "id": "code-parens",
+      "title": "()：呼び出し・まとまり・型変換",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "結合と評価順序を混同せずキャスト・sizeofも説明。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "code-braces",
+      "title": "{} とセミコロン",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "空文の落とし穴と宣言末尾の;を具体的に説明。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "code-ternary",
+      "title": "?:：条件によって選ぶ式",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "教材の2つの三項式を具体的に読み分けられる。",
+      "auditProposal": "device-directionの共用図への参照で十分。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "code-comma",
+      "title": "カンマと引数の区切り",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "区切りと演算子の評価順序の違いを明確に説明。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "code-comment",
+      "title": "コメントと文字・文字列",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "コメント、文字定数、文字列、asm文字列の違いを説明。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "code-directive",
+      "title": "#：プリプロセッサの指示",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "前処理とGNU拡張を適切に区別。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "code-const",
+      "title": "const：この経路から変更しない",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "const経由と対象自体のconst、ハード保護の差が明確。",
+      "auditProposal": "ポインタと対象の図で修飾先を示す。",
+      "diagramProposal": "const char*とchar*constで変更可能な箱と禁止される矢印を比較。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「const char*とchar*constで変更可能な箱と禁止される矢印を比較。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「const char*とchar*constで変更可能な箱と禁止される矢印を比較。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "code-void",
+      "title": "void：戻り値なし・型未指定のポインタ",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "voidの3用途と汎用ポインタの制約が十分。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "code-width",
+      "title": "char / int / long と環境の前提",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "教材の型幅とC一般を明確に区別。shortも幅確認へ案内がある。",
+      "auditProposal": "必要なら教材のshort=16ビットを表へ補足。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "code-control",
+      "title": "return / break / continue / switch",
+      "priority": "P2",
+      "diagramRating": "B",
+      "auditFinding": "本文は丁寧だがreturn/switchが登録表記にないためクリック先がcode-basicsになり、そちらに説明がない。",
+      "auditProposal": "return/switchの登録先を整理しcode-basicsから明示参照。",
+      "diagramProposal": "switch内whileのbreak、外側break、return、continueの到達先を図示。",
+      "status": "追加図は保留",
+      "actions": [
+        "return/switchの登録表記を受け取り、クリックで直接説明へ到達。"
+      ],
+      "diagramOwners": [],
+      "reason": "図案「switch内whileのbreak、外側break、return、continueの到達先を図示。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [
+        "aliases"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": [
+          "return",
+          "switch"
+        ]
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": []
+      },
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「switch内whileのbreak、外側break、return、continueの到達先を図示。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "code-array-pointer",
+      "title": "二重ポインタと保存先",
+      "priority": "P2",
+      "diagramRating": "A",
+      "auditFinding": "誤った二重ポインタ解釈を防ぎ数値例もある。",
+      "auditProposal": "例の0x1000と0x8000の役割を図示。",
+      "diagramProposal": "a0=保存欄住所→[0x1000:sp値0x8000]→スタック、真のT**と比較。",
+      "status": "対応済み",
+      "actions": [
+        "図：保存先の住所を渡す（RV32の例）"
+      ],
+      "diagramOwners": [
+        "code-array-pointer"
+      ],
+      "reason": "必要な本文・参照・図を対象に反映。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "ここではproc->spが置かれた番地を0x1000、保存するsp値を0x8000と仮定します。\n［図の定義］\n引数は保存欄を指すuint32_t*です。そこへ32ビットのsp値を書きます。CPUがレジスタの数値を解釈することと、Cの型がuint32_t**であることは別です。"
+        ]
+      },
+      "diagramDisposition": "図を搭載"
+    },
+    {
+      "id": "code-designated",
+      "title": "指示付き初期化と複合リテラル",
+      "priority": "P3",
+      "diagramRating": "C",
+      "auditFinding": "構文・値渡し・寿命まで過不足なく説明。",
+      "auditProposal": "現状維持。",
+      "diagramProposal": "",
+      "status": "現状維持",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "監査で概ね十分。不要な改稿・図追加を行わない。",
+      "changedFields": [],
+      "diagramDisposition": "図は不要、文章を維持"
+    },
+    {
+      "id": "code-asm-operands",
+      "title": "RISC-Vの即値・アドレス計算",
+      "priority": "P2",
+      "diagramRating": "B",
+      "auditFinding": "命令自体の説明は正確。教材のC呼出し整列問題はtrap-stateへ案内が必要。",
+      "auditProposal": "124バイトは保存データ量であり呼出し整列とは別と短く注記。",
+      "diagramProposal": "sp旧値/新値、4(sp)のバイト位置、実行後spが変わる命令との対比。",
+      "status": "追加図は保留",
+      "actions": [
+        "124Bの保存量とC呼出し整列の違いをtrap-stateへ案内。"
+      ],
+      "diagramOwners": [],
+      "reason": "図案「sp旧値/新値、4(sp)のバイト位置、実行後spが変わる命令との対比。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "124バイトは31個の保存データの量です。続くC関数呼出し時の16バイト整列は別条件なので、[[trap-state|トラップ入口のABI上の注意]]を参照してください。"
+        ]
+      },
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「sp旧値/新値、4(sp)のバイト位置、実行後spが変わる命令との対比。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "code-asm-jump",
+      "title": "call / ret / j：呼び出しとジャンプ",
+      "priority": "P2",
+      "diagramRating": "B",
+      "auditFinding": "call/ret/jは正確だがjrを調べると直接説明がない。",
+      "auditProposal": "jr rsはレジスタの値へジャンプする疑似命令と補う。",
+      "diagramProposal": "callでra更新→関数→ret、jとjrの即値ラベル/レジスタ宛先を比較。",
+      "status": "追加図は保留",
+      "actions": [
+        "jr rsのレジスタ間接ジャンプ、jalr x0,0(rs)との関係、ra非更新を説明。"
+      ],
+      "diagramOwners": [],
+      "reason": "図案「callでra更新→関数→ret、jとjrの即値ラベル/レジスタ宛先を比較。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [
+        "detail"
+      ],
+      "aliasChange": {
+        "removed": [],
+        "added": []
+      },
+      "textChange": {
+        "removedParagraphs": [],
+        "addedParagraphs": [
+          "`jr rs`はレジスタrsの値をジャンプ先にする疑似命令で、`jalr x0, 0(rs)`に対応します。通常の`j label`がラベルへ飛ぶのに対し、jrはレジスタが指す場所へ飛び、戻り先raを新たに設定しません。`ret`は典型的には`jr ra`と同じ復帰操作を表します。"
+        ]
+      },
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「callでra更新→関数→ret、jとjrの即値ラベル/レジスタ宛先を比較。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "code-asm-registers",
+      "title": "s0〜s11・t0〜t6・zero",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "保存責任とzeroのハード仕様、トラップとの差が明瞭。",
+      "auditProposal": "ABIのレジスタ分類表を共有。",
+      "diagramProposal": "s/a/t/ra/gp/tp/zeroの役割・通常呼出し保存責任・トラップ保存を比較。",
+      "status": "対応済み",
+      "actions": [
+        "B追加改善：目的を示した共通図への案内"
+      ],
+      "diagramOwners": [
+        "abi"
+      ],
+      "reason": "文章と具体例で理解可能。図の個別追加は重複・表示量を増やすため行わない。",
+      "changedFields": [
+        "detail"
+      ],
+      "diagramDisposition": "既存図への参照で対応した",
+      "bFollowup": {
+        "addedText": [
+          "[[abi|図：呼び出し規約・ABI]]では、a/tとsの保存責任、およびraを必要とする側を比較できます。"
+        ],
+        "owners": [
+          "abi"
+        ]
+      },
+      "bStatus": "既存図への参照で対応した",
+      "bReason": "対応先：abi"
+    },
+    {
+      "id": "code-sections",
+      "title": "リンカのセクション選択とワイルドカード",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "入力/出力セクションと2つの*を丁寧に説明。",
+      "auditProposal": "linker-scriptの図へ対応付け。",
+      "diagramProposal": "複数.oのtext/text.boot/text.func→出力textへ集まる順序とKEEP。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「複数.oのtext/text.boot/text.func→出力textへ集まる順序とKEEP。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「複数.oのtext/text.boot/text.func→出力textへ集まる順序とKEEP。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    },
+    {
+      "id": "code-memory-clobber",
+      "title": "\"memory\"：メモリへの副作用を伝える",
+      "priority": "P3",
+      "diagramRating": "B",
+      "auditFinding": "例のバッファが実際のPutcharの挙動ではないと明示している点が良い。",
+      "auditProposal": "barrierの図でコンパイラ層とCPU層を分離。",
+      "diagramProposal": "C書込み→asmで参照→C再読をコンパイラ視点で示し、fenceとは別欄。",
+      "status": "追加図は保留",
+      "actions": [],
+      "diagramOwners": [],
+      "reason": "図案「C書込み→asmで参照→C再読をコンパイラ視点で示し、fenceとは別欄。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。",
+      "changedFields": [],
+      "diagramDisposition": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bStatus": "学習効果は期待できるが、今回の優先順位では保留した",
+      "bReason": "図案「C書込み→asmで参照→C再読をコンパイラ視点で示し、fenceとは別欄。」には効果が期待できる。指定5テーマと既存図再利用を優先し、今回は未実装として残す。"
+    }
+  ],
+  "changedCount": 87,
+  "implementationDate": "2026-11-15",
+  "metadataPolicy": "194 IDs・見出し・前提関係・章スコープ等は保持。登録表記変更はreturn/switchの移管のみ。",
+  "bFollowup": {
+    "changed": 23,
+    "newDiagrams": 8,
+    "statusCounts": {
+      "現状の文章・コード例で十分と判断した": 14,
+      "学習効果は期待できるが、今回の優先順位では保留した": 67,
+      "既存図への参照で対応した": 22,
+      "図解を追加・改善した": 9
+    }
+  }
+}

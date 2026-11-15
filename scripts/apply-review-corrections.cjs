@@ -1,3 +1,5 @@
+// Historical one-off script: do not overwrite the source-checked audit corrections.
+if(require('node:fs').existsSync(require('node:path').join(__dirname,'../research/audit-resolution.json')))throw Error('監査反映後のデータには旧一括処理を適用できません。research/AUDIT-IMPLEMENTATION.mdを参照し、対象項目を個別に編集してください。');
 // Apply only source-checked editorial corrections after the generation batch has exited.
 const fs=require('fs'),C=require('../extension/core');
 const files=['data/glossary.json','data/code-explanations.json'];
