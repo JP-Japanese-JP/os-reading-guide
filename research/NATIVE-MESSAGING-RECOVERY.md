@@ -1,44 +1,22 @@
-# Native Messaging接続の調査・復旧（1.3.1）
+# Windows接続の復旧と調査知見
 
-調査日：2026-11-01。作業フォルダー移行後のWindows環境で確認しました。
+## 復旧の手順
 
-## 確認できたこと
+拡張を同じフォルダーで更新・再読み込みし、通常使用するWindowsセッションから `setup-helper.cmd` を実行します。AI設定を再読み込みし、「接続を再確認」で画面・バックグラウンド・補助のバージョンと接続先を確認します。詳細は [操作手順](../INSTALL.html) にあります。
 
-通常のChromeのSecure Preferencesから、OS読書ガイドの読み込み元がこの作業フォルダーのextension、登録された拡張IDが一致することを確認しました。環境設定全体や認証内容は出力していません。
+読み取り専用の登録診断は次のコマンドです。
 
-実ユーザー側のHKCUのRegistry32・Registry64は、調査開始時点からともに%LOCALAPPDATA%\OSReadingGuide\host\native-host.jsonを指していました。HKLMに同名ホストの登録はありません。ホスト名、実行用launch.cmd・node.exe・host.cjsの存在、allowed_originsとホスト側originsに含まれる現在の拡張IDも整合していました。実行関連ファイルはOneDriveのプロジェクトへ依存していません。
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\install-helper.ps1 -DiagnoseOnly
+```
 
-変更前の専用Chromeプロファイルで、同じ拡張IDからNative Messagingを直接呼んだstatus通信はok:true、signedIn:trueでした。したがって、報告された元の「Specified native messaging host not found」の未検出状態は調査時点では再現せず、その発生時の原因は特定できません。過去の未登録状態や移動によるID変更が原因だった可能性を、確認済みの事実としては扱っていません。before証跡のworker側エラーは、検証コードを辞書ページから呼んだための想定されたAI設定ページ制限で、Native Messagingのエラーではありません。
+## 原因と設計への反映
 
-一方、background.jsのonDisconnectがchrome.runtime.lastErrorを読んでいなかったことは確認できました。これにより、接続失敗の具体的な理由がUIに届かず「Unchecked runtime.lastError」として残り得ます。このエラー処理を修正しました。
+- フォルダー移動で拡張IDが変わる可能性があるため、現在の読み込み元からIDを検出し、HKCUの32/64ビットの登録とallowed_originsを照合します。
+- Native Messagingの切断時に `chrome.runtime.lastError` を取得し、未登録や許可ID不一致を利用者へ伝えます。正常終了に伴う切断は成功として扱います。
+- Chromeに旧manifest登録が残るケースでは、画面の更新だけでは登録が切り替わらないことがありました。Chrome全体の再起動と再確認を手順に含めます。
+- エージェントの実行環境と通常のWindowsセッションで登録・認証の参照先が異なるケースがありました。登録環境差の詳しい原因は未確定です。通常利用するChromeから実通信を確認する必要があります。
+- 1.4.4ではホスト名 `jp.osreadingguide.chatgpt.v2` を追加し、セットアップは旧名も互換用に登録します。
+- 1.4.5ではPowerShellの標準入出力をUTF-8に固定し、Node側でストリームをデコードして、日本語の接続名の文字化けを修正しました。
 
-## 修正
-
-- 切断コールバック内でlastErrorを読み取り、未検出・許可ID不一致・その他の切断を利用者向けの具体的な説明と復旧手順へ変換。成功後の切断、タイムアウト後の二重処理にも対応。
-- AI設定に「接続の修復」、現在のIDを含むPowerShellコマンド、コピーボタンを追加。
-- setup-helper.cmdをダブルクリックすると、install-helper.ps1が同じフォルダーの拡張IDをChromeのDefault/Profile各設定から自動検出。未検出・複数候補なら明示IDを使用。初回はChromeへextensionを読み込んだ後に実行。
-- HKCUの32/64ビット両方を同じマニフェストへ登録し、登録後にファイル・ホスト名・IDの整合性を検査。既存の有効な許可IDを維持し、同一ファイルの不要なコピーを省略。既に配置したnode.exeも再利用可能。
-- Windows PowerShell 5.1で日本語が誤解釈されないUTF-8 BOM付きでセットアップ／解除スクリプトを保存。解除は両レジストリビューへ対応（解除自体は実行していません）。
-- -DiagnoseOnlyは読み取り専用の登録診断。認証ファイルやChrome保存データを読み書きせずに、診断・再登録できます。
-
-実ユーザーのID自動検出→再登録→整合性検査を実行済みです。再実行も成功しました。credentials.dpapiとChromeの個人辞書は更新していません。Sign in with ChatGPT、DPAPI保護、APIキーなし、有料APIへの切替なしを維持しています。
-
-## 検証
-
-- 単体・契約・回帰テスト30件成功。lastErrorの消費、成功後切断、ID検出の一致・旧パス除外・複数プロファイル・壊れたJSON、PowerShell 5.1構文解析を含みます。
-- 実ChromeのAI設定ページ→実サービスワーカー→実Native Messagingホストでstatus成功。ログイン状態を保持。
-- 専用検証プロファイルのサービスワーカーだけを未登録の検証用ホスト名に向け、実際のChromeのnot found応答から復旧表示を確認。実ユーザーのレジストリを壊す方法は使っていません。
-- 接続先を戻して「接続を再確認」に成功。モデル一覧取得も成功。新規生成・再ログイン・設定保存は行っていません。
-- 専用プロファイルのstorage前後一致。実ユーザーの通常のChromeプロファイルのUI操作は行っていません。
-- 390px幅と復旧コマンド表示をスクリーンショットでも確認。アカウント表示は画像でマスクしています。
-- 194項目と3図の内容を維持し、全件検査・ビルドも成功。
-
-証跡：tests/evidence/native-registration-report.json、native-recovery-before.json、native-recovery-report.json、native-repair-desktop.png、native-repair-mobile.png。
-
-## 今後の復旧
-
-このPCの再登録は実施済みです。現在開いているChromeでは、拡張を再読み込みしてAI設定の「接続を再確認」を押してください。再ログインは不要です。
-
-以後の初回登録／復旧は、配布フォルダーのsetup-helper.cmdを実行します。自動検出できなければ、AI設定に表示される現在のID入りコマンドを、配布フォルダーで開いたPowerShellへ貼り付けます。管理者権限は不要です。認証・個人辞書は削除しません。
-
-Chrome拡張だけではWindowsレジストリへ書き込めないため、Windows側ファイルの初回実行は必要です。ホスト登録形式、レジストリビュー検索順、onDisconnectでのlastError処理は[Chrome公式Native Messaging資料](https://developer.chrome.com/docs/extensions/develop/concepts/native-messaging)を参照しています。
+認証保存の扱いは [アカウント設計](CHATGPT-ACCOUNTS.md)、検証範囲は [検証結果](../TEST-REPORT.md) を参照してください。初回に報告されたhost not foundの発生原因そのものは調査時に再現できず、断定していません。
